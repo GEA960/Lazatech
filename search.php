@@ -6,7 +6,7 @@ $table_ass_array = array(
 							//'COLUMNNAME_B'	  Column Name B to search in
 						),
 			'topics' => array(			// TABLENAME 2 to search in
-							'topic_cubject'		// Column Name A to search in
+							'topic_subject'		// Column Name A to search in
 							//'COLUMNNAME_B'		// Column Name B to search in
 			            ),
 			'blogs' => array(			// TABLENAME 2 to search in
