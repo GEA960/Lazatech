@@ -38,7 +38,7 @@
                 </li>
                 <li class="nav-item dropdown px-3">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                   Settings <i class="fa fa-cog fa-2x" aria-hidden="true"></i>
+                    <i class="fa fa-cog fa-2x" aria-hidden="true"></i>
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="profile.php">My Profile</a>
@@ -50,7 +50,7 @@
                 </li>
                 <li class="nav-item px-3">
                     <a class="nav-link" href="https://github.com/GEA960/OnAid.git">                                         
-                    GitHub Repository <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+                    <i class="fa fa-github fa-2x" aria-hidden="true"></i>
                     </a>
                 </li>
                 <li class="nav-item px-3">
