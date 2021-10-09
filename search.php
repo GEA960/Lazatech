@@ -1,20 +1,26 @@
 <?php
+error_reporting (0);
 $search_keyword = "code";			// search Keyword
 $table_ass_array = array( 
 			'posts' => array( 			// TABLENAME 1 to search in
-							'post_content'		// Column Name A to search in
+							 'post_id', 
+				 			 'post_content'
+							 		// Column Name A to search in
 							//'COLUMNNAME_B'	  Column Name B to search in
 						),
 			'topics' => array(			// TABLENAME 2 to search in
-							'topic_subject'		// Column Name A to search in
+							'topic_id',
+				 			'topic_subject'		// Column Name A to search in
 							//'COLUMNNAME_B'		// Column Name B to search in
 			            ),
 			'blogs' => array(			// TABLENAME 2 to search in
-							'blog_title',		// Column Name A to search in
+							'blog_id',
+				 			'blog_title',		// Column Name A to search in
 							'blog_content'		// Column Name B to search in
 			            ),	
 			'event_info' => array(			// TABLENAME 2 to search in
-							'title',		// Column Name A to search in
+							'event_id',
+				 			'title',		// Column Name A to search in
 							'headline',		// Column Name B to search in
 							'description'		// Column Name B to search in
 						)					

@@ -2,5 +2,5 @@
 	<br>
 	Integrated by OnAid.org
 	<br>
-	สนับสนุน devbanban.com
-	<a href="http://devbanban.com/?page_id=2309"> Click here to return to Dashboard </a></p>
+	OnAid.org
+	<a href="/index.php"> Click here to return to Dashboard </a></p>

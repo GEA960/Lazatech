@@ -21,7 +21,7 @@
                     </a>
                 </li>
                 <li class="nav-item px-3">
-                    <a class="nav-link" href="  ">                                         ">
+                    <a class="nav-link" href="  ">                                         
                         <i class="fa fa-github fa-2x" aria-hidden="true"></i>
                     </a>
                 </li>

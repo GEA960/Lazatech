@@ -11,6 +11,7 @@
   <body>
     <?php
     require_once('condb.php');
+    
     include ('navbar.php');
     $q = (isset($_GET['q']) ? $_GET['q'] : '');
     include('form.php');
