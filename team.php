@@ -46,7 +46,7 @@
             </div>
             <div class="row no-gutters">
               <div class="col-lg-6">
-                  <a class="portfolio-item" href="includes/OnAid_Creators/Gab.php" target="_blank">
+                  <a class="portfolio-item" href="https://gea960.github.io/GEA-Portfolio-Website/" target="_blank">
                   <span class="caption">
                     <span class="caption-content">
                       <h2>Gabriel Edrian Alvaro</h2>

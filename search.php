@@ -1,6 +1,12 @@
+
+
 <?php
 error_reporting (0);
-$search_keyword = "code";			// search Keyword
+
+
+
+$search_keyword = 'code';			// search Keyword
+
 $table_ass_array = array( 
 			'posts' => array( 			// TABLENAME 1 to search in
 							 'post_id', 
@@ -59,12 +65,12 @@ function php_search_all_database($search_keyword,$table_ass_array){
 					$rs3 = $conn->query($sql_search);
 
 					if($rs3->num_rows > 0){ 				// check weather 'keyword' found or not
-
+						
 						echo "<ul><u>Table :" . $table . '</u>';
 						while($r3 = $rs3->fetch_array()){ 	// fetch result from respective data
 							$count++;
 							echo "<li> Column Name : " . $colum . "</li>";
-							echo "<li> Row  : " . $r3['ROW ID'] . "</li>";	// primary key column name
+							//echo "<li> Row  : " . $r3['ROW ID'] . "</li>";	// primary key column name
 							echo "<li> Value : " . $r3[$colum] . "</li><br>";
 						
 						}	// while loop close

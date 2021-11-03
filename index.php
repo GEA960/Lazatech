@@ -96,7 +96,6 @@
                                     <div class="row mb-2">
 
                                     <?php
-                                         /*
                                         $sql = "select topic_id, topic_subject, topic_date, topic_cat, topic_by, userImg, idUsers, uidUsers, cat_name, (
                                                     select sum(post_votes)
                                                     from posts
@@ -107,31 +106,6 @@
                                                 and topics.topic_cat = categories.cat_id
                                                 order by topic_id desc, upvotes asc 
                                                 LIMIT 6";
-                                         */
-
-                                
-                                        /*
-                                        $up = "update posts
-                                            SET posts.post_votes = postvotes.vote
-                                            FROM posts
-                                            INNER JOIN postvotes
-                                            ON posts.votePost = postvotes.vote";
-                                            */
-                                            
-                                           
-                                        $sql = "select topic_id, topic_subject, topic_date, topic_cat, topic_by, userImg, idUsers, uidUsers, cat_name, (
-                                            select sum(post_votes)
-                                            from posts
-                                            where post_topic = topic_id
-                                            ) as upvotes
-                                        from topics, users, categories
-                                        where topics.topic_by = users.idUsers
-                                        and topics.topic_cat = categories.cat_id
-                                        order by topic_id desc, upvotes asc 
-                                        LIMIT 6";
-
-
-                                       
                                         $stmt = mysqli_stmt_init($conn);    
 
                                         if (!mysqli_stmt_prepare($stmt, $sql))
@@ -381,23 +355,13 @@
                             <p><br>THE CREATORS</p>
                         </div>
 
-                        <a href="forum.php" class="btn btn-warning btn-lg btn-block">OnAid Forum</a>
-                        <a href="hub.php" class="btn btn-secondary btn-lg btn-block">OnAid Hub</a>
+                        <a href="forum.php" class="btn btn-warning btn-lg btn-block">KLiK Forum</a>
+                        <a href="hub.php" class="btn btn-secondary btn-lg btn-block">KLiK Hub</a>
                         <br><br><br>
                         <a href="create-topic.php" class="btn btn-warning btn-lg btn-block">Create a Forum</a>
                         <a href="create-blog.php" class="btn btn-secondary btn-lg btn-block">Create a Blog</a>
-                        <br><br>
-                        <a href="create-poll.php" class="btn btn-warning btn-lg btn-block">Create a Poll</a>
-                        <a href="create-event.php" class="btn btn-secondary btn-lg btn-block">Create a event</a>
 
                     </div>
-                    
-                    
-                    
-                   <center> <iframe src="https://public.domo.com/cards/31O7r" width="900" height="600" marginheight="0" marginwidth="0" frameborder="0"></iframe>
-                        <iframe src="https://public.domo.com/cards/2kO6J" width="900" height="600" marginheight="0" marginwidth="0" frameborder="0"></iframe>    
-                            
-                   </center>
                 </div>
             </div>
             <?php include 'includes/footer.php'; ?>
@@ -421,27 +385,5 @@
             }
         </script>  
         
-        <head> 
-            <!-- Smartsupp Live Chat script -->
-            <script type="text/javascript">
-            var _smartsupp = _smartsupp || {};
-            _smartsupp.key = '65e3e34cfb9c275de6054519440686d961121055';
-            window.smartsupp||(function(d) {
-            var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
-            s=d.getElementsByTagName('script')[0];c=d.createElement('script');
-            c.type='text/javascript';c.charset='utf-8';c.async=true;
-            c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
-            })(document);
-            </script>
-        
-        
-            
-        </head>
-        
-        <!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-614464c1e7ba5017"></script>
-
-
     </body>
-    
 </html>

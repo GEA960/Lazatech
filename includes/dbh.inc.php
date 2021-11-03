@@ -3,7 +3,7 @@
 $serverName = "localhost";
 $dBUsername = "root";
 $dBPassword = "";
-$dBName = "OnAid_database";
+$dBName = "onaid_database";
 
 $conn = new mysqli($serverName, $dBUsername, $dBPassword, $dBName, 3306);
 
