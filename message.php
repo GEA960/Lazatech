@@ -60,7 +60,7 @@
                               <div class="chat_ib">
                                 <h5>
                                     <?php echo ucwords($row['uidUsers']) ?> 
-                                    <span class="chat_date">KLiK User</span>
+                                    <span class="chat_date">OnAid User</span>
                                 </h5>
                                 <p>Click on the User to start chatting</p>
                               </div>

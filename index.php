@@ -61,7 +61,7 @@
                             <br>
                         </div>
 
-
+                          
                         <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
                             <li class="nav-item">
                               <a class="nav-link active" id="forum-tab" data-toggle="tab" href="#forum" role="tab" 
@@ -367,6 +367,7 @@
                     </div>
                 </div>
             </div>
+            
             <?php include 'includes/footer.php'; ?>
         </div>
         

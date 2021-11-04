@@ -1,6 +1,6 @@
  
 
-        <nav class="navbar sticky-top navbar-expand-md navbar-light bg-light">
+        <nav class="navbar sticky-top navbar-expand-md navbar-light bg-dark">
             <a class="navbar-brand" href="index.php">
                 <img src="img/200px.png" width="40" height="40">
             </a>
@@ -22,18 +22,18 @@
   
               <li class="nav-item px-3">
                     <a class="nav-link" href="index.php">
-                        <i class="fa fa-home fa-2x" aria-hidden="true">Home</i>
+                        <i class="fa fa-home fa-2x" aria-hidden="true"></i>
                     </a>
                 </li>
                
                 <li class="nav-item px-3">
                     <a class="nav-link" href="message.php">
-                        <i class="fa fa-envelope fa-2x" aria-hidden="true">Messages</i>
+                        <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
                     </a>
                 </li>
                 <li class="nav-item px-3">
                     <a class="nav-link" href="users-view.php">
-                        <i class="fa fa-users fa-2x" aria-hidden="true">People</i>
+                        <i class="fa fa-users fa-2x" aria-hidden="true"></i>
                     </a>
                 </li>
                 <li class="nav-item dropdown px-3">
