@@ -89,7 +89,7 @@
                         <a href="contact.php">
                             <i class="fa fa-envelope fa-2x social-icon" aria-hidden="true"></i>
                         </a>
-                        <a href="contact.php">
+                        <a href="https://github.com/GEA960/OnAid.git">
                             <i class="fa fa-github fa-2x social-icon" aria-hidden="true"></i>
                         </a>
                     </div>
