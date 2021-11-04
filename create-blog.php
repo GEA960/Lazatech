@@ -100,7 +100,7 @@
         
         
                             <script>
-                                var dp = 'img/blog_cover.png';
+                                var dp = 'img/blog-cover.png';
                                 
                                 $('#blah').attr('src', dp);
                                 
