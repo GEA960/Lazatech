@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="en">
   <head>
+  <link href="css/list-page.css" rel="stylesheet">
+  <link href="css/loader.css" rel="stylesheet">
+  
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,16 +13,17 @@
   </head>
   <body>
     <?php
-    require_once('condb.php');
+    include_once '1condb.php';
+    include 'includes/HTML-head.php';
     
-    include ('navbar.php');
+    include ('includes/navbar.php');
     
     $q = (isset($_GET['q']) ? $_GET['q'] : '');
-    include('form.php');
+    include('1form.php');
     if($q!=''){
-    include('show.php');
+    include('1show.php');
     }
-    include ('footer.php');
+    include ('includes/footer.php');
     ?>
     
   </body>

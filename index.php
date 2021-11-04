@@ -1,4 +1,4 @@
-<script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
+
 
 <?php
 
@@ -350,14 +350,16 @@
                     <div class="col-sm-2">
 
                         <div class="text-center p-3 mt-5">
-                            <a href="team.php" target="_blank">
+                        <!--    <a href="team.php" target="_blank">
                                 <i class="creater-icon fa fa-users fa-5x" aria-hidden="true"></i>
                             </a>
-                            <p><br>THE CREATORS</p>
+                            <p><br>THE CREATORS</p> -->
+                            <a> </a>
+                            <p><br></br><br></br><br></br><br></br><br></br></p>
                         </div>
 
-                        <a href="forum.php" class="btn btn-warning btn-lg btn-block">KLiK Forum</a>
-                        <a href="hub.php" class="btn btn-secondary btn-lg btn-block">KLiK Hub</a>
+                        <a href="forum.php" class="btn btn-warning btn-lg btn-block">OnAid Forum</a>
+                        <a href="hub.php" class="btn btn-secondary btn-lg btn-block">OnAid Hub</a>
                         <br><br><br>
                         <a href="create-topic.php" class="btn btn-warning btn-lg btn-block">Create a Forum</a>
                         <a href="create-blog.php" class="btn btn-secondary btn-lg btn-block">Create a Blog</a>

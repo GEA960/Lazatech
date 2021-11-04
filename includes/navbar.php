@@ -11,7 +11,7 @@
             
             <ul class="navbar-nav ml-auto mr-1">
             <li class="nav-item px-3">
-                    <a class="nav-link" href="Search/index.php">
+                    <a class="nav-link" href="1index.php">
                         <i class="fa fa-search fa-2x" aria-hidden="true"></i>
                     </a>
             </li> 

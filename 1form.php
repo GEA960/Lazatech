@@ -4,7 +4,7 @@
 			<h3>System search data from DB more than 1 Column</h3>
 			 *Try searching for Best code editor, code, tools, presentations. 
 			<br />
-			<form action="index.php" method="get" class="form-horizontal">
+			<form action="1index.php" method="get" class="form-horizontal">
 				<div class="form-group row">
 					<div class="col-sm-5">
 						<input type="text" name="q" class="form-control"  required>

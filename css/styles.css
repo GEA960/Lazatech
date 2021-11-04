@@ -37,7 +37,7 @@ h1 {
 /* [Login page] cover */
 
 #cover {
-    background: #222 url('../img/cover2.png') center center no-repeat;
+    background: #222 url('../img/background.png') center center no-repeat;
     background-size: cover;
     color: white;
     height: 100%;
@@ -48,7 +48,7 @@ h1 {
 
 
 #signup {
-    background: url('../img/cover2.png') center center no-repeat;
+    background: url('../img/background.png') center center no-repeat;
     background-size: cover; 
     background-attachment: fixed;
     width: 100%;

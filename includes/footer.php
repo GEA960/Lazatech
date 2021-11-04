@@ -34,7 +34,7 @@
              
                 <div class="col-sm-3">
                     <div class="social-networks">
-                        <a href="             " 
+                        <a href="https://github.com/GEA960/OnAid.git" 
                            class="twitter"><i class="fa fa-github fa-2x"></i></a>
                     </div>
                     <a class="btn btn-default" href="contact.php">Contact us</a>

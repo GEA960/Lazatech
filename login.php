@@ -26,7 +26,7 @@
             <div class="container">
                 <div class="col-sm-10 offset-sm-1">
                     <img src='img/200px.png'>
-                    <h5 class="text-white">Spreading Ideas</h5>
+                    <h5 style="color:black;">Spreading Ideas</h5>
                     <br>
                     <?php
                     
