@@ -1,64 +1,45 @@
 <?php
+
 session_start();
-if (isset($_POST['create-topic']))
+
+if (isset($_GET['id']) && isset($_SESSION['userId']))
 {
     
     require 'dbh.inc.php';
     
-    $topicSubject = $_POST['topic-subject'];
-    $topicCategory = $_POST['topic-cat'];
-    $postContent = $_POST['post-content'];
+    $topic = $_GET['id'];
     
-    if (empty($topicSubject) || empty($postContent))
+    if(isset($_GET['page']))
     {
-        header("Location: ../create-topic.php?error=emptyfields");
+        $page = $_GET['page'];
+    }
+    else
+    {
+        $page = 'poll';
+    }
+    
+    $sql = "delete from polls where id = ?";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql))
+    {
+        header("Location: ../".$page.".php?error=sqlerror");
         exit();
     }
     else
     {
-        $sql = "insert into topics(topic_subject, topic_date, topic_cat, topic_by) "
-                . "values (?,now(),?,?)";
-        $stmt = mysqli_stmt_init($conn);
-        if (!mysqli_stmt_prepare($stmt, $sql))
-        {
-            header("Location: ../create-topic.php?error=sqlerror");
-            exit();
-        }
-        else
-        {
-            mysqli_stmt_bind_param($stmt, "sss", $topicSubject, $topicCategory, $_SESSION['userId']);
-            mysqli_stmt_execute($stmt);
-            mysqli_stmt_store_result($stmt);
-            
-            $topicid = mysqli_insert_id($conn);
-            
-            $sql = "insert into posts(post_content, post_date, post_topic, post_by) "
-                    . "values (?,now(),?,?)";
-            $stmt = mysqli_stmt_init($conn);
-            
-            if (!mysqli_stmt_prepare($stmt, $sql))
-            {
-                header("Location: ../create-topic.php?error=sqlerror");
-                exit();
-            }
-            else
-            {
-                mysqli_stmt_bind_param($stmt, "sss", $postContent, $topicid, $_SESSION['userId']);
-                mysqli_stmt_execute($stmt);
-                mysqli_stmt_store_result($stmt);
-                
-                header("Location: ../create-topic.php?operation=success");
-            }
-        }
+        mysqli_stmt_bind_param($stmt, "s", $topic);
+        mysqli_stmt_execute($stmt);
+        header("Location: ../".$page.".php");
+        exit();
     }
+    
     
     mysqli_stmt_close($stmt);
     mysqli_close($conn);
     
 }
-
 else
 {
-    header("Location: ../index.php");
+    header("Location: ../".$page.".php");
     exit();
 }
