@@ -1,7 +1,7 @@
 <?php
 
 
-if (isset($_POST['add-event-submit']))
+if (isset($_POST['add-event-submit']) && ($_SESSION['userLevel'] == 1 ))
 {
     
     require 'dbh.inc.php';
