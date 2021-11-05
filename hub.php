@@ -149,8 +149,11 @@
         ?>
         
         <small class="d-block text-right mt-3">
-            <a href="create-event.php" class="btn btn-primary">Create An Event</a>
-            <a href="events.php" class="btn btn-primary">All Events</a>
+
+        <?php if ($_SESSION['userLevel'] == 1 ) {
+             echo '<a href="create-event.php" class="btn btn-primary">Create An Event</a>'; } ?>
+              
+        <a href="events.php" class="btn btn-primary">All Events</a>
         </small>
         
       </div>
