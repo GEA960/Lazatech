@@ -1,29 +1,56 @@
 <?php
-
 session_start();
-
-if (isset($_GET['pollid']) && isset($_SESSION['userId']) && ($_SESSION['userLevel'] == 1))
+if (isset($_POST['create-topic']))
 {
     
     require 'dbh.inc.php';
     
-    $poll = $_GET['pollid'];
+    $topicSubject = $_POST['topic-subject'];
+    $topicCategory = $_POST['topic-cat'];
+    $postContent = $_POST['post-content'];
     
-    $sql = "delete from polls where id=?";
-    $stmt = mysqli_stmt_init($conn);
-    if (!mysqli_stmt_prepare($stmt, $sql))
+    if (empty($topicSubject) || empty($postContent))
     {
-        header("Location: ../poll-view.php?error=sqlerror");
+        header("Location: ../create-topic.php?error=emptyfields");
         exit();
     }
     else
     {
-        mysqli_stmt_bind_param($stmt, "s", $poll);
-        mysqli_stmt_execute($stmt);
-        header("Location: ../poll-view.php");
-        exit();
+        $sql = "insert into topics(topic_subject, topic_date, topic_cat, topic_by) "
+                . "values (?,now(),?,?)";
+        $stmt = mysqli_stmt_init($conn);
+        if (!mysqli_stmt_prepare($stmt, $sql))
+        {
+            header("Location: ../create-topic.php?error=sqlerror");
+            exit();
+        }
+        else
+        {
+            mysqli_stmt_bind_param($stmt, "sss", $topicSubject, $topicCategory, $_SESSION['userId']);
+            mysqli_stmt_execute($stmt);
+            mysqli_stmt_store_result($stmt);
+            
+            $topicid = mysqli_insert_id($conn);
+            
+            $sql = "insert into posts(post_content, post_date, post_topic, post_by) "
+                    . "values (?,now(),?,?)";
+            $stmt = mysqli_stmt_init($conn);
+            
+            if (!mysqli_stmt_prepare($stmt, $sql))
+            {
+                header("Location: ../create-topic.php?error=sqlerror");
+                exit();
+            }
+            else
+            {
+                mysqli_stmt_bind_param($stmt, "sss", $postContent, $topicid, $_SESSION['userId']);
+                mysqli_stmt_execute($stmt);
+                mysqli_stmt_store_result($stmt);
+                
+                header("Location: ../create-topic.php?operation=success");
+            }
+        }
     }
-    
     
     mysqli_stmt_close($stmt);
     mysqli_close($conn);
@@ -32,6 +59,6 @@ if (isset($_GET['pollid']) && isset($_SESSION['userId']) && ($_SESSION['userLeve
 
 else
 {
-    header("Location: ../poll-view.php");
+    header("Location: ../index.php");
     exit();
 }
