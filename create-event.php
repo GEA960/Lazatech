@@ -117,7 +117,7 @@
         
         
                             <script>
-                                var dp = 'img/event-cover.png';
+                                var dp = 'img/event_cover.png';
                                 
                                 $('#blah').attr('src', dp);
                                 
