@@ -18,7 +18,7 @@ if (isset($_GET['id']) && isset($_SESSION['userId']))
         $page = 'users';
     }
     
-    $sql = "delete from users where idUsers = ?";
+    $sql = "delete from users where idUsers = ? AND userLevel = 0";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql))
     {
