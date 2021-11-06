@@ -68,10 +68,23 @@
                                       <span class="text-right text-primary">
                                           <a href="message.php?id='.$row['idUsers'].'" >
                                               <i class="fa fa-comments-o fa-2x" aria-hidden="true"></i>
+                                              
                                           </a>
                                       </span>
                                   </div>';
-                          }
+                                  
+                                  if ($_SESSION['userLevel'] == 1)
+                                  {
+                                      echo '<a href="includes/delete-user.php?id='.$row['idUsers'].'&page=users" >
+                                              <i class="fa fa-trash" aria-hidden="true" style="color: red;"></i>
+                                            </a>
+                                          </span>';
+                                  }
+                                  else
+                                  {
+                                      echo '</span>';
+                                  }
+                          }  
                      }
                   ?>
 
