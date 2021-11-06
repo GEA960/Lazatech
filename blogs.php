@@ -72,8 +72,12 @@
                                   </div>';
                         }
                     }
-                ?>        
-          
+                ?>      
+                  
+           <?php if ($_SESSION['userLevel'] == 1 ) {
+           echo '<small class="d-block text-right mt-3">
+                <a href="create-blog.php" class="btn btn-primary">Create a Blog</a>
+                '; } ?>
           
       </div>
             
