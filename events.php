@@ -90,10 +90,10 @@
                 }
            }
         ?>
-        
-            <small class="d-block text-right mt-3">
-                <a href="create-event.php" class="btn btn-primary">Create an Event</a>
-            </small>
+        <?php if ($_SESSION['userLevel'] == 1 ) {
+          echo '<small class="d-block text-right mt-3">
+              <a href="create-event.php" class="btn btn-primary">Create an Event</a>
+            </small> '; } ?>
         
         
       </div>
