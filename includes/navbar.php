@@ -48,11 +48,11 @@
                     <a class="dropdown-item" href="contact.php">Contact Us</a>
                   </div>
                 </li>
-                <li class="nav-item px-3">
+               <!-- <li class="nav-item px-3">
                     <a class="nav-link" href="https://github.com/GEA960/OnAid.git">                                         
                     <i class="fa fa-github fa-2x" aria-hidden="true"></i>
                     </a>
-                </li>
+                </li> -->
                 <li class="nav-item px-3">
                   <a class="nav-link" href="includes/logout.inc.php">
                       <i class="fa fa-sign-out fa-2x" aria-hidden="true"></i>
