@@ -198,7 +198,7 @@
                               <span class="text-muted">Created By'.ucwords($row['uidUsers']).'</span><br>
                                   <span class="text-primary">'.$row['voters'].' user(s) voted</span>
                             </p>
-                            </div>';
+                            <span class="text-primary text-right">';
                             
                             if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['event_by'])
                             {
@@ -212,6 +212,8 @@
                                 echo '</span>';
                             }
                     echo '';
+                    echo '</span>
+                    </div>';
                 }
            }
         ?>
