@@ -73,7 +73,7 @@
                                       </span>
                                   </div>';
                                   
-                                  if ($_SESSION['userLevel'] == 1)
+                                  if ($_SESSION['userLevel'] == 1 AND $row['userLevel'] == 0 )
                                   {
                                       echo '<a href="includes/delete-user.php?id='.$row['idUsers'].'&page=users" >
                                               <i class="fa fa-trash" aria-hidden="true" style="color: red;"></i>

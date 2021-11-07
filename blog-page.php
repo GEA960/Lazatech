@@ -105,17 +105,19 @@
                     </script>
                     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
                     <div>
-                <h3 class="page-header">With count</h3>
+                    <div>
+                <h3 class="page-header">Share this blog!</h3>
 
-                <div class="ssk-group ssk-lg ssk-count">
+                <div class="ssk-group ssk-xs">
                     <a href="" class="ssk ssk-facebook"></a>
                     <a href="" class="ssk ssk-twitter"></a>
                     <a href="" class="ssk ssk-google-plus"></a>
                     <a href="" class="ssk ssk-pinterest"></a>
-                    <a href="" class="ssk ssk-vk"></a>
+                    <a href="" class="ssk ssk-tumblr"></a>
                     <a href="" class="ssk ssk-linkedin"></a>
-                    <a href="" class="ssk ssk-buffer"></a>
-                </div> 
+                    <a href="" class="ssk ssk-vk"></a>
+                    <a href="" class="ssk ssk-email"></a>
+                </div>
                    </div>
                   
               </div>
