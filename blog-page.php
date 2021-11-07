@@ -34,7 +34,10 @@
               <?php include 'includes/profile-card.php'; ?>
               
           </div>
-            
+         <!-- Social Share Kit CSS -->
+<link rel="stylesheet" href="../social-share-kit/dist/css/social-share-kit.css" type="text/css">
+         <!-- Social Share Kit JS -->
+<script type="text/javascript" src="../social-share-kit/dist/js/social-share-kit.js"></script>
             
           <div class="col-sm-9" id="user-section">
               
@@ -101,7 +104,19 @@
                          })();
                     </script>
                     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                    </div>
+                    <div>
+                <h3 class="page-header">With count</h3>
+
+                <div class="ssk-group ssk-lg ssk-count">
+                    <a href="" class="ssk ssk-facebook"></a>
+                    <a href="" class="ssk ssk-twitter"></a>
+                    <a href="" class="ssk ssk-google-plus"></a>
+                    <a href="" class="ssk ssk-pinterest"></a>
+                    <a href="" class="ssk ssk-vk"></a>
+                    <a href="" class="ssk ssk-linkedin"></a>
+                    <a href="" class="ssk ssk-buffer"></a>
+                </div> 
+                   </div>
                   
               </div>
               
@@ -114,7 +129,15 @@
 
       </div> <!-- /container -->
 
-
+      <script type="text/javascript">
+        SocialShareKit.init();
+      </script>
+      <script type="text/javascript">
+      SocialShareKit.init({ forceInit: true });
+      </script>
+      <script type="text/javascript">
+      SocialShareKit.init({ reinitialize: true });
+      </script>
 <?php include 'includes/footer.php'; ?>
 
 
