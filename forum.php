@@ -165,7 +165,9 @@
         ?>
         
         <small class="d-block text-right mt-3">
-            <a href="create-topic.php" class="btn btn-primary">Create A Forum</a>
+        <?php if ($_SESSION['userLevel'] == 1) {
+            echo '<a href="create-topic.php" class="btn btn-primary">Create A Forum</a>';  } 
+        ?>
             <a href="topics.php" class="btn btn-primary">All Forums</a>
         </small>
         
