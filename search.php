@@ -78,7 +78,7 @@ function php_search_all_database($search_keyword,$table_ass_array){
 					}	// table data count close
 					echo "</ul>";
 
-				}	//foreach close
+				echo ""; }	//foreach close
 
 				echo $table." Searching End's Here<hr>";
 
