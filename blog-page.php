@@ -85,7 +85,10 @@
                       </h3>
                       <br>
                       <p class="text-muted">Author: <?php echo ucwords($row['uidUsers']); ?></p>
+                    
+                    <!--Disquss script-->
                     <div id="disqus_thread"></div>
+                    
                     <script>
                      /**
                     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -104,8 +107,10 @@
                          })();
                     </script>
                     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                    <div>
-                    <div>
+                    </div> 
+
+
+                        <!--Social Share script-->
                 <h3 class="page-header">Share this blog!</h3>
 
                 <div class="ssk-group ssk-xs">
@@ -117,7 +122,7 @@
                     <a href="" class="ssk ssk-linkedin"></a>
                     <a href="" class="ssk ssk-vk"></a>
                     <a href="" class="ssk ssk-email"></a>
-                </div>
+              
                    </div>
                   
               </div>
@@ -140,8 +145,6 @@
       <script type="text/javascript">
       SocialShareKit.init({ reinitialize: true });
       </script>
+      
 <?php include 'includes/footer.php'; ?>
-
-
-
-<?php include 'includes/HTML-footer.php'; ?>
+<?php include 'includes/HTML-footer.php'; ?> 
