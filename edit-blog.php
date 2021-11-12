@@ -3,7 +3,7 @@
     session_start();
     require 'includes/dbh.inc.php';
     
-    define('TITLE',"Blog | OnAid");
+    define('TITLE',"Edit-Blog | OnAid");
     
     if(!isset($_SESSION['userId']))
     {
@@ -69,12 +69,23 @@
               
               <div class="px-5">
                   
-                  <br><br><br>
-                  <h1><?php echo ucwords($row['blog_title']) ?></h1>
+                  <br><br><br>  
+                <label for="headline">Blog Title</label>
+                <input class="form-control" type="text" id="headline" name="title" 
+                placeholder="Your Profile Headline" value='<?php echo $row['blog_title']; ?>'><br>
                   <br><br><br>
                   
-                  <p class="text-justify"><?php echo $row['blog_content'] ?></p>
                   
+                  <label for="edit-bio">Blog Content</label>
+                        <textarea class="form-control" id="edit-bio" rows="10" name="bio" maxlength="5000"
+                            placeholder="Edit Blog Content" 
+                            ><?php echo $row['blog_content']; ?></textarea>
+
+
+
+
+
+
                   <div class="blog-likes pr-1 pt-5">
                       
                       <h3>
@@ -85,44 +96,8 @@
                       </h3>
                       <br>
                       <p class="text-muted">Author: <?php echo ucwords($row['uidUsers']); ?></p>
-                    
-                    <!--Disquss script-->
                     <div id="disqus_thread"></div>
-                    
-                    <script>
-                     /**
-                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-                    /*
-                    var disqus_config = function () {
-                    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-                    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                    };
-                    */
-                    (function() { // DON'T EDIT BELOW THIS LINE
-                        var d = document, s = d.createElement('script');
-                        s.src = 'https://onaid.disqus.com/embed.js';
-                        s.setAttribute('data-timestamp', +new Date());
-                        (d.head || d.body).appendChild(s);
-                         })();
-                    </script>
-                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                    </div> 
-
-
-                        <!--Social Share script-->
-                <h3 class="page-header">Share this blog!</h3>
-
-                <div class="ssk-group ssk-xs">
-                    <a href="" class="ssk ssk-facebook"></a>
-                    <a href="" class="ssk ssk-twitter"></a>
-                    <a href="" class="ssk ssk-google-plus"></a>
-                    <a href="" class="ssk ssk-pinterest"></a>
-                    <a href="" class="ssk ssk-tumblr"></a>
-                    <a href="" class="ssk ssk-linkedin"></a>
-                    <a href="" class="ssk ssk-vk"></a>
-                    <a href="" class="ssk ssk-email"></a>
-              
+                  
                    </div>
                   
               </div>
@@ -136,15 +111,9 @@
 
       </div> <!-- /container -->
 
-      <script type="text/javascript">
-        SocialShareKit.init();
-      </script>
-      <script type="text/javascript">
-      SocialShareKit.init({ forceInit: true });
-      </script>
-      <script type="text/javascript">
-      SocialShareKit.init({ reinitialize: true });
-      </script>
-      
+     
 <?php include 'includes/footer.php'; ?>
-<?php include 'includes/HTML-footer.php'; ?> 
+
+
+
+<?php include 'includes/HTML-footer.php'; ?>
