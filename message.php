@@ -16,6 +16,9 @@
 
 
         <link href="css/inbox.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="emoji-picker/lib/css/emoji.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
     
     <body>
@@ -170,18 +173,24 @@
                         <input type="hidden" id="user_to" value="<?php echo base64_encode($user_two); ?>">
 
                         <textarea id="message" type="text" class="write_msg form-control-plaintext" style="background-color: white;" 
-                                  placeholder="Type a message"></textarea>
-
+                                  placeholder="Type a message" data-emojiable="true"></textarea>
+                               
                         <button id="reply" class="msg_send_btn" 
                                 type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+                                
                     </div>
                 </div>
               </div>
             </div>
         </div>
     </div>
-            
- 
+    <!-- ** Don't forget to Add jQuery here ** -->
+
+    <script src="emoji-picker/lib/js/config.js"></script>
+    <script src="emoji-picker/lib/js/util.js"></script>
+    <script src="emoji-picker/lib/js/jquery.emojiarea.js"></script>
+    <script src="emoji-picker/lib/js/emoji-picker.js"></script>        
+    
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
