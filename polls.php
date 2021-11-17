@@ -61,7 +61,7 @@
                     
                     echo '<a href="poll.php?poll='.$row['id'].'">
                         <div class="media text-muted pt-3">
-                            <img src="img/poll-cover.png" alt="" class="mr-2 rounded div-img poll-img">
+                            <img src="img/poll_cover.png" alt="" class="mr-2 rounded div-img poll-img">
                             <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray ">
                               <strong class="d-block text-gray-dark">'.ucwords($row['subject']).'</strong></a>
                                   '.date("F jS, Y", strtotime($row['created'])).'
