@@ -1,3 +1,11 @@
+<?php
+error_reporting(0);
+$pref_value= $_GET ['pref_value'];
+
+
+if($_GET['pref_value'] == 'forum'){
+
+    echo '
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -10,8 +18,8 @@
                        
                         
                     </tr>
-                </thead>
-                <?php 
+                </thead>';
+                
                 echo '<font color="red">';   
                 echo 'Keyword(s) = ';
                 echo $_GET['q'];
@@ -23,30 +31,30 @@
                 $result = mysqli_query($con, $sql);
                 while($row = mysqli_fetch_assoc($result)) {
                                     
-                ?>
                 
-                <tr>
-                    <td><?php echo $row['post_content'];?></td> 
-                    <td> <a href= "http://onaid/posts.php?topic=<?php echo $row['post_topic'];?>"><Center> <Button>LINK</Button> </Center></a> </td> 
-                </tr>
-            <?php } ?>
-            </table>
-        <?php mysqli_close($con);     ?>    
-    </div>
+                
+                echo '<tr>';
+            echo '<td>'; echo $row['post_content']; echo '</td>'; 
+            echo '<td> <a href= "http://onaid/posts.php?topic=';  echo $row['post_topic']; echo'"><Center> <Button>LINK</Button> </Center></a> </td>'; 
+            echo '</tr>';
+             } 
+             echo ' </table>';
+        mysqli_close($con);  
+        echo '</div>
 </div>
-</div>
+</div>';
 
              
-                
+             }      
 
 
 
 
 
 
-<!--
+if($_GET['pref_value'] == 'blog'){
 
-
+    echo '
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -54,130 +62,244 @@
                 
                 <thead>
                     <tr class="table-primary">
-                        <th width="20%">Blog_Title</th>
-                        <th width="50%">Blog_Content</th>
-                        <th width="30%">Link</th>
+                    <th width="20%">Blog_Title</th>
+                    <th width="50%">Blog_Content</th>
+                    <th width="30%">Link</th>
                        
                         
                     </tr>
-                </thead>
-                <?php /*
+                </thead>';
+                
                 echo '<font color="red">';   
                 echo 'Keyword(s) = ';
                 echo $_GET['q'];
                 echo '</font>';
                 echo '<br/>';             
                 $sql = "SELECT * FROM blogs
-                    WHERE blog_title LIKE '%$q%' OR blog_content LIKE '%$q%'
-                 ORDER BY blog_id DESC";
+                WHERE blog_title LIKE '%$q%' OR blog_content LIKE '%$q%'
+                ORDER BY blog_id DESC";
                 $result = mysqli_query($con, $sql);
                 while($row = mysqli_fetch_assoc($result)) {
                                     
-                ?>
                 
-                <tr>
-                    <td><?php echo $row['blog_title'];?></td>
-                    <td><?php echo $row['blog_content'];?></td>
-                    <td>http://onaid/blog-page.php?id=<?php echo $row['blog_id'];?></td>
-                </tr>
-            <?php } ?>
-            </table>
-        <?php mysqli_close($con);  */ ?>
-    </div>
+                
+                echo '<tr>';
+            echo '<td>'; echo $row['blog_title']; echo '</td>'; 
+            echo '<td>'; echo $row['blog_content']; echo '</td>'; 
+            echo '<td> <a href= "http://onaid/blog-page.php?id=';  echo $row['blog_id']; echo'"><Center> <Button>LINK</Button> </Center></a> </td>'; 
+            echo '</tr>';
+             } 
+             echo ' </table>';
+        mysqli_close($con);  
+        echo '</div>
 </div>
-</div>
-                -->
-            
+</div>';
+
+             
+             } 
+             
 
 
-<!--
 
-    <div class="container">
+             
+
+if($_GET['pref_value'] == 'blog'){
+
+    echo '
+<div class="container">
     <div class="row">
         <div class="col-md-12">
             <table  class="table table-striped" border="1" cellpadding="0"  cellspacing="0" align="center">
                 
                 <thead>
                     <tr class="table-primary">
-                        <th width="20%">Poll Subject</th>
-                        <th width="50%">Poll Description</th>
-                        <th width="30%">Link</th>
+                    <th width="20%">Blog_Title</th>
+                    <th width="50%">Blog_Content</th>
+                    <th width="30%">Link</th>
                        
                         
                     </tr>
-                </thead>
-                <?php     /*
+                </thead>';
+                
                 echo '<font color="red">';   
                 echo 'Keyword(s) = ';
                 echo $_GET['q'];
                 echo '</font>';
                 echo '<br/>';             
-                $sql = "SELECT * FROM polls
-                    WHERE 'subject' LIKE '%$q%' OR poll_desc LIKE '%$q%'
-                 ORDER BY id DESC";
+                $sql = "SELECT * FROM blogs
+                WHERE blog_title LIKE '%$q%' OR blog_content LIKE '%$q%'
+                ORDER BY blog_id DESC";
                 $result = mysqli_query($con, $sql);
                 while($row = mysqli_fetch_assoc($result)) {
                                     
-                ?>
                 
-                <tr>
-                    <td><?php echo $row['subject'];?></td>
-                    <td><?php echo $row['poll_desc'];?></td>
-                    <td>http://onaid/poll.php?poll=<?php echo $row['id'];?></td> 
-                </tr>
-            <?php } ?>
-            </table>
-        <?php mysqli_close($con); */  ?>
-    </div>
+                
+                echo '<tr>';
+            echo '<td>'; echo $row['blog_title']; echo '</td>'; 
+            echo '<td>'; echo $row['blog_content']; echo '</td>'; 
+            echo '<td> <a href= "http://onaid/blog-page.php?id=';  echo $row['blog_id']; echo'"><Center> <Button>LINK</Button> </Center></a> </td>'; 
+            echo '</tr>';
+             } 
+             echo ' </table>';
+        mysqli_close($con);  
+        echo '</div>
 </div>
-</div>               
-                -->
-            
+</div>';
 
+             
+             } if($_GET['pref_value'] == 'blog'){
 
-
-
-<!--
-    <div class="container">
+    echo '
+<div class="container">
     <div class="row">
         <div class="col-md-12">
             <table  class="table table-striped" border="1" cellpadding="0"  cellspacing="0" align="center">
                 
                 <thead>
                     <tr class="table-primary">
-                        <th width="20%">Event Title</th>
-                        <th width="50%">Event Headline</th>
-                        <th width="30%">Event Description</th>
-                        <th width="30%">Link</th>
+                    <th width="20%">Blog_Title</th>
+                    <th width="50%">Blog_Content</th>
+                    <th width="30%">Link</th>
                        
                         
                     </tr>
-                </thead>
-                <?php     /*
+                </thead>';
+                
                 echo '<font color="red">';   
                 echo 'Keyword(s) = ';
                 echo $_GET['q'];
                 echo '</font>';
                 echo '<br/>';             
-                $sql = "SELECT * FROM event_info
-                    WHERE title LIKE '%$q%' OR headline LIKE '%$q%' OR 'description' LIKE '%$q%'
-                 ORDER BY event_id DESC";
+                $sql = "SELECT * FROM blogs
+                WHERE blog_title LIKE '%$q%' OR blog_content LIKE '%$q%'
+                ORDER BY blog_id DESC";
                 $result = mysqli_query($con, $sql);
                 while($row = mysqli_fetch_assoc($result)) {
                                     
-                ?>
                 
-                <tr>
-                    <td><?php echo $row['title'];?></td>
-                    <td><?php echo $row['headline'];?></td>
-                    <td><?php echo $row['description'];?></td>
-                    <td>http://onaid/event-page.php?id=<?php echo $row['event_id'];?></td>
-                </tr>
-            <?php } ?>
-            </table>
-        <?php mysqli_close($con); */ ?>
-    </div>
+                
+                echo '<tr>';
+            echo '<td>'; echo $row['blog_title']; echo '</td>'; 
+            echo '<td>'; echo $row['blog_content']; echo '</td>'; 
+            echo '<td> <a href= "http://onaid/blog-page.php?id=';  echo $row['blog_id']; echo'"><Center> <Button>LINK</Button> </Center></a> </td>'; 
+            echo '</tr>';
+             } 
+             echo ' </table>';
+        mysqli_close($con);  
+        echo '</div>
 </div>
-</div>               
+</div>';
 
-                -->        
+             
+             }              
+             
+             
+             
+             
+
+             
+
+if($_GET['pref_value'] == 'poll'){
+
+           echo '<div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <table  class="table table-striped" border="1" cellpadding="0"  cellspacing="0" align="center">
+                            
+                      <thead>
+                      <th width="20%">Poll Subject</th>
+                      <th width="50%">Poll Description</th>
+                            <th width="30%">Link</th>
+                                   
+                                    
+                      </tr>
+                      </thead>';
+                            
+                            echo '<font color="red">';   
+                            echo 'Keyword(s) = ';
+                            echo $_GET['q'];
+                            echo '</font>';
+                            echo '<br/>';             
+                            $sql = "SELECT * FROM polls
+                            WHERE 'subject' LIKE '%$q%' OR poll_desc LIKE '%$q%'
+                            ORDER BY id DESC";
+                            $result = mysqli_query($con, $sql);
+                            while($row = mysqli_fetch_assoc($result)) {
+                                                
+                            
+                            
+                            echo '<tr>';
+                        echo '<td>'; echo $row['subject']; echo '</td>'; 
+                        echo '<td>'; echo $row['poll_desc']; echo '</td>'; 
+                        echo '<td> <a href= "http://onaid/poll.php?poll=';  echo $row['id']; echo'"><Center> <Button>LINK</Button> </Center></a> </td>'; 
+                        echo '</tr>';
+                         } 
+                         echo ' </table>';
+                    mysqli_close($con);  
+                    echo '</div>
+            </div>
+            </div>';
+            
+                         
+                         }             
+                         
+                         
+
+                         
+
+                    
+
+                        
+                         
+                         
+if($_GET['pref_value'] == 'event'){
+                         
+                  echo '
+                  <div class="container">
+                  <div class="row">
+                  <div class="col-md-12">
+                  <table  class="table table-striped" border="1" cellpadding="0"  cellspacing="0" align="center">
+                                         
+                  <thead>
+                  <tr class="table-primary">
+                  <th width="20%">Event Title</th>
+                  <th width="50%">Event Headline</th>
+                  <th width="30%">Event Description</th>
+                  <th width="30%">Link</th>
+                                                 
+                  </tr>
+                  </thead>';
+                                         
+                  echo '<font color="red">';   
+                  echo 'Keyword(s) = ';
+                  echo $_GET['q'];
+                  echo '</font>';
+                  echo '<br/>';             
+                  $sql = "SELECT * FROM event_info
+                  WHERE title LIKE '%$q%' OR headline LIKE '%$q%' OR 'description' LIKE '%$q%'
+                  ORDER BY event_id DESC";
+                  $result = mysqli_query($con, $sql);
+                  while($row = mysqli_fetch_assoc($result)) {
+                                                             
+                                         
+                                         
+                  echo '<tr>';
+                  echo '<td>'; echo $row['title']; echo '</td>'; 
+                  echo '<td>'; echo $row['headline']; echo '</td>'; 
+                  echo '<td>'; echo $row['description']; echo '</td>'; 
+                  echo '<td> <a href= "http://onaid/event-page.php?id=';  echo $row['event_id']; echo'"><Center> <Button>LINK</Button> </Center></a> </td>'; 
+                  echo '</tr>';
+                                      } 
+                  echo ' </table>';
+                  mysqli_close($con);  
+                  echo '</div>
+                  </div>
+                  </div>';
+                         
+                                      
+                                      }      
+                  ?>       
+
+            
+
+
