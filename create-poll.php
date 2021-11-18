@@ -98,7 +98,7 @@
 					</div>
                                         
                                         <div class="text-center">
-                                        <br><br><a class="btn btn-light btn-lg btn-block" href="poll-view.php">
+                                        <br><br><a class="btn btn-light btn-lg btn-block" href="polls.php">
                                             View Polls</a>
                                         </div>
                                         
