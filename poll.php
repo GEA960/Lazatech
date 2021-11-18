@@ -177,7 +177,7 @@
                             <br><br>
                             <a href="./poll-voters.php?poll=<?php echo $_GET['poll']; ?>" 
                                class="btn btn-secondary">View All Votes</a> 
-                            <a href="./poll-view.php" class="btn btn-secondary">View All Polls</a>
+                            <a href="./polls.php" class="btn btn-secondary">View All Polls</a>
                             
                             <?php
                                 }
