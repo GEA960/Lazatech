@@ -1,7 +1,3 @@
-
-
-
-
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -10,12 +6,12 @@
                 <thead>
                     <tr class="table-primary">
                         <th width="50%">Forum</th>
-                        <th width="30%">Link</th>
+                        <th width="30%">Link(Copy and paste this link to your URL)</th>
                        
                         
                     </tr>
                 </thead>
-                <?php    
+                <?php 
                 echo '<font color="red">';   
                 echo 'Keyword(s) = ';
                 echo $_GET['q'];
@@ -31,6 +27,7 @@
                 
                 <tr>
                     <td><?php echo $row['post_content'];?></td> 
+                    <td> <a href= "http://onaid/posts.php?topic=<?php echo $row['post_topic'];?>"><Center> <Button>LINK</Button> </Center></a> </td> 
                 </tr>
             <?php } ?>
             </table>
@@ -40,8 +37,7 @@
 </div>
 
              
-
-
+                
 
 
 
@@ -49,6 +45,7 @@
 
 
 <!--
+
 
 <div class="container">
     <div class="row">
@@ -81,20 +78,20 @@
                 <tr>
                     <td><?php echo $row['blog_title'];?></td>
                     <td><?php echo $row['blog_content'];?></td>
-                    <td>   </td> 
+                    <td>http://onaid/blog-page.php?id=<?php echo $row['blog_id'];?></td>
                 </tr>
             <?php } ?>
             </table>
-        <?php mysqli_close($con);   */?>
+        <?php mysqli_close($con);  */ ?>
     </div>
 </div>
 </div>
-
                 -->
-
+            
 
 
 <!--
+
     <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -126,16 +123,16 @@
                 <tr>
                     <td><?php echo $row['subject'];?></td>
                     <td><?php echo $row['poll_desc'];?></td>
-                    <td>   </td> 
+                    <td>http://onaid/poll.php?poll=<?php echo $row['id'];?></td> 
                 </tr>
             <?php } ?>
             </table>
-        <?php mysqli_close($con);  */  ?>
+        <?php mysqli_close($con); */  ?>
     </div>
 </div>
 </div>               
-
                 -->
+            
 
 
 
@@ -173,8 +170,8 @@
                 <tr>
                     <td><?php echo $row['title'];?></td>
                     <td><?php echo $row['headline'];?></td>
-                    <td><?php echo $row['headline'];?></td>
-                    <td>   </td> 
+                    <td><?php echo $row['description'];?></td>
+                    <td>http://onaid/event-page.php?id=<?php echo $row['event_id'];?></td>
                 </tr>
             <?php } ?>
             </table>
@@ -183,4 +180,4 @@
 </div>
 </div>               
 
-                -->
+                -->        
