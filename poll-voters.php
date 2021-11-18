@@ -39,7 +39,7 @@
           <div class="col-sm-9" id="user-section">
               
               
-              <img class="event-cover" src="img/pollpage-cover.png">
+              <img class="event-cover" src="img/pollpage_cover.png">
               
               
               <div class="px-5 my-5">
