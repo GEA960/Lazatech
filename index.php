@@ -188,10 +188,10 @@
                                                                 <i class="fa fa-thumbs-up" aria-hidden="true"></i> '.$row['blog_votes'].'
                                                             </strong>
                                                             <h6 class="mb-0">
-                                                              <a class="text-dark" href="blog-page.php?id='.$row['blog_id'].'">'.substr($row['blog_title'],0,10).'...</a>
+                                                              <a class="text-dark" href="blog-page.php?id='.$row['blog_id'].'">'.substr($row['blog_title'],0,40).'...</a>
                                                             </h6>
                                                             <small class="mb-1 text-muted">'.date("F jS, Y", strtotime($row['blog_date'])).'</small>
-                                                            <small class="card-text mb-auto">'.substr($row['blog_content'],0,40).'...</small>
+                                                            <small class="card-text mb-auto">'.substr($row['blog_title'],0,100).'...</small>
                                                             <a href="blog-page.php?id='.$row['blog_id'].'">Continue reading</a>
                                                           </div>
                                                           <a href="blog-page.php?id='.$row['blog_id'].'">
