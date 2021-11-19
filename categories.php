@@ -61,7 +61,7 @@
                     
                     echo '<a href="topics.php?cat='.$row['cat_id'].'">
                         <div class="media text-muted pt-3">
-                            <img src="img/forum-cover.png" alt="" class="mr-2 rounded div-img ">
+                            <img src="img/forum_cover.png" alt="" class="mr-2 rounded div-img ">
                             <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray ">
                               <strong class="d-block text-gray-dark">'.ucwords($row['cat_name']).'</strong></a>
                                   <br>'.$row['cat_description'].'
