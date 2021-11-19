@@ -191,8 +191,8 @@ if($_GET['pref_value'] == 'event'){
                                          
                   echo '<tr>';
                   echo '<td>'; echo $row['title']; echo '</td>'; 
-                  echo '<td>'; echo $row['headline']; echo '</td>'; 
-                  echo '<td>'; echo $row['description']; echo '</td>'; 
+                  echo '<td>'; echo $row['headline']; echo '</td>';
+                  echo '<td>'; echo substr($row['description'],0,100); echo '...</td>'; 
                   echo '<td> <a href= "http://onaid/event-page.php?id=';  echo $row['event_id']; echo'"><Center> <Button>LINK</Button> </Center></a> </td>'; 
                   echo '</tr>';
                                       } 
