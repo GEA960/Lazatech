@@ -64,6 +64,9 @@
                 ?>
               
               <img class="blog-cover" src="uploads/<?php echo $row['blog_img']; ?>">
+              <a href="edit-blog.php">
+                        <i class="fa fa-pencil fa-2x edit-blog" aria-hidden="true"></i>
+              </a>
               
               <img class="blog-author" src="uploads/<?php echo $row['userImg']; ?>">
               
