@@ -63,7 +63,7 @@ if($_GET['pref_value'] == 'blog'){
                 <thead>
                     <tr class="table-primary">
                     <th width="20%">Blog_Title</th>
-                    <th width="50%">Blog_Content</th>
+                    
                     <th width="30%">Link</th>
                        
                         
@@ -84,8 +84,7 @@ if($_GET['pref_value'] == 'blog'){
                 
                 
                 echo '<tr>';
-            echo '<td>'; echo $row['blog_title']; echo '</td>'; 
-            echo '<td>'; echo substr($row['blog_content'],0,100); echo '...</td>'; 
+            echo '<td>'; echo $row['blog_title']; echo '...</td>'; 
             echo '<td> <a href= "http://onaid/blog-page.php?id=';  echo $row['blog_id']; echo'"><Center> <Button>LINK</Button> </Center></a> </td>'; 
             echo '</tr>';
              } 
