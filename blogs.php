@@ -36,7 +36,7 @@
       <div class="row mb-2">
           
                 <?php
-                    $sql = "select * from Blogs, users 
+                    $sql = "select * from blogs, users 
                             where blogs.blog_by = users.idUsers";
                     $stmt = mysqli_stmt_init($conn);    
 
