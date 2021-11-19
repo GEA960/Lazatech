@@ -64,7 +64,10 @@
                 ?>
               
               <img class="blog-cover" src="uploads/<?php echo $row['blog_img']; ?>">
-              
+              <label class="btn btn-primary">
+                        Change Blog Image <input type="file" id="imgInp" name='bc' hidden>
+                    </label>
+                    
               <img class="blog-author" src="uploads/<?php echo $row['userImg']; ?>">
               
               <div class="px-5">
