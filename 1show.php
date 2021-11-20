@@ -14,7 +14,7 @@ if($_GET['pref_value'] == 'forum'){
                 <thead>
                     <tr class="table-primary">
                         <th width="50%">Forum</th>
-                        <th width="30%">Link(Copy and paste this link to your URL)</th>
+                        <th width="30%">Link(Click this button to view page)</th>
                        
                         
                     </tr>
@@ -64,7 +64,7 @@ if($_GET['pref_value'] == 'blog'){
                     <tr class="table-primary">
                     <th width="20%">Blog_Title</th>
                     
-                    <th width="30%">Link</th>
+                    <th width="30%">Link(Click this button to view page)</th>
                        
                         
                     </tr>
@@ -114,7 +114,7 @@ if($_GET['pref_value'] == 'poll'){
                       <thead>
                       <th width="20%">Poll Subject</th>
                       <th width="50%">Poll Description</th>
-                            <th width="30%">Link</th>
+                            <th width="30%">Link(Click this button to view page)</th>
                                    
                                     
                       </tr>
@@ -170,7 +170,7 @@ if($_GET['pref_value'] == 'event'){
                   <th width="20%">Event Title</th>
                   <th width="50%">Event Headline</th>
                   <th width="30%">Event Description</th>
-                  <th width="30%">Link</th>
+                  <th width="30%">Link(Click this button to view page)</th>
                                                  
                   </tr>
                   </thead>';
