@@ -34,11 +34,7 @@
               <?php include 'includes/profile-card.php'; ?>
               
           </div>
-         <!-- Social Share Kit CSS -->
-<link rel="stylesheet" href="../social-share-kit/dist/css/social-share-kit.css" type="text/css">
-         <!-- Social Share Kit JS -->
-<script type="text/javascript" src="../social-share-kit/dist/js/social-share-kit.js"></script>
-            
+       
           <div class="col-sm-9" id="user-section">
               
                 <?php
@@ -62,12 +58,21 @@
                         $row = mysqli_fetch_assoc($result);
                     }
                 ?>
-              
-              <img class="blog-cover" src="uploads/<?php echo $row['blog_img']; ?>">
+           
+           <form action="includes/BlogUpdate.inc.php" method='post' enctype="multipart/form-data"
+                    style="padding: 0 30px 0 30px;">
+
               <label class="btn btn-primary">
                         Change Blog Image <input type="file" id="imgInp" name='bc' hidden>
-                    </label>
-                    
+              </label>
+              <img class="blog-cover" id="blah" name='bc' src="uploads/<?php echo $row['blog_img']; ?>">
+
+              
+          
+
+
+
+
               <img class="blog-author" src="uploads/<?php echo $row['userImg']; ?>">
               
               <div class="px-5">
@@ -75,28 +80,21 @@
                   <br><br><br>  
                 <label for="headline">Blog Title</label>
                 <input class="form-control" type="text" id="headline" name="title" 
-                placeholder="Your Profile Headline" value='<?php echo $row['blog_title']; ?>'><br>
+                placeholder="Your Blog Title" value='<?php echo $row['blog_title']; ?>'><br>
                   <br><br><br>
                   
                   
                   <label for="edit-bio">Blog Content</label>
-                        <textarea class="form-control" id="edit-bio" rows="10" name="bio" maxlength="5000"
+                        <textarea class="form-control" id="edit-content" rows="10" name="content" maxlength="5000"
                             placeholder="Edit Blog Content" 
                             ><?php echo $row['blog_content']; ?></textarea>
 
 
 
-
-
-
-                  <div class="blog-likes pr-1 pt-5">
+                 <br><input type="submit" class="btn btn-primary" name="update-blog" value="Update blog">
+                  
+                  </form>
                       
-                      <h3>
-                            <a href="includes/blog-vote.inc.php?blog=<?php echo $row['blog_id']; ?>" >
-                                <i class="fa fa-thumbs-up fa-2x" aria-hidden="true"></i>
-                            </a>  
-                            <?php echo $row['blog_votes']; ?>
-                      </h3>
                       <br>
                       <p class="text-muted">Author: <?php echo ucwords($row['uidUsers']); ?></p>
                     <div id="disqus_thread"></div>
