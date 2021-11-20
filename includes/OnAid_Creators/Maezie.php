@@ -123,7 +123,7 @@
 						<div class="panel-area margin-b-30">
 							<h5 class="panel-title active"><b>Web Development</b>
 								<i class="icon minus ion-minus"></i><i class="icon plus ion-plus"></i></h5>
-                                                                <p class="panel-desc">Web Development : I have specialized in advanced front/backend features of PHP, JS and little knowledge in Python and C++.<br><br> </p>
+                                                                <p class="panel-desc">I have specialized in advanced front/backend features of PHP, JS and little knowledge in Python and C++.<br><br> </p>
 						</div><!-- panel-area -->
 						
 						<div class="panel-area margin-b-30">
