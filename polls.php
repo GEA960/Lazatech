@@ -74,7 +74,7 @@
                     
                     if ($_SESSION['userLevel'] == 1)
                     {
-                        echo '<a href="includes/delete-poll.inc.php?pollid='.$row['id'].'" >
+                        echo '<a href="includes/delete-poll.php?id='.$row['id'].'" >
                                 <i class="fa fa-trash fa-2x" aria-hidden="true" style="color: red;"></i>
                               </a>';
                     }
