@@ -61,9 +61,20 @@
                                         </strong>
                                         <h3 class="mb-0">
                                           <a class="text-dark" href="blog-page.php?id='.$row['blog_id'].'">'.substr($row['blog_title'],0,10).'...</a>
-                                        </h3>
+                                        </h3> 
                                         <div class="mb-1 text-muted">'.date("F jS, Y", strtotime($row['blog_date'])).'</div>
                                         <p class="card-text mb-auto">'.substr($row['blog_title'],0,70).'...</p>
+                                        <div>';
+                                        
+                                        if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['blog_by'])
+                                        {
+                                            echo '<a href="includes/delete-blog.php?id='.$row['blog_id'].'&page=blogs" >
+                                                    <i class="fa fa-trash" aria-hidden="true" style="color: red;"></i>
+                                                  </a>
+                                                </span>';
+                                        }
+
+                                      echo  '</div>
                                         <a href="blog-page.php?id='.$row['blog_id'].'">Continue reading</a>
                                       </div>
                                       <img class="card-img-right flex-auto d-none d-lg-block bloglist-cover" 
