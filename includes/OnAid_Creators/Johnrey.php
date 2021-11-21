@@ -1,25 +1,24 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-	<title>KLiK Creator</title>
+	<title>OnAid Creator</title>
         
-	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
         
-	<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet"> 
+	<link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet"> 
         
-	<link href="../css/creator-styles.css" rel="stylesheet">
+	<link href="/css/creator-styles.css" rel="stylesheet">
 	
-	<link href="../css/creator-responsive.css" rel="stylesheet">
+	<link href="/css/creator-responsive.css" rel="stylesheet">
         
-        <link href="../css/creator-portfolio.min.css" rel="stylesheet">
+        <link href="/css/creator-portfolio.min.css" rel="stylesheet">
         
-        <link href="../css/footer.css" rel="stylesheet">
+        <link href="/css/footer.css" rel="stylesheet">
         
-        <link rel="shortcut icon" href="../img/favicon.png" />
+        <link rel="shortcut icon" href="/img/favicon.png" />
 	
 </head>
 <body>
-    
 	
 	<header>
 		<div class="container">
@@ -29,8 +28,8 @@
 						<div class="info">
 							<i class="icon ion-ios-location-outline"></i>
 							<div class="right-area">
-								<h5>NUST</h5>
-								<h5>BESE 8A - SEECS</h5>
+								<h5>Information Technology</h5>
+								<h5>BSIT-Business Analytics</h5>
 							</div><!-- right-area -->
 						</div><!-- info -->
 					</div><!-- col-sm-4 -->
@@ -39,8 +38,8 @@
 						<div class="info">
 							<i class="icon ion-ios-telephone-outline"></i>
 							<div class="right-area">
-								<h5>337-4139538</h5>
-                                                                <h6>Official Phone Number</h6>
+								<h5>0965-681-7124</h5>
+                                                                <h6>Business Number</h6>
 							</div><!-- right-area -->
 						</div><!-- info -->
 					</div><!-- col-sm-4 -->
@@ -49,7 +48,7 @@
 						<div class="info">
 							<i class="icon ion-ios-chatboxes-outline"></i>
 							<div class="right-area">
-								<h5>mullah.bese17seecs@seecs.edu.pk</h5>
+								<h5>casabalmaezie@gmail.com</h5>
 								<h6>Official Email</h6>
 							</div><!-- right-area -->
 						</div><!-- info -->
@@ -60,25 +59,27 @@
 		</div><!-- container -->
 	</header>
 	
-    <section class="intro-section" style="background-image: url(img/ubaid-cover.jpg);">
+    <section class="intro-section" style="background-image: url(/img/Lee-ann-cover.jpg);">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-1 col-lg-2"></div>
 				<div class="col-md-10 col-lg-8">
 					<div class="intro">
-                                            <div class="profile-img"><img src="img/ubaid.JPG" alt=""></div>
-                                            <h2><b>Muhammad Ubaid Asim</b></h2><br>
+                                            <div class="profile-img"><img src="/img/Maezie.jpg" alt=""></div>
+                                            <h2><b>Maezie Casabal</b></h2><br>
                                             
-                                            <h4 class="font-yellow">Freelance Graphic Designer</h4>
-                                                <b class="text-muted">(All rounder)</b>
+                                            <h4 class="font-yellow">Never give up because great things take time</h4>
+                                                
                                                 
                                             <br><br>
 						<ul class="social-icons">
-							<li><a href="https://github.com/UbaidAsim">
-                                                                <i class="fa fa-github"></i></a></li>
-							<li><a href="https://web.facebook.com/ubaid.asim7">
-                                                                <i class="fa fa-linkedin"></i></a></li>
-							<li><a href="https://www.linkedin.com/in/muhammadubaidullahasim/">
+
+							<li><a href="https://twitter.com/_maezieeeeee" target="_blank">
+                                                                <i class="fa fa-twitter"></i></a></li>
+																
+							<li><a href="https://www.instagram.com/_maezieeeee/?hl=en" target="_blank">
+                                                                <i class="fa fa-instagram"></i></a></li>
+							<li><a href="https://web.facebook.com/maezie.casabal.1" target="_blank">
                                                                 <i class="fa fa-facebook"></i></a></li>
 						</ul>
 					</div><!-- intro -->
@@ -100,42 +101,41 @@
 				
 				<div class="col-md-12 col-lg-6">
 				
-					<div class="line-progress margin-b-20" data-prog-percent=".90"><div></div>
-                                            <p class="progress-title"><b>Brand Strategizing</b></p></div><br>
+					<div class="line-progress margin-b-20" data-prog-percent=".80"><div></div>
+                                            <p class="progress-title"><b>Programming</b></p></div><br>
+					
+					<div class="line-progress margin-b-20" data-prog-percent=".75"><div></div>
+                                            <p class="progress-title"><b>Technical Writing</b></p></div><br>
+
+					<div class="line-progress margin-b-20" data-prog-percent=".75"><div></div>
+                                            <p class="progress-title"><b>Academic Writing</b></p></div><br>
 					
 					<div class="line-progress margin-b-20" data-prog-percent=".70"><div></div>
-                                            <p class="progress-title"><b>Graphic Designing</b></p></div><br>
-
-					<div class="line-progress margin-b-20" data-prog-percent=".50"><div></div>
-                                            <p class="progress-title"><b>Android Development</b></p></div><br>
-					
-					<div class="line-progress margin-b-50" data-prog-percent=".70"><div></div>
-                                            <p class="progress-title"><b>Social Media Marketing</b></p></div><br>
+                                            <p class="progress-title"><b>Reading Books</b></p></div><br>
+                    
+					<div class="line-progress margin-b-20" data-prog-percent=".70"><div></div>
+                                            <p class="progress-title"><b>Algorithms</b></p></div><br>
 
 				</div><!-- col-sm-6 -->
 				
 				<div class="col-md-12 col-lg-6">
 					<div class="panel margin-b-30">
 						<div class="panel-area margin-b-30">
-							<h5 class="panel-title active"><b>Testing People's Patience</b>
+							<h5 class="panel-title active"><b>Web Development</b>
 								<i class="icon minus ion-minus"></i><i class="icon plus ion-plus"></i></h5>
-							<p class="panel-desc">No explanation needed. I irritate people (its fun,
-                                                             go try it out).</p>
+                                                                <p class="panel-desc">Web Development : I have specialized in advanced front/backend features of PHP, JS and little knowledge in Python and C++.<br><br> </p>
 						</div><!-- panel-area -->
 						
 						<div class="panel-area margin-b-30">
-							<h5 class="panel-title"><b>Web Development</b>
+							<h5 class="panel-title"><b>           </b>
 								<i class="icon minus ion-minus"></i><i class="icon plus ion-plus"></i></h5>
-							<p class="panel-desc">I have specialized in advanced front/backend features
-                                                        of WordPress, as well as PHP, JS, JQuery, MYSQLI</p>
+							<p class="panel-desc">              </p>
 						</div><!-- panel-area -->
 						
 						<div class="panel-area margin-b-30">
-							<h5 class="panel-title"><b>Software Development</b>
+							<h5 class="panel-title"><b></b>
 								<i class="icon minus ion-minus"></i><i class="icon plus ion-plus"></i></h5>
-							<p class="panel-desc">Currently an aspiring software engineering student,
-                                                        with improved skills in web development and an interest in endorsing into 
-                                                        ML and AI later on</p>
+							<p class="panel-desc">     </p>
 						</div><!-- panel-area -->
 					</div><!-- panel -->
 				</div><!-- col-sm-6-->
@@ -157,18 +157,9 @@
 				</div><!-- col-sm-12 -->
 				<div class="col-sm-6 col-md-6 col-lg-3">
 					<div class="radial-prog-area margin-b-30">
-						<div class="radial-progress" data-prog-percent="1.00">
+						<div class="radial-progress" data-prog-percent=".80">
 							<div></div>
-							<h6 class="progress-title">Sneak</h6>
-						</div>
-					</div><!-- radial-prog-area-->
-				</div><!-- col-sm-6-->
-				
-				<div class="col-sm-6 col-md-6 col-lg-3">
-					<div class="radial-prog-area margin-b-30">
-						<div class="radial-progress" data-prog-percent=".50">
-							<div></div>
-							<h6 class="progress-title">Speech</h6>
+							<h6 class="progress-title">Good Joker</h6>
 						</div>
 					</div><!-- radial-prog-area-->
 				</div><!-- col-sm-6-->
@@ -177,16 +168,25 @@
 					<div class="radial-prog-area margin-b-30">
 						<div class="radial-progress" data-prog-percent=".80">
 							<div></div>
-							<h6 class="progress-title">Destruction</h6>
+							<h6 class="progress-title">Adaptability</h6>
+						</div>
+					</div><!-- radial-prog-area-->
+				</div><!-- col-sm-6-->
+				
+				<div class="col-sm-6 col-md-6 col-lg-3">
+					<div class="radial-prog-area margin-b-30">
+						<div class="radial-progress" data-prog-percent=".85">
+							<div></div>
+							<h6 class="progress-title">Earnest Learning</h6>
 						</div>
 					</div><!-- radial-prog-area-->
 				</div><!-- col-sm-6-->
 				
 				<div class="col-sm-6 col-md-6 col-lg-3">
 					<div class="radial-prog-area margin-b-50">
-						<div class="radial-progress" data-prog-percent=".97">
+						<div class="radial-progress" data-prog-percent=".80">
 							<div></div>
-                                                        <h6 class="progress-title">Responsible</h6>
+                                                        <h6 class="progress-title">Independency</h6>
 						</div>
 					</div><!-- radial-prog-area-->
 				</div><!-- col-sm-6-->
@@ -198,7 +198,7 @@
         
         
         
-        <!-- Portfolio -->
+        <!-- Portfolio 
         <section class="content-section" id="portfolio">
           <div class="container">
             <div class="content-section-heading text-center">
@@ -207,43 +207,44 @@
             </div>
             <div class="row no-gutters">
               <div class="col-lg-6">
-                <a class="portfolio-item" href="https://www.nimun.com.pk">
+                <a class="portfolio-item" href="             " target="_blank">
                   <span class="caption">
                     <span class="caption-content">
                       <h2>NIMUN'19</h2>
-                      <p class="mb-0 text-white">Director of Team Graphics</p>
+                      <p class="mb-0 text-white">Official website for the NUST International Model<br>
+                      United Nations (NIMUN'19)</p>
                     </span>
                   </span>
-                  <img class="img-fluid" src="img/nimun2.png" alt="">
-                </a>
-              </div>
-              <div class="col-lg-6">
-                <a class="portfolio-item" href="https://github.com/msaad1999/LOST--Java-2D-Game">
-                  <span class="caption">
-                    <span class="caption-content">
-                      <h2>LOST</h2>
-                      <p class="mb-0 text-white">Java powered indie 2D Game</p>
-                    </span>
-                  </span>
-                  <img class="img-fluid" src="img/LOST.png" alt="">
+                  <img class="img-fluid" src="img/nimun.png" alt="">
                 </a>
               </div>
               <div class="col-lg-6">
                 <a class="portfolio-item" href="">
                   <span class="caption">
                     <span class="caption-content">
-                      <h2>Snake and Ladders</h2>
-                      <p class="mb-0 text-white">A Python based 2D Game</p>
+                      <h2>Image Processor</h2>
+                      <p class="mb-0 text-white">Advanced unsupervised Machine Learning</p>
                     </span>
                   </span>
-                  <img class="img-fluid" src="img/snake.png" alt="https://github.com/UbaidAsim/Snakes-N-Ladders">
+                    <img class="img-fluid" src="img/img-process.jpg" alt="">
                 </a>
               </div>
               <div class="col-lg-6">
-                <a class="portfolio-item" href="https://github.com/msaad1999/KLiK--PHP-coded-Social-Media-Website">
+                <a class="portfolio-item" href="                                   " target="_blank">
                   <span class="caption">
                     <span class="caption-content">
-                      <h2>klIk</h2>
+                      <h2>Electronic Sandbox</h2>
+                      <p class="mb-0 text-white">A Java based Trainer Board Simulation</p>
+                    </span>
+                  </span>
+                  <img class="img-fluid" src="img/dld.jpg" alt="">
+                </a>
+              </div>
+              <div class="col-lg-6">
+                <a class="portfolio-item" href="                            ">
+                  <span class="caption">
+                    <span class="caption-content">
+                      <h2>KLiK</h2>
                       <p class="mb-0 text-white">A hand-coded PHP Social Media Website</p>
                     </span>
                   </span>
@@ -253,23 +254,72 @@
             </div>
           </div>
         </section>
+        -->
+
+		
+     
 	
-	
-	
-	
-	<?php include 'assets/footer.php'; ?>
+		
+
+		<!--My footer for all developer's page"-->
+<br><br><br><br>
+<footer id="myFooter" class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h2 class="logo"><a href="index.php"><img src='/img/200px.png'></a></h2>
+                </div>
+                <div class="col-sm-2">
+                    <h5>Get started</h5>
+                    <ul>
+                        <li><a href="/index.php">Home</a></li> <div></div>
+                        <li><a href="/team.php">The Team</a></li>
+                        <li><a href="/forum.php">The OnAid Forum</a></li>
+                        <li><a href="/hub.php">The OnAid Hub</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>About us</h5>
+                    <ul>
+                        <li><a href="https://gea960.github.io/GEA-Portfolio-Website/">Gabriel Edrian Alvaro</a></li>
+                        <li><a href="Lee-ann.php">Lee Ann Joy Natanauan</a></li>
+                        <li><a href="Maezie.php">Maezie Landicho Casabal</a></li>
+                        <li><a href="Marjorie.php">Marjori Javier</a></li> <br>
+                        <li><a href="Johnrey.php">Jhonrey Manalo</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="/contact.php">Contact Us</a></li>
+                    </ul>
+                </div>
+             
+                <div class="col-sm-3">
+                    <div class="social-networks">
+                        <a href="             " 
+                           class="twitter"><i class="fa fa-github fa-2x"></i></a>
+                    </div>
+                    <a class="btn btn-default" href="/contact.php">Contact us</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All Rights Reserved </p>
+        </div>
+    </footer>
 	
         
 	
-	<script src="../js/jquery.min.js"></script>
+	<script src="/js/jquery.min.js"></script>
 	
-	<script src="../js/bootstrap.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
 	
-	<script src="../js/jquery.waypoints.min.js"></script>
+	<script src="/js/jquery.waypoints.min.js"></script>
 	
-	<script src="../js/progressbar.min.js"></script>
+	<script src="/js/progressbar.min.js"></script>
 	
-	<script src="../js/scripts.js"></script>
+	<script src="/js/scripts.js"></script>
 	
 </body>
 </html>

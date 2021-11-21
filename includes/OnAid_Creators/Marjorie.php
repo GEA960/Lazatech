@@ -66,13 +66,14 @@
 				<div class="col-md-10 col-lg-8">
 					<div class="intro">
                                             <div class="profile-img"><img src="/img/Marjorie.jpg" alt=""></div>
-                                            <h2><b>Marjori Javier</b></h2><br>
+                                            <h2><b>Maezie Casabal</b></h2><br>
                                             
                                             <h4 class="font-yellow">You’re stronger than you think</h4>
                                                 
                                                 
                                             <br><br>
 						<ul class="social-icons">
+
 
 							<li><a href="https://www.facebook.com/mrj.jvr03" target="_blank">
                                                                 <i class="fa fa-facebook"></i></a></li>
@@ -106,10 +107,10 @@
                                             <p class="progress-title"><b>Academic Writing</b></p></div><br>
 					
 					<div class="line-progress margin-b-20" data-prog-percent=".85"><div></div>
-                                            <p class="progress-title"><b>Reading Books</b></p></div><br>
+                                            <p class="progress-title"><b>Analyzation</b></p></div><br>
                     
 					<div class="line-progress margin-b-20" data-prog-percent=".85"><div></div>
-                                            <p class="progress-title"><b>Algorithms</b></p></div><br>
+                                            <p class="progress-title"><b>Logical Thinking</b></p></div><br>
 
 				</div><!-- col-sm-6 -->
 				
@@ -185,7 +186,7 @@
 						</div>
 					</div><!-- radial-prog-area-->
 				</div><!-- col-sm-6-->
-
+				
 				<div class="col-sm-6 col-md-6 col-lg-3">
 					<div class="radial-prog-area margin-b-50">
 						<div class="radial-progress" data-prog-percent=".80">
