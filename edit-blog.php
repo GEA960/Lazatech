@@ -1,5 +1,5 @@
 <?php
-
+    error_reporting (E_ALL);
     session_start();
     require 'includes/dbh.inc.php';
     
@@ -57,41 +57,37 @@
 
                         $row = mysqli_fetch_assoc($result);
                     }
+                    
                 ?>
            
-           <form action="includes/BlogUpdate.inc.php" method='post' enctype="multipart/form-data"
+           <form action="BlogInsert.php" method='POST'
                     style="padding: 0 30px 0 30px;">
-
-              <label class="btn btn-primary">
-                        Change Blog Image <input type="file" id="imgInp" name='bc' hidden>
-              </label>
-              <img class="blog-cover" id="blah" name='bc' src="uploads/<?php echo $row['blog_img']; ?>">
-
+               
+               <img class="blog-author" src="uploads/<?php echo $row['userImg']; ?>">
               
-          
-
-
-
-
-              <img class="blog-author" src="uploads/<?php echo $row['userImg']; ?>">
-              
-              <div class="px-5">
+               <div class="px-5">
                   
+               <br><br><br>  
+               <label for="headline">Blog ID</label>
+               <input class="form-control" type="text" id="blog_id" name="blog_id" 
+                    placeholder="Your Blog Title" value='<?php echo $row['blog_id']; ?>'>
+             
+
                   <br><br><br>  
-                <label for="headline">Blog Title</label>
-                <input class="form-control" type="text" id="headline" name="title" 
-                placeholder="Your Blog Title" value='<?php echo $row['blog_title']; ?>'><br>
+               <label for="headline">Blog Title</label>
+               <input class="form-control" type="text" id="blog_title" name="blog_title" 
+                    placeholder="Your Blog Title" value='<?php echo $row['blog_title']; ?>'><br>
                   <br><br><br>
                   
                   
                   <label for="edit-bio">Blog Content</label>
-                        <textarea class="form-control" id="edit-content" rows="10" name="content" maxlength="5000"
+                        <textarea class="form-control" id="blog_content" rows="10" name="blog_content" maxlength="5000"
                             placeholder="Edit Blog Content" 
                             ><?php echo $row['blog_content']; ?></textarea>
 
 
 
-                 <br><input type="submit" class="btn btn-primary" name="update-blog" value="Update blog">
+                 <br><input type="submit" class="btn btn-primary" name="update" value="UPDATE DATA">
                   
                   </form>
                       

@@ -38,6 +38,7 @@
          height: 100%;
      }
    </style>
+   
     </head>
     <body>
 
@@ -89,6 +90,7 @@
               <div class="px-5">
                   
                   <br><br><br>
+                  
                   <h1><?php echo ucwords($row['blog_title']) ?></h1>
                   <br><br><br>
                   
