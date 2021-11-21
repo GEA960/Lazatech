@@ -63,7 +63,7 @@
                                           <a class="text-dark" href="blog-page.php?id='.$row['blog_id'].'">'.substr($row['blog_title'],0,10).'...</a>
                                         </h3>
                                         <div class="mb-1 text-muted">'.date("F jS, Y", strtotime($row['blog_date'])).'</div>
-                                        <p class="card-text mb-auto">'.substr($row['blog_content'],0,70).'...</p>
+                                        <p class="card-text mb-auto">'.substr($row['blog_title'],0,70).'...</p>
                                         <a href="blog-page.php?id='.$row['blog_id'].'">Continue reading</a>
                                       </div>
                                       <img class="card-img-right flex-auto d-none d-lg-block bloglist-cover" 
