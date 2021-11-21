@@ -76,7 +76,7 @@
                     
                     if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['event_by'])
                     {
-                        echo '<a href="includes/delete-event.php?id='.$row['event_id'].'&page=forum" >
+                        echo '<a href="includes/delete-event.php?id='.$row['event_id'].'&page=events" >
                                 <i class="fa fa-trash" aria-hidden="true" style="color: red;"></i>
                               </a>
                             </span>';
