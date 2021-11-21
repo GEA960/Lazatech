@@ -61,7 +61,7 @@
                             <img src="uploads/'.$row['blog_img'].'" alt="" class="mr-2 rounded div-img ">
                             <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray ">
                               <strong class="d-block text-gray-dark">'.ucwords($row['blog_title']).'</strong></a>
-                                  <br>'.substr($row['blog_content'],0,50).'...
+                                  <br>'.substr($row['blog_title'],0,50).'...
                             </p>
                             <span class="text-right text-primary"><i class="fa fa-thumbs-up" aria-hidden="true"></i>
                                 '.$row['blog_votes'].'<br>';
