@@ -95,9 +95,16 @@
                     ?>
 
                     <img class="blog-cover" src="uploads/<?php echo $row['event_image']; ?>">
-                   
-                    <a href="http://onaid/edit-event.php?id= <?php echo $row['event_id'] ?>">
-                    <i class="fa fa-pencil fa-2x edit-event" aria-hidden="true"></i>
+                    <?php
+
+                    if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['event_by'])
+                            {
+                    echo '<a href="edit-event.php?id= '.$row['event_id'].' ">
+                    <i class="fa fa-pencil fa-2x edit-event" aria-hidden="true"></i>';
+                            }
+                    ?>
+
+   
                     </a>
                     <img class="blog-author" src="uploads/<?php echo $row['userImg']; ?>">
 
