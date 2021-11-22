@@ -77,13 +77,16 @@
 
                         $row = mysqli_fetch_assoc($result);
                     }
+                    
                 ?>
               
               <img class="blog-cover" src="uploads/<?php echo $row['blog_img']; ?>">
+              
 
               <a href="http://onaid/edit-blog.php?id= <?php echo $row['blog_id'] ?>">
                 <i class="fa fa-pencil fa-2x edit-blog" aria-hidden="true"></i>
               </a>
+              
               
               <img class="blog-author" src="uploads/<?php echo $row['userImg']; ?>">
               
@@ -106,7 +109,16 @@
                       </h3>
                       <br>
                       <p class="text-muted">Author: <?php echo ucwords($row['uidUsers']); ?></p>
-                    
+                      <?php
+              if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['blog_by'])
+                      {
+                      echo '<a href="includes/delete-blog.php?id='.$row['blog_id'].'&page=blogs" >
+                      <i class="fa fa-trash" aria-hidden="true" style="color: red;"></i>
+                      </a>
+                      </span>';
+                      }
+
+                      ?>
                     <!--Disquss script-->
                     <div id="disqus_thread"></div>
                     

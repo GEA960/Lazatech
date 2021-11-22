@@ -55,12 +55,19 @@
                       <form action="" method="post" name="pollFrm">
         
                         <h1><?php echo $pollData['poll']['subject']; ?></h1>
+                        <?php
+                        if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['event_by'])
+                                {
+                                    echo '<a href="includes/delete-poll.php?id='.$row['id'].'&page=poll" >
+                                            <i class="fa fa-trash" aria-hidden="true" style="color: red;"></i>
+                                          </a>
+                                        </span>';
+                                }    
+                        ?>
                         <br>
                         <p class="text-muted"><?php echo $pollData['poll']['poll_desc']; ?></p>
                         <br><br>
-                        
-                            
-                        
+
                             <div class="funkyradio">
                             
                         
@@ -97,7 +104,9 @@
                                 $voted = $row['poll_option_id']; 
 
                        
-                        
+                                        
+
+                               
                                 foreach($pollData['options'] as $opt){
                                     
                                     //echo '<input type="radio" name="voteOpt" id="option'.$opt['id'].'" '
@@ -172,8 +181,10 @@
                                         }
                                         echo '</div>';
                                     }
-                            ?>
                             
+                            ?>
+                                                        
+
                             <br><br>
                             <a href="./poll-voters.php?poll=<?php echo $_GET['poll']; ?>" 
                                class="btn btn-secondary">View All Votes</a> 

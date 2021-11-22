@@ -95,7 +95,10 @@
                     ?>
 
                     <img class="blog-cover" src="uploads/<?php echo $row['event_image']; ?>">
-
+                   
+                    <a href="http://onaid/edit-event.php?id= <?php echo $row['event_id'] ?>">
+                    <i class="fa fa-pencil fa-2x edit-event" aria-hidden="true"></i>
+                    </a>
                     <img class="blog-author" src="uploads/<?php echo $row['userImg']; ?>">
 
                     <div class="px-5">
@@ -115,13 +118,27 @@
                             <br><br><br>
 
                             <p class="text-justify"><?php echo $row['description'] ?></p>
-
+                             
                             <br><br>
+                            
                             <p class="text-muted text-left">Organized By: <?php echo ucwords($row['uidUsers']); ?></p>
+                            
 
                         </div>
+                        <?php
+
+                            if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['event_by'])
+                            {
+                                echo '<a href="includes/delete-event.php?id='.$row['event_id'].'&page=events" >
+                                        <i class="fa fa-trash" aria-hidden="true" style="color: red;"></i>
+                                      </a>
+                                    </span>';
+                            }
+                            ?>
                     </div>
+                    
                 </div>
+                
             </div>
         </div> 
 
