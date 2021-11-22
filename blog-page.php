@@ -81,13 +81,15 @@
                 ?>
               
               <img class="blog-cover" src="uploads/<?php echo $row['blog_img']; ?>">
-              
-
-              <a href="http://onaid/edit-blog.php?id= <?php echo $row['blog_id'] ?>">
+    <?php          
+   
+   if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['blog_by'])
+             { echo '<a href="edit-blog.php?id= '.$row['blog_id'].' ">
                 <i class="fa fa-pencil fa-2x edit-blog" aria-hidden="true"></i>
-              </a>
+              </a>';
               
-              
+             }
+             ?>
               <img class="blog-author" src="uploads/<?php echo $row['userImg']; ?>">
               
               <div class="px-5">

@@ -215,10 +215,20 @@
                                             <a href="profile.php?id='.$row['idUsers'].'">
                                                 <i class="fa fa-user fa-2x" aria-hidden="true"></i></a>
                                             <a href="message.php?id='.$row['idUsers'].'">
-                                                <i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>
-                                        </div>
+                                                <i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>';
+                                        
+                                       if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['post_by'])
+                                                {     
+                                                    echo '<a href="Edit-forum.php?id= '.$row['post_id'].' ">
+                                                    <i class="fa fa-pencil fa-2x edit-blog" aria-hidden="true"></i>
+                                                  </a>';
+                                                }    
+                                                
+                                                
+                                     echo   '</div>
                                     </div>
-
+                                      
+              
                                     <div class="col-sm-9 post-content">
                                         <p>'.$row['post_content'].'</p>
                                             <div class="vote text-center">';
