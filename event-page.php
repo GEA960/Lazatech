@@ -98,12 +98,11 @@
                     <?php
 
                     if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['event_by'])
-                            {
+                    {
                     echo '<a href="edit-event.php?id= '.$row['event_id'].' ">
                     <i class="fa fa-pencil fa-2x edit-event" aria-hidden="true"></i>';
-                            }
-                    ?>
-
+                    }
+                     ?>
    
                     </a>
                     <img class="blog-author" src="uploads/<?php echo $row['userImg']; ?>">
@@ -113,6 +112,8 @@
 
                             <br><br><br>
                             <h1><?php echo ucwords($row['title']) ?></h1>
+                           
+
                             <br>
                             <h6 class="text-muted"><?php echo ucwords($row['e_headline']) ?></h6>
                             <br><br><br>
