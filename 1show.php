@@ -35,7 +35,7 @@ if($_GET['pref_value'] == 'forum'){
                 
                 echo '<tr>';
             echo '<td>'; echo $row['post_content']; echo '</td>'; 
-            echo '<td> <a href= "http://onaid/posts.php?topic=';  echo $row['post_topic']; echo'"><Center> <Button>LINK</Button> </Center></a> </td>'; 
+            echo '<td> <a href= "posts.php?topic=';  echo $row['post_topic']; echo'"><Center> <Button>LINK</Button> </Center></a> </td>'; 
             echo '</tr>';
              } 
              echo ' </table>';
@@ -85,7 +85,7 @@ if($_GET['pref_value'] == 'blog'){
                 
                 echo '<tr>';
             echo '<td>'; echo $row['blog_title']; echo '...</td>'; 
-            echo '<td> <a href= "http://onaid/blog-page.php?id=';  echo $row['blog_id']; echo'"><Center> <Button>LINK</Button> </Center></a> </td>'; 
+            echo '<td> <a href= "blog-page.php?id=';  echo $row['blog_id']; echo'"><Center> <Button>LINK</Button> </Center></a> </td>'; 
             echo '</tr>';
              } 
              echo ' </table>';
@@ -136,7 +136,7 @@ if($_GET['pref_value'] == 'poll'){
                             echo '<tr>';
                         echo '<td>'; echo $row['subject']; echo '</td>'; 
                         echo '<td>'; echo $row['poll_desc']; echo '</td>'; 
-                        echo '<td> <a href= "http://onaid/poll.php?poll=';  echo $row['id']; echo'"><Center> <Button>LINK</Button> </Center></a> </td>'; 
+                        echo '<td> <a href= "poll.php?poll=';  echo $row['id']; echo'"><Center> <Button>LINK</Button> </Center></a> </td>'; 
                         echo '</tr>';
                          } 
                          echo ' </table>';
@@ -169,7 +169,6 @@ if($_GET['pref_value'] == 'event'){
                   <tr class="table-primary">
                   <th width="20%">Event Title</th>
                   <th width="50%">Event Headline</th>
-                  <th width="30%">Event Description</th>
                   <th width="30%">Link(Click this button to view page)</th>
                                                  
                   </tr>
@@ -191,8 +190,7 @@ if($_GET['pref_value'] == 'event'){
                   echo '<tr>';
                   echo '<td>'; echo $row['title']; echo '</td>'; 
                   echo '<td>'; echo $row['headline']; echo '</td>';
-                  echo '<td>'; echo substr($row['description'],0,100); echo '...</td>'; 
-                  echo '<td> <a href= "http://onaid/event-page.php?id=';  echo $row['event_id']; echo'"><Center> <Button>LINK</Button> </Center></a> </td>'; 
+                  echo '<td> <a href= "event-page.php?id=';  echo $row['event_id']; echo'"><Center> <Button>LINK</Button> </Center></a> </td>'; 
                   echo '</tr>';
                                       } 
                   echo ' </table>';
