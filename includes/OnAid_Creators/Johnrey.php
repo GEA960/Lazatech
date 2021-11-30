@@ -38,7 +38,7 @@
 						<div class="info">
 							<i class="icon ion-ios-telephone-outline"></i>
 							<div class="right-area">
-								<h5>0965-681-7124</h5>
+								<h5>0906-403-1902</h5>
                                                                 <h6>Business Number</h6>
 							</div><!-- right-area -->
 						</div><!-- info -->
@@ -48,7 +48,7 @@
 						<div class="info">
 							<i class="icon ion-ios-chatboxes-outline"></i>
 							<div class="right-area">
-								<h5>casabalmaezie@gmail.com</h5>
+								<h5>manalojohnrey9@gmail.com</h5>
 								<h6>Official Email</h6>
 							</div><!-- right-area -->
 						</div><!-- info -->
@@ -65,21 +65,18 @@
 				<div class="col-md-1 col-lg-2"></div>
 				<div class="col-md-10 col-lg-8">
 					<div class="intro">
-                                            <div class="profile-img"><img src="/img/Maezie.jpg" alt=""></div>
-                                            <h2><b>Maezie Casabal</b></h2><br>
+                                            <div class="profile-img"><img src="/img/Johnrey.jpg" alt=""></div>
+                                            <h2><b>Johnrey Manalo</b></h2><br>
                                             
-                                            <h4 class="font-yellow">Never give up because great things take time</h4>
+                                            <h4 class="font-yellow">Don't count the days make the days count</h4>
                                                 
                                                 
                                             <br><br>
 						<ul class="social-icons">
-
-							<li><a href="https://twitter.com/_maezieeeeee" target="_blank">
-                                                                <i class="fa fa-twitter"></i></a></li>
 																
-							<li><a href="https://www.instagram.com/_maezieeeee/?hl=en" target="_blank">
+							<li><a href="https://www.instagram.com/_manalojohnrey/?hl=en" target="_blank">
                                                                 <i class="fa fa-instagram"></i></a></li>
-							<li><a href="https://web.facebook.com/maezie.casabal.1" target="_blank">
+							<li><a href="https://www.facebook.com/johnrey.manalo.378/ " target="_blank">
                                                                 <i class="fa fa-facebook"></i></a></li>
 						</ul>
 					</div><!-- intro -->
@@ -101,19 +98,19 @@
 				
 				<div class="col-md-12 col-lg-6">
 				
-					<div class="line-progress margin-b-20" data-prog-percent=".80"><div></div>
+					<div class="line-progress margin-b-20" data-prog-percent=".78"><div></div>
                                             <p class="progress-title"><b>Programming</b></p></div><br>
 					
-					<div class="line-progress margin-b-20" data-prog-percent=".75"><div></div>
+					<div class="line-progress margin-b-20" data-prog-percent=".80"><div></div>
                                             <p class="progress-title"><b>Technical Writing</b></p></div><br>
 
-					<div class="line-progress margin-b-20" data-prog-percent=".75"><div></div>
+					<div class="line-progress margin-b-20" data-prog-percent=".80"><div></div>
                                             <p class="progress-title"><b>Academic Writing</b></p></div><br>
 					
 					<div class="line-progress margin-b-20" data-prog-percent=".70"><div></div>
                                             <p class="progress-title"><b>Reading Books</b></p></div><br>
                     
-					<div class="line-progress margin-b-20" data-prog-percent=".70"><div></div>
+					<div class="line-progress margin-b-20" data-prog-percent=".75"><div></div>
                                             <p class="progress-title"><b>Algorithms</b></p></div><br>
 
 				</div><!-- col-sm-6 -->
@@ -123,7 +120,7 @@
 						<div class="panel-area margin-b-30">
 							<h5 class="panel-title active"><b>Web Development</b>
 								<i class="icon minus ion-minus"></i><i class="icon plus ion-plus"></i></h5>
-                                                                <p class="panel-desc">Web Development : I have specialized in advanced front/backend features of PHP, JS and little knowledge in Python and C++.<br><br> </p>
+                                                                <p class="panel-desc">I have specialized in advanced front/backend features of PHP, JS, C++, MYSQLI <br><br> </p>
 						</div><!-- panel-area -->
 						
 						<div class="panel-area margin-b-30">
@@ -157,7 +154,7 @@
 				</div><!-- col-sm-12 -->
 				<div class="col-sm-6 col-md-6 col-lg-3">
 					<div class="radial-prog-area margin-b-30">
-						<div class="radial-progress" data-prog-percent=".80">
+						<div class="radial-progress" data-prog-percent="1">
 							<div></div>
 							<h6 class="progress-title">Good Joker</h6>
 						</div>
@@ -166,7 +163,7 @@
 				
 				<div class="col-sm-6 col-md-6 col-lg-3">
 					<div class="radial-prog-area margin-b-30">
-						<div class="radial-progress" data-prog-percent=".80">
+						<div class="radial-progress" data-prog-percent=".85">
 							<div></div>
 							<h6 class="progress-title">Adaptability</h6>
 						</div>
@@ -175,7 +172,7 @@
 				
 				<div class="col-sm-6 col-md-6 col-lg-3">
 					<div class="radial-prog-area margin-b-30">
-						<div class="radial-progress" data-prog-percent=".85">
+						<div class="radial-progress" data-prog-percent=".81">
 							<div></div>
 							<h6 class="progress-title">Earnest Learning</h6>
 						</div>
@@ -184,7 +181,7 @@
 				
 				<div class="col-sm-6 col-md-6 col-lg-3">
 					<div class="radial-prog-area margin-b-50">
-						<div class="radial-progress" data-prog-percent=".80">
+						<div class="radial-progress" data-prog-percent=".85">
 							<div></div>
                                                         <h6 class="progress-title">Independency</h6>
 						</div>
