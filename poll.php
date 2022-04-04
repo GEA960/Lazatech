@@ -48,7 +48,7 @@
             <div class="col-sm-9" id="user-section">
               
               <img class="event-cover" src="img/pollpage_cover.png" style="width:100%; height:400px;">
-              
+
               <div class="px-5 my-5">
                   <div class="px-5">
                       
@@ -116,6 +116,7 @@
                                                 <input type="radio" name="voteOpt" id="option'.$opt['id'].'"
                                                     value="'.$opt['id'].'" ';
                                     
+                                    
                                     if ($opt['id'] == $voted)
                                     {
                                         echo 'checked="checked" ';
@@ -128,6 +129,16 @@
                                     echo            '> 
                                                     <label for="option'.$opt['id'].'">'.$opt['name'].'</label>
                                             </div>';
+                                            
+                                    if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['created_by'])
+                                                    
+                                        {
+                                            echo '<a href="edit-poll.php?id= '.$row['name'].' ">
+                                            <i class="fa fa-pencil fa-2x edit-event" aria-hidden="true"></i>';
+                                        }     
+   
+                                                     
+                                         
                                 }
                                 
                                 echo '</div><br><br>';

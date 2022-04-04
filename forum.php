@@ -10,7 +10,7 @@
         header("Location: login.php");
         exit();
     }
-    
+ 
     include 'includes/HTML-head.php';
 ?>  
 

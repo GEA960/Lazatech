@@ -99,7 +99,7 @@
                   <h1><?php echo ucwords($row['blog_title']) ?></h1>
                   <br><br><br>
                   
-                  <p class="text-justify"><?php echo $row['blog_content'] ?></p>
+                  <p> <?php echo $row['blog_content'] ?><p> 
                   
                   <div class="blog-likes pr-1 pt-5">
                       
