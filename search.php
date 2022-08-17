@@ -41,7 +41,7 @@ function php_search_all_database($search_keyword,$table_ass_array){
 	$db_hostname = "localhost"; 				// database hostname (default value: localhost)
 	$db_username = "root"; 				// database username (default value: root)
 	$db_password = ""; 				// database password (default value: password)
-	$db_database_name = "OnAid_database"; 				// database name
+	$db_database_name = "lazatech_database"; 				// database name
 
 	$conn = mysqli_connect($db_hostname, $db_username, $db_password, $db_database_name, 3306);	// create connection
 

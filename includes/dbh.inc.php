@@ -3,7 +3,7 @@
 $serverName = "localhost";
 $dBUsername = "root";
 $dBPassword = "adqUKjS5Tg31JoZH";
-$dBName = "onaid_database";
+$dBName = "lazatech_database";
 
 $conn = new mysqli($serverName, $dBUsername, $dBPassword, $dBName, 3306);
 
