@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 17, 2022 at 08:47 AM
--- Server version: 10.5.16-MariaDB
+-- Generation Time: Jun 18, 2022 at 05:16 AM
+-- Server version: 10.5.12-MariaDB
 -- PHP Version: 7.3.32
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -21,8 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `id17986245_onaid_database`
 --
-CREATE DATABASE IF NOT EXISTS `id17986245_onaid_database` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-USE `id17986245_onaid_database`;
 
 -- --------------------------------------------------------
 
@@ -718,7 +716,7 @@ INSERT INTO `postvotes` (`voteId`, `votePost`, `voteBy`, `voteDate`, `vote`) VAL
 (7, 151, 40, '2021-11-09', 1),
 (8, 152, 40, '2021-11-09', 1),
 (9, 153, 40, '2021-11-11', 1),
-(10, 154, 40, '2022-08-17', 1),
+(10, 154, 40, '2021-11-14', 1),
 (11, 156, 40, '2021-11-14', 1),
 (12, 193, 40, '2021-11-25', 1),
 (13, 194, 40, '2021-11-25', 1),
