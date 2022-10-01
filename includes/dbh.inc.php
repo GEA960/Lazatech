@@ -5,7 +5,7 @@ $dBUsername = "u488180748_LAZAT3CH";
 $dBPassword = "LAZAT3CHPass";
 $dBName = "u488180748_LAZAT3CH";
 
-$conn = new mysqli($serverName, $dBUsername, $dBPassword, $dBName, 3306);
+$conn = new mysqli($serverName, $dBUsername, $dBPassword, $dBName);
 
 if (!$conn)
 {
