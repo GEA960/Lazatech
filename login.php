@@ -25,7 +25,7 @@
         <div id="cover-caption">
             <div class="container">
                 <div class="col-sm-10 offset-sm-1">
-                    <img src='img/200px.png'>
+                    <img src='img/200pxFinal.png'>
                     <h5 style="color:black;">Spreading Ideas</h5>
                     <br>
                     <?php
