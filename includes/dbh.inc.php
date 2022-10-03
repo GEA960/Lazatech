@@ -1,9 +1,9 @@
 <?php
 
 $serverName = "localhost";
-$dBUsername = "root";
-$dBPassword = "";
-$dBName = "lazatech_db";
+$dBUsername = "u488180748_LAZAT3CH";
+$dBPassword = "LAZAT3CHPass";
+$dBName = "u488180748_LAZATECH";
 
 $conn = new mysqli($serverName, $dBUsername, $dBPassword, $dBName, 3306);
 
