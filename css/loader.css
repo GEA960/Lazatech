@@ -41,7 +41,7 @@
   bottom: 0;
   width: 10px;
   height: 50%;
-  background: #ff9000;
+  background: #07e956;
   -webkit-transform-origin: center bottom;
           transform-origin: center bottom;
 }
@@ -86,7 +86,7 @@
   left: 0;
   width: 10px;
   height: 10px;
-  background: #ff9000;
+  background: #07e956;
   border-radius: 50%;
   -webkit-animation: ball 4s infinite;
           animation: ball 4s infinite;

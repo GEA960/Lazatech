@@ -30,7 +30,7 @@
     <body onload="pageLoad()">
         
         <div id="loader-wrapper">
-        <img src='img/loader.png' id='loader-logo'>
+        <img src='img/logo.png' id='loader-logo'>
             <div class="loader">
                 <div class="loader__bar"></div>
                 <div class="loader__bar"></div>
@@ -47,7 +47,7 @@
             
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-3" >
+                    <div >
 
                         <?php include 'includes/profile-card.php'; ?>
 

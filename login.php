@@ -25,10 +25,15 @@
         <div id="cover-caption">
             <div class="container">
                 <div class="col-sm-10 offset-sm-1">
-                    <img src='img/200pxFinal.png'>
-                    <h5 style="color:black;">Spreading Ideas</h5>
+                    <div class="leftbox">
+                        <img src='img/logo.png' style="width: 30%; height30%">
+                    <h5 style="color:black; font-family: Helvetica; font-size: 20px;">Welcome to</h5>
+                    <h3 class="lazatech" style="font-family: Verdana; font-size: 50px; text-shadow: 2px 2px 12px #0d0d0d;">LazaTech</h3>
                     <br>
-                    <?php
+                    </div>
+                    <div class="rightbox">
+                        <h3 id="title">Sign In</h3>
+                        <?php
                     
                         if(isset($_GET['error']))
                         {
@@ -69,22 +74,29 @@
                             }
                         }
                     ?>
-                    <form method="post" action="includes/login.inc.php" class="form-inline justify-content-center">
+                    <form method="post" action="includes/login.inc.php">
                         <div class="form-group">
                             <label class="sr-only">Name</label>
                             <input type="text" id="name" name="mailuid"
-                                   class="form-control form-control-lg mr-1" placeholder="Username">
+                                   placeholder="Username">
                         </div>
                         <div class="form-group">
                             <label class="sr-only">Email</label>
                             <input type="password" id="password" name="pwd"
-                                   class="form-control form-control-lg mr-1" placeholder="Password">
+                                   placeholder="Password">
                         </div>
-                        <input type="submit" class="btn btn-dark btn-lg mr-1" name="login-submit" value="Login">
+
+                        <input type="submit" class="btn btn-dark btn-lg mr-1" name="login-submit" value="Continue">
                     </form>
-                    <br><a href="signup.php" class="btn btn-light btn-lg mr-1">Signup</a>
+                    <br>
+                    <div id="signupbottom">
+                        <p>Dont have an account? 
+                        <a href="signup.php">Signup</a>
+                        </p>
+                    </div>
                     
-                    <br><br>
+                    
+                    <!--<br><br>
                     <div class="position-absolute login-icons">
                         <a href="contact.php">
                             <i class="fa fa-envelope fa-2x social-icon" aria-hidden="true"></i>
@@ -93,6 +105,8 @@
                             <i class="fa fa-github fa-2x social-icon" aria-hidden="true"></i>
                         </a> -->
                     </div>
+                    </div>
+                    
                     
                     
                 </div>
