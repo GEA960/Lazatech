@@ -1,7 +1,7 @@
 <?php
 
     session_start();
-    define('TITLE',"Contact Us | OnAid");
+    define('TITLE',"Contact Us | Lazatech");
     
     include 'includes/HTML-head.php';
     include 'includes/email-server.php';
@@ -194,7 +194,7 @@
 						</span>
 
 						<span class="txt3">
-							Giving students the support they need for online classes.
+							Giving students the opportunity to earn while helping others.
 						</span>
 					</div>
 				</div>
@@ -210,7 +210,7 @@
 						</span>
 
 						<span class="txt3">
-                        onaid.inc2021@gmail.com
+                        lazatech.org@gmail.com
 						</span>
 					</div>
 				</div>

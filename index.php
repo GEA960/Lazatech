@@ -4,7 +4,7 @@
 
     session_start();
     include_once 'includes/dbh.inc.php';
-    define('TITLE',"Dashboard| OnAid");
+    define('TITLE',"Dashboard| Lazatech");
 
     $companyName = "Franklin's Fine Dining";
     
@@ -56,7 +56,7 @@
                     <div class="col-sm-7" >
 
                         <div class="text-center p-3">
-                            <img src="img/200px.png">
+                            <img src="img/200pxFinal.png">
                             <h2 class='text-muted'>DASHBOARD</h2>
                             <br>
                         </div>

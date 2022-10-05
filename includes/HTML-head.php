@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta name="description" content="A Social Media Website" />
-        <meta name="keywords" content="OnAid, social-media, social-network, forum" >
+        <meta name="keywords" content="Lazatech, social-media, social-network, forum" >
   
         <title><?php echo TITLE; ?></title>
         

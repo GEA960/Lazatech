@@ -2,7 +2,7 @@
 
         <nav class="navbar sticky-top navbar-expand-md navbar-light bg-dark">
             <a class="navbar-brand" href="index.php">
-                <img src="img/200px.png" width="40" height="40">
+                <img src="img/200.png" width="40" height="40">
             </a>
             
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
