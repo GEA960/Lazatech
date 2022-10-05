@@ -1,7 +1,7 @@
 <?php
 
-$SMTPuser = 'onaid.inc2021@gmail.com';   
-$SMTPpwd = 'gabriele582019'; 
-$SMTPtitle = "OnAid inc.";
+$SMTPuser = 'lazatech.org@gmail.com';   
+$SMTPpwd = 'begvgstgelmmnpyp'; 
+$SMTPtitle = "Lazatech inc.";
 $Domain = 'localhost';
 

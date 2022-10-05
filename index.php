@@ -47,7 +47,7 @@
             
             <div class="container-fluid">
                 <div class="row">
-                    <div >
+                <div class="col-sm-3" >
 
                         <?php include 'includes/profile-card.php'; ?>
 

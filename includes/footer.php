@@ -11,18 +11,16 @@
                     <ul>
                         <li><a href="index.php">Home</a></li>
                         <li><a href="team.php">The Team</a></li>
-                        <li><a href="forum.php">The OnAid Forum</a></li>
-                        <li><a href="hub.php">The OnAid Hub</a></li>
+                        <li><a href="forum.php">The Lazatech Forum</a></li>
+                        <li><a href="hub.php">The Lazatech Hub</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-3">
                     <h5>About us</h5>
                     <ul>
                         <li><a href="https://gea960.github.io/GEA-Portfolio-Website/">Gabriel Edrian Alvaro</a></li>
-                        <li><a href="includes/OnAid_Creators/Lee-ann.php">Lee Ann Joy Natanauan</a></li>
-                        <li><a href="includes/OnAid_Creators/Maezie.php">Maezie Landicho Casabal</a></li>
-                        <li><a href="includes/OnAid_Creators/Marjorie.php">Marjori Javier</a></li>
-                        <li><a href="includes/OnAid_Creators/Johnrey.php">Jhonrey Manalo</a></li>
+                        <li><a href="includes/OnAid_Creators/Lee-ann.php">Marian Guerra</a></li>
+                        <li><a href="includes/OnAid_Creators/Maezie.php">Mariel Guerra</a></li>  
                     </ul>
                 </div>
                 <div>
