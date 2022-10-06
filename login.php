@@ -14,7 +14,7 @@
         exit();
     }
     
-    include 'includes/HTML-head.php';
+    include 'includes/HTML-head1.php';
 ?>  
     </head>
     
