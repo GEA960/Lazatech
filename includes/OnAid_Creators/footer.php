@@ -17,11 +17,9 @@
                 <div class="col-sm-3">
                     <h5>About us</h5>
                     <ul>
-                        <li><a href="includes/OnAid_Creators/Gab.php">Gabriel Edrian Alvaro</a></li>
-                        <li><a href="OnAid_Creators/          .php">Lee Ann Joy Natanauan</a></li>
-                        <li><a href="OnAid_Creators/            .php">Maezie Landicho Casabal</a></li>
-                        <li><a href="OnAid_Creators/            .php">Marjori Javier</a></li>
-                        <li><a href="OnAid_Creators/            .php">Jhonrey Manalo</a></li>
+                        <li><a href="https://gea960.github.io/GEA-Portfolio-Website/">Gabriel Edrian Alvaro</a></li>
+                        <li><a href="includes/OnAid_Creators/Marian.php">Marian Guerra</a></li>
+                        <li><a href="includes/OnAid_Creators/Mariel.php">Mariel Guerra</a></li>
                     </ul>
                 </div>
                 <div>
