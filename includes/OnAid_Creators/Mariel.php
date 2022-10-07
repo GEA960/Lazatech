@@ -282,10 +282,8 @@
                     <h5>About us</h5>
                     <ul>
                         <li><a href="https://gea960.github.io/GEA-Portfolio-Website/">Gabriel Edrian Alvaro</a></li>
-                        <li><a href="Lee-ann.php">Lee Ann Joy Natanauan</a></li>
-                        <li><a href="Maezie.php">Maezie Landicho Casabal</a></li>
-                        <li><a href="Marjorie.php">Marjori Javier</a></li> <br>
-                        <li><a href="Johnrey.php">Jhonrey Manalo</a></li>
+                        <li><a href="includes/OnAid_Creators/Marian.php">Marian Guerra</a></li>
+                        <li><a href="includes/OnAid_Creators/Mariel.php">Mariel Guerra</a></li>
                     </ul>
                 </div>
                 <div>
