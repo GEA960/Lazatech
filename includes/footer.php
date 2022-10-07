@@ -19,8 +19,8 @@
                     <h5>About us</h5>
                     <ul>
                         <li><a href="https://gea960.github.io/GEA-Portfolio-Website/">Gabriel Edrian Alvaro</a></li>
-                        <li><a href="includes/OnAid_Creators/Lee-ann.php">Marian Guerra</a></li>
-                        <li><a href="includes/OnAid_Creators/Maezie.php">Mariel Guerra</a></li>  
+                        <li><a href="includes/OnAid_Creators/Marian.php">Marian Guerra</a></li>
+                        <li><a href="includes/OnAid_Creators/Mariel.php">Mariel Guerra</a></li>  
                     </ul>
                 </div>
                 <div>
