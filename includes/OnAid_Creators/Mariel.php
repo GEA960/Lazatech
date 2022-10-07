@@ -38,7 +38,7 @@
 						<div class="info">
 							<i class="icon ion-ios-telephone-outline"></i>
 							<div class="right-area">
-								<h5>0906-012-1813</h5>
+								<h5>Your number</h5>
                                                                 <h6>Business Number</h6>
 							</div><!-- right-area -->
 						</div><!-- info -->
@@ -48,7 +48,7 @@
 						<div class="info">
 							<i class="icon ion-ios-chatboxes-outline"></i>
 							<div class="right-area">
-								<h5>leeannjoy24natanauan@gmail.com</h5>
+								<h5>mariel.guerra@g.batstate-u.edu.ph</h5>
 								<h6>Official Email</h6>
 							</div><!-- right-area -->
 						</div><!-- info -->
@@ -59,29 +59,29 @@
 		</div><!-- container -->
 	</header>
 	
-    <section class="intro-section" style="background-image: url(/img/Lee-ann-cover.jpg);">
+    <section class="intro-section" style="background-image: url(/img/Mariel-cover.jpg);">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-1 col-lg-2"></div>
 				<div class="col-md-10 col-lg-8">
 					<div class="intro">
-                                            <div class="profile-img"><img src="/img/Lee-ann.jpg" alt=""></div>
-                                            <h2><b>Lee-ann Joy Natanauan</b></h2><br>
+                                            <div class="profile-img"><img src="/img/Mariel.jpg" alt=""></div>
+                                            <h2><b>Mariel Guerra</b></h2><br>
                                             
-                                            <h4 class="font-yellow">Work hard in silence, let your success make the noise.</h4>
+                                            <h4 class="font-yellow">Never give up because great things take time</h4>
                                                 
                                                 
                                             <br><br>
-											<ul class="social-icons">
+						<ul class="social-icons">
 
-<li><a href="https://twitter.com/imlianne_" target="_blank">
-									<i class="fa fa-twitter"></i></a></li>
-									
-<li><a href="https://www.instagram.com/iamleeanneee_/?hl=en" target="_blank">
-									<i class="fa fa-instagram"></i></a></li>
-<li><a href="https://www.facebook.com/leeannjoy.natanauan/" target="_blank">
-									<i class="fa fa-facebook"></i></a></li>
-</ul>
+							<li><a href="Your twitter account link" target="_blank">
+                                                                <i class="fa fa-twitter"></i></a></li>
+																
+							<li><a href="Your instagram account link" target="_blank">
+                                                                <i class="fa fa-instagram"></i></a></li>
+							<li><a href="Your facebook account link" target="_blank">
+                                                                <i class="fa fa-facebook"></i></a></li>
+						</ul>
 					</div><!-- intro -->
 				</div><!-- col-sm-8 -->
 			</div><!-- row -->
@@ -104,16 +104,16 @@
 					<div class="line-progress margin-b-20" data-prog-percent=".80"><div></div>
                                             <p class="progress-title"><b>Programming</b></p></div><br>
 					
-					<div class="line-progress margin-b-20" data-prog-percent=".80"><div></div>
+					<div class="line-progress margin-b-20" data-prog-percent=".75"><div></div>
                                             <p class="progress-title"><b>Technical Writing</b></p></div><br>
 
-					<div class="line-progress margin-b-20" data-prog-percent=".80"><div></div>
+					<div class="line-progress margin-b-20" data-prog-percent=".75"><div></div>
                                             <p class="progress-title"><b>Academic Writing</b></p></div><br>
 					
 					<div class="line-progress margin-b-20" data-prog-percent=".70"><div></div>
                                             <p class="progress-title"><b>Reading Books</b></p></div><br>
                     
-					<div class="line-progress margin-b-20" data-prog-percent=".75"><div></div>
+					<div class="line-progress margin-b-20" data-prog-percent=".70"><div></div>
                                             <p class="progress-title"><b>Algorithms</b></p></div><br>
 
 				</div><!-- col-sm-6 -->
@@ -123,7 +123,7 @@
 						<div class="panel-area margin-b-30">
 							<h5 class="panel-title active"><b>Web Development</b>
 								<i class="icon minus ion-minus"></i><i class="icon plus ion-plus"></i></h5>
-                                                                <p class="panel-desc">I have specialized in advanced front/backend features of PHP, JS, C++, MYSQLI and a little knowledge about Python.<br><br> </p>
+                                                                <p class="panel-desc">I have specialized in advanced front/backend features of PHP, JS and little knowledge in Python and C++.<br><br> </p>
 						</div><!-- panel-area -->
 						
 						<div class="panel-area margin-b-30">
@@ -157,7 +157,7 @@
 				</div><!-- col-sm-12 -->
 				<div class="col-sm-6 col-md-6 col-lg-3">
 					<div class="radial-prog-area margin-b-30">
-						<div class="radial-progress" data-prog-percent="1.00">
+						<div class="radial-progress" data-prog-percent=".80">
 							<div></div>
 							<h6 class="progress-title">Good Joker</h6>
 						</div>
@@ -175,7 +175,7 @@
 				
 				<div class="col-sm-6 col-md-6 col-lg-3">
 					<div class="radial-prog-area margin-b-30">
-						<div class="radial-progress" data-prog-percent=".83">
+						<div class="radial-progress" data-prog-percent=".85">
 							<div></div>
 							<h6 class="progress-title">Earnest Learning</h6>
 						</div>
@@ -184,7 +184,7 @@
 				
 				<div class="col-sm-6 col-md-6 col-lg-3">
 					<div class="radial-prog-area margin-b-50">
-						<div class="radial-progress" data-prog-percent=".79">
+						<div class="radial-progress" data-prog-percent=".80">
 							<div></div>
                                                         <h6 class="progress-title">Independency</h6>
 						</div>
