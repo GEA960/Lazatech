@@ -24,7 +24,7 @@
         <main role="main" class="container">
             
             <div class="d-flex align-items-center mt-5 p-3 text-white-50 bg-purple rounded shadow-sm">
-                <img class="mr-3" src="img/200px.png" alt="" width="48" height="48">
+                <img class="mr-3" src="img/200.png" alt="" width="48" height="48">
               <div class="lh-100">
                 <h1 class="mb-0 text-white lh-100">Password Reset</h1>
               </div>

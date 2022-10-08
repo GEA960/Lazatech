@@ -62,6 +62,19 @@
 
                     </div>
 
+
+<?php
+$var_1 = 'Git is free and open source software for distributed version control: tracking changes in any set of files';
+$var_2 = 'Git is free a';
+
+similar_text($var_1, $var_2, $percent);
+
+echo $percent;
+// 27.272727272727
+
+?>
+
+
                     <div class="col-sm-2" -->
 
                         <div class="text-center p-3 mt-5">
