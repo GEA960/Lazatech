@@ -202,11 +202,11 @@
                                             {
                                                 echo '<div class="col-md-14">
                                                         <div class="card flex-md-row mb-4 shadow-sm h-md-250">
-                                                          <div class="card-body d-flex flex-column align-items-start">
-                                                          <a href="blog-page.php?id='.$row['blog_id'].'">
+                                                        <a href="blog-page.php?id='.$row['blog_id'].'">
                                                           <img class="card-img-right flex-auto d-none d-lg-block blogindex-cover" 
                                                                 src="uploads/'.$row['blog_img'].'" alt="Card image cap">
                                                                     </a>
+                                                          <div class="card-body d-flex flex-column align-items-start">
                                                             <strong class="d-inline-block mb-2 text-primary">
                                                                 <i class="fa fa-thumbs-up" aria-hidden="true"></i> '.$row['blog_votes'].'
                                                             </strong>
