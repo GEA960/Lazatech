@@ -43,14 +43,15 @@
     <?php include 'includes/navbar.php'; ?>
       <div class="container">
         <div class="row">
+<!--
           <div class="col-sm-3">
             
-              <?php include 'includes/profile-card.php'; ?>
+              <?php /*include 'includes/profile-card.php';*/ ?>
               
           </div>
+-->           
             
-            
-          <div class="col-sm-8 text-center" id="user-section">
+          <div class="col-sm-12 text-center" id="user-section">
               <img class="cover-img" src="img/User_Cover.png">
               <img class="profile-img" src="uploads/<?php echo $user['userImg']; ?>">
               

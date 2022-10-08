@@ -55,7 +55,7 @@
 
                     <div class="col-sm-2">
 
-                        
+                        <br>
                         <a href="create-topic.php" class="btn btn-warning btn-lg btn-block">Create a Forum</a>
                         <a href="create-blog.php" class="btn btn-secondary btn-lg btn-block">Create a Blog</a>
                         <a href="create-poll.php" class="btn btn-warning btn-lg btn-block">Create a Poll</a>
