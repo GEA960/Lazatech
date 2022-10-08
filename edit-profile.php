@@ -14,17 +14,18 @@
     include 'includes/HTML-head.php';  
 ?> 
 </head>
-<body>
+<body class="justify-content-center">
 
     <?php include 'includes/navbar.php'; ?>
       <div class="container">
         <div class="row">
-            <div class="col-sm-3">
+<!--            <div class="col-sm-3">
             
-                <?php include 'includes/profile-card.php'; ?>
+                <?php /*include 'includes/profile-card.php';*/ ?>
                 
             </div>
-        <div class="col-sm-8 text-center" id="user-section">
+  -->
+        <div class="col-sm-12 text-center" id="user-section">
               
               <img class="cover-img" id='blah-cover' src="img/user_cover.png">
               

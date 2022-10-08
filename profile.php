@@ -38,7 +38,7 @@
 ?> 
 </head>
 
-<body>
+<body class="justify-content-center">
 
     <?php include 'includes/navbar.php'; ?>
       <div class="container">
