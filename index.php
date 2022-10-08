@@ -46,21 +46,32 @@
             <?php include 'includes/navbar.php'; ?> 
             
             <div class="container-fluid">
-                <div class="row">
-                <div class="col-sm-3" >
+                <div class="row justify-content-center">
+                <div class="col-sm-11" >
 
                         <?php include 'includes/profile-card.php'; ?>
 
                     </div>
 
-                    <div class="col-sm-7" >
+                    <div class="col-sm-2">
 
+                        <br>
+                        <a href="create-topic.php" class="btn btn-warning btn-lg btn-block">Create a Forum</a>
+                        <a href="create-blog.php" class="btn btn-secondary btn-lg btn-block">Create a Blog</a>
+                        <a href="create-poll.php" class="btn btn-warning btn-lg btn-block">Create a Poll</a>
+                        <a href="forum.php" class="btn btn-warning btn-lg btn-block">OnAid Forum</a>
+                        <a href="hub.php" class="btn btn-secondary btn-lg btn-block">OnAid Hub</a>
+                        
+
+                    </div>
+                    <div class="col-sm-9" >
+<!--
                         <div class="text-center p-3">
                             <img src="img/200pxFinal.png">
                             <h2 class='text-muted'>DASHBOARD</h2>
                             <br>
                         </div>
-
+-->
                           
                         <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
                             <li class="nav-item">
@@ -87,14 +98,14 @@
 
                             <div class="tab-pane fade show active" id="forum" role="tabpanel" aria-labelledby="forum-tab">
 
-                                <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded shadow-sm">
-                                    <img class="mr-3" src="img/200px.png" alt="" width="48" height="48">
+                                <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-info rounded shadow-sm">
+                                    <img class="mr-3" src="img/logo.png" alt="" width="48" height="48">
                                   <div class="lh-100">
                                     <h1 class="mb-0 text-white lh-100">Latest Forums</h1>
                                   </div>
                                 </div>  
 
-                                    <div class="row mb-2">
+                                    <div class="mb-2">
 
                                     <?php
                                         $sql = "select topic_id, topic_subject, topic_date, topic_cat, topic_by, userImg, idUsers, uidUsers, cat_name, (
@@ -121,7 +132,7 @@
 
                                             while ($row = mysqli_fetch_assoc($result))
                                             {
-                                                echo '<div class="col-md-6">
+                                                echo '<div class="col-md-14">
                                                         <div class="card flex-md-row mb-4 shadow-sm h-md-250">
                                                         <a href="posts.php?topic='.$row['topic_id'].'">
                                                         <img class="card-img-left flex-auto d-none d-lg-block blogindex-cover" 
@@ -153,14 +164,14 @@
 
                             <div class="tab-pane fade" id="blog" role="blog" aria-labelledby="blog-tab">
 
-                                <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded shadow-sm">
-                                    <img class="mr-3" src="img/200px.png" alt="" width="48" height="48">
+                                <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-info rounded shadow-sm">
+                                    <img class="mr-3" src="img/logo.png" alt="" width="48" height="48">
                                   <div class="lh-100">
                                     <h1 class="mb-0 text-white lh-100">Latest Blogs</h1>
                                   </div>
                                 </div>  
 
-                                <div class="row mb-2">
+                                <div class="mb-2">
 
                                     <?php
                                         $sql = "select * from blogs, users 
@@ -181,8 +192,12 @@
 
                                             while ($row = mysqli_fetch_assoc($result))
                                             {
-                                                echo '<div class="col-md-6">
+                                                echo '<div class="col-md-14">
                                                         <div class="card flex-md-row mb-4 shadow-sm h-md-250">
+                                                        <a href="blog-page.php?id='.$row['blog_id'].'">
+                                                          <img class="card-img-right flex-auto d-none d-lg-block blogindex-cover" 
+                                                                src="uploads/'.$row['blog_img'].'" alt="Card image cap">
+                                                                    </a>
                                                           <div class="card-body d-flex flex-column align-items-start">
                                                             <strong class="d-inline-block mb-2 text-primary">
                                                                 <i class="fa fa-thumbs-up" aria-hidden="true"></i> '.$row['blog_votes'].'
@@ -194,10 +209,7 @@
                                                             <small class="card-text mb-auto">'.substr($row['blog_title'],0,100).'...</small>
                                                             <a href="blog-page.php?id='.$row['blog_id'].'">Continue reading</a>
                                                           </div>
-                                                          <a href="blog-page.php?id='.$row['blog_id'].'">
-                                                          <img class="card-img-right flex-auto d-none d-lg-block blogindex-cover" 
-                                                                src="uploads/'.$row['blog_img'].'" alt="Card image cap">
-                                                                    </a>
+                                                          
                                                         </div>
                                                       </div>';
                                             }
@@ -211,8 +223,8 @@
 
                             <div class="tab-pane fade" id="poll" role="poll" aria-labelledby="poll-tab">
 
-                                <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded shadow-sm">
-                                    <img class="mr-3" src="img/200px.png" alt="" width="48" height="48">
+                                <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-info rounded shadow-sm">
+                                    <img class="mr-3" src="img/logo.png" alt="" width="48" height="48">
                                   <div class="lh-100">
                                     <h1 class="mb-0 text-white lh-100">Latest Polls</h1>
                                   </div>
@@ -279,8 +291,8 @@
 
                             <div class="tab-pane fade" id="event" role="event" aria-labelledby="event-tab">
 
-                                <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded shadow-sm">
-                                    <img class="mr-3" src="img/200px.png" alt="" width="48" height="48">
+                                <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-info rounded shadow-sm">
+                                    <img class="mr-3" src="img/logo.png" alt="" width="48" height="48">
                                   <div class="lh-100">
                                     <h1 class="mb-0 text-white lh-100">Upcoming Events</h1>
                                   </div>
@@ -339,25 +351,6 @@
 
                     </div>
 
-                    <div class="col-sm-2">
-
-                        <div class="text-center p-3 mt-5">
-                        <!--    <a href="team.php" target="_blank">
-                                <i class="creater-icon fa fa-users fa-5x" aria-hidden="true"></i>
-                            </a>
-                            <p><br>THE CREATORS</p> -->
-                            <a> </a>
-                            <p><br></br><br></br><br></br><br></br><br></br></p>
-                        </div>
-
-                        <a href="forum.php" class="btn btn-warning btn-lg btn-block">OnAid Forum</a>
-                        <a href="hub.php" class="btn btn-secondary btn-lg btn-block">OnAid Hub</a>
-                        <br><br><br>
-                        <a href="create-topic.php" class="btn btn-warning btn-lg btn-block">Create a Forum</a>
-                        <a href="create-blog.php" class="btn btn-secondary btn-lg btn-block">Create a Blog</a>
-                        <a href="create-poll.php" class="btn btn-warning btn-lg btn-block">Create a Poll</a>
-
-                    </div>
                 </div>
             </div>
             

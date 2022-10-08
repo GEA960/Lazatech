@@ -3,7 +3,7 @@
     session_start();
     require 'includes/dbh.inc.php';
     
-    define('TITLE',"Forum | OnAid");
+    define('TITLE',"Forum | Lazatech");
     
     if(!isset($_SESSION['userId']))
     {
@@ -24,10 +24,10 @@
    
 
         <main role="main" class="container">
-      <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded shadow-sm">
-          <img class="mr-3" src="img/200px.png" alt="" width="48" height="48">
+      <div class="d-flex align-items-center p-3 my-3 bg-info text-white-50 rounded shadow-sm">
+          <img class="mr-3" src="img/logo.png" alt="" width="48" height="48">
         <div class="lh-100">
-          <h1 class="mb-0 text-white lh-100">OnAid Forums</h1>
+          <h1 class="mb-0 text-white lh-100">Lazatech Forums</h1>
           <small>Spreading Ideas</small>
         </div>
       </div>
