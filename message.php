@@ -11,10 +11,8 @@
         exit();
     }  
     
-    include 'includes/HTML-head.php';
-?> 
-
-
+    include 'includes/HTML-head.php'; ?> 
+    
         <link href="css/inbox.css" rel="stylesheet">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="emoji-picker/lib/css/emoji.css" rel="stylesheet">
