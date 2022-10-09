@@ -1,7 +1,7 @@
 
 
              <div class='card'>
-                <img alt='Card image cap' class='rounded-top text-white d-flex flex-row' src='img/User_Cover.png' style="height:200px;">
+                <img alt='Card image cap' class='rounded-top text-white d-flex flex-row' src='img/user_Cover.png' style="height:200px;">
                 <div class="d-flex p-3">
                
                     <a href='profile.php'>
