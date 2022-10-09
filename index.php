@@ -144,7 +144,7 @@
                                                             </strong>
                                                             <h6 class="mb-0">
                                                               <a class="text-dark" href="posts.php?topic='.$row['topic_id'].'">'
-                                                                .substr(ucwords($row['topic_subject']),0,15).'...</a>
+                                                                .substr(ucwords($row['topic_subject']),0,100).'</a>
                                                             </h6>
                                                             <small class="mb-1 text-muted">'.date("F jS, Y", strtotime($row['topic_date'])).'</small>
                                                             <small class="card-text mb-auto">Created By: '.ucwords($row['uidUsers']).'</small>
@@ -203,7 +203,7 @@
                                                                 <i class="fa fa-thumbs-up" aria-hidden="true"></i> '.$row['blog_votes'].'
                                                             </strong>
                                                             <h6 class="mb-0">
-                                                              <a class="text-dark" href="blog-page.php?id='.$row['blog_id'].'">'.substr($row['blog_title'],0,40).'...</a>
+                                                              <a class="text-dark" href="blog-page.php?id='.$row['blog_id'].'">'.substr($row['blog_title'],0,100).'</a>
                                                             </h6>
                                                             <small class="mb-1 text-muted">'.date("F jS, Y", strtotime($row['blog_date'])).'</small>
                                                             <small class="card-text mb-auto">'.substr($row['blog_title'],0,100).'...</small>
