@@ -47,15 +47,18 @@
         <div class="row">
           <div class="col-sm-3">
             
-              <?php include 'includes/profile-card.php'; ?>
+            
               
           </div>
-         <!-- Social Share Kit CSS -->
+<!-- Social Share Kit CSS -->
 <link rel="stylesheet" href="../social-share-kit/dist/css/social-share-kit.css" type="text/css">
-         <!-- Social Share Kit JS -->
+<!-- Social Share Kit JS -->
 <script type="text/javascript" src="../social-share-kit/dist/js/social-share-kit.js"></script>
-            
-          <div class="col-sm-9" id="user-section">
+
+<div class="col-sm-11" >
+<?php include 'includes/profile-card.php'; ?>
+</div>
+          <div class="col-sm-11" id="user-section">
               
                 <?php
 
