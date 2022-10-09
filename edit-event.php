@@ -49,11 +49,14 @@
             <div class="row">
                 <div class="col-sm-3">
 
-                    <?php include 'includes/profile-card.php'; ?>
 
                 </div>
 
-                <div class="col-sm-9" id="user-section">
+                <div class="col-sm-11" >
+                <?php include 'includes/profile-card.php'; ?>
+                </div>
+
+                <div class="col-sm-11" id="user-section">
 
                 <?php
 
