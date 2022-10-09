@@ -52,7 +52,7 @@
 -->           
             
           <div class="col-sm-12 text-center" id="user-section">
-              <img class="cover-img" src="img/User_Cover.png">
+              <img class="cover-img" src="img/user_cover.png">
               <img class="profile-img" src="uploads/<?php echo $user['userImg']; ?>">
               
               <?php  
