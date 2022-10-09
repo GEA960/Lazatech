@@ -28,7 +28,7 @@
     
     <body>
         
-        <?php include 'includes/navbar.php'; ?>    
+       
 
         <div class="container">
             <div class="row">
@@ -37,8 +37,11 @@
                     <?php include 'includes/profile-card.php'; ?>
 
                 </div>
+                <div class="col-sm-11" >
+                <?php include 'includes/navbar.php'; ?>  
+                </div>
 
-                <div class="col-sm-9" id="user-section">
+                <div class="col-sm-11" id="user-section">
 
                 <?php
 
