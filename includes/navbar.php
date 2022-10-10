@@ -52,6 +52,12 @@ require 'includes/dbh.inc.php';
                 } 
               }      
                 ?>
+                
+              <li class="nav-item px-3">
+                    <a class="nav-link" href="index.php">
+                        <i class="fa fa-home fa-2x" aria-hidden="true"></i>
+                    </a>
+                </li>
 
               <li class="nav-item px-3">
                     <a class="nav-link" href="survey.php">
@@ -59,11 +65,6 @@ require 'includes/dbh.inc.php';
                     </a>
                 </li>
 
-              <li class="nav-item px-3">
-                    <a class="nav-link" href="index.php">
-                        <i class="fa fa-home fa-2x" aria-hidden="true"></i>
-                    </a>
-                </li>
                 <li class="nav-item px-3">
                     <a class="nav-link" href="plagiarism.php">
                         <i class="fa fa-check fa-2x" aria-hidden="true"></i>
