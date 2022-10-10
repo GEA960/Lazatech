@@ -52,6 +52,13 @@ require 'includes/dbh.inc.php';
                 } 
               }      
                 ?>
+
+              <li class="nav-item px-3">
+                    <a class="nav-link" href="survey.php">
+                        <i class="fa fa-book fa-2x" aria-hidden="true"></i>
+                    </a>
+                </li>
+
               <li class="nav-item px-3">
                     <a class="nav-link" href="index.php">
                         <i class="fa fa-home fa-2x" aria-hidden="true"></i>

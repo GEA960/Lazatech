@@ -4,7 +4,7 @@
 
     session_start();
     include_once 'includes/dbh.inc.php';
-    define('TITLE',"Plagiarism Checker| Lazatech");
+    define('TITLE',"Survey| Lazatech");
 
     $companyName = "Franklin's Fine Dining";
     
@@ -54,20 +54,8 @@
 
                     <div class="col-sm-11" >
                     
-                    <h1> <center> Lazatech Plagiarism Checker - Powered by Prepostseo </center></h1>
-
-<!-- PrepostSEO Plagiarism Checker Widget --><div id="ppsWidgetCode"></div><div style="text-align: center; font-size:12px; color:#333;"><p>Plagiarism checker provided by <a href="https://www.prepostseo.com/plagiarism-checker" target="_blank"  style="color:#000;" id="ppsLink">prepostseo.com</a></p></div><script type="text/javascript" src="//www.prepostseo.com/widget.js?"></script>
-
-<?php
-$var_1 = 'Git is free and open source software for distributed version control: tracking changes in any set of files';
-$var_2 = 'Git is free a';
-
-similar_text($var_1, $var_2, $percent);
-
-echo $percent;
-// 27.272727272727
-?>
-</div>
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeDFdOQtJpS9_8Sk9DTGgkrUI-mxlzLCaTF13YrhxWfx6QbOg/viewform?embedded=true" width="1500" height="3030" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    </div>
 
 
 
