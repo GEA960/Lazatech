@@ -56,8 +56,7 @@
                     
                     <h1> <center> Lazatech Plagiarism Checker - Powered by Prepostseo </center></h1>
 
-<!-- PrepostSEO Plagiarism Checker Widget -->
-<script type="text/javascript" src="//www.prepostseo.com/widget.js?"></script><div style="text-align: center; font-size:12px; color:#333;"><p>
+<!-- PrepostSEO Plagiarism Checker Widget --><div id="ppsWidgetCode"></div><div style="text-align: center; font-size:12px; color:#333;"><p>Plagiarism checker provided by <a href="https://www.prepostseo.com/plagiarism-checker" target="_blank"  style="color:#000;" id="ppsLink">prepostseo.com</a></p></div><script type="text/javascript" src="//www.prepostseo.com/widget.js?"></script>
 
 <?php
 $var_1 = 'Git is free and open source software for distributed version control: tracking changes in any set of files';
