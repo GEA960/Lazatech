@@ -22,7 +22,7 @@
                         
                         <div class="signup-left position-fixed text-center">
                             
-                            <img src="img/200px.png">
+                            <img src="img/200pxFinal.png">
                             <br><br><br>
                             <?php
                             
