@@ -54,7 +54,7 @@
 
                     <div class="col-sm-11" >
                     
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeDFdOQtJpS9_8Sk9DTGgkrUI-mxlzLCaTF13YrhxWfx6QbOg/viewform?embedded=true" width="1500" height="3030" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeDFdOQtJpS9_8Sk9DTGgkrUI-mxlzLCaTF13YrhxWfx6QbOg/viewform?embedded=true" width="800" height="3030" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                     </div>
 
 
