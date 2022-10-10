@@ -15,3 +15,5 @@
         
         
         <link rel="shortcut icon" href="img/faviconpx.png" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1312697179939441"
+     crossorigin="anonymous"></script>

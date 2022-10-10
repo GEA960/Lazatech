@@ -4,6 +4,7 @@
     define('TITLE',"Contact Us | Lazatech");
     
     include 'includes/HTML-head.php';
+    
     include 'includes/email-server.php';
 ?>  
 
