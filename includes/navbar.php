@@ -1,5 +1,6 @@
- 
-
+<?php 
+require 'includes/dbh.inc.php';
+?>
         <nav class="navbar sticky-top navbar-expand-md navbar-light bg-dark">
             <a class="navbar-brand" href="index.php">
                 <img src="img/200.png" width="40" height="40">
@@ -20,12 +21,42 @@
               <div class="collapse navbar-collapse justify-content-right" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto mr-1">
    
+
+            <?php
+            $sql = "select idUsers, uidUsers, userLevel, f_name, l_name, emailUsers, userImg
+            from users
+            order by userLevel desc, idUsers asc";
+
+    $stmt = mysqli_stmt_init($conn);    
+
+    if (!mysqli_stmt_prepare($stmt, $sql))
+    {
+        die('SQL error');
+    }
+    else
+    {
+        mysqli_stmt_execute($stmt);
+        $result = mysqli_stmt_get_result($stmt);
+
+
+             if ($_SESSION['userLevel'] == 1)
+             {    
+              echo '              <li class="nav-item px-3">
+              <a class="nav-link" href="admin.php">
+                  <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+              </a>
+          </li>'; }
+                else
+                {
+                    echo '</span>';
+                } 
+              }      
+                ?>
               <li class="nav-item px-3">
                     <a class="nav-link" href="index.php">
                         <i class="fa fa-home fa-2x" aria-hidden="true"></i>
                     </a>
                 </li>
-
                 <li class="nav-item px-3">
                     <a class="nav-link" href="plagiarism.php">
                         <i class="fa fa-check fa-2x" aria-hidden="true"></i>
