@@ -47,21 +47,17 @@
             
             <div class="container-fluid">
                 <div class="row">
-                <div class="col-sm-3" >
+                <div class="col-sm-11" >
+                <?php include 'includes/profile-card.php'; ?>
+                </div>
+                  
 
-                        <?php include 'includes/profile-card.php'; ?>
-
-                    </div>
-
-                    <div class="col-sm-7" >
-
-                    <h1>Lazatech Plagiarism Checker - Powered by Prepostseo</h1>
+                    <div class="col-sm-11" >
+                    
+                    <h1> <center> Lazatech Plagiarism Checker - Powered by Prepostseo </center></h1>
 
 <!-- PrepostSEO Plagiarism Checker Widget -->
-<script type="text/javascript" src="//www.prepostseo.com/widget.js?"></script><div style="text-align: center; font-size:12px; color:#333;"><p><a href="https://www.prepostseo.com/plagiarism-checker" target="_blank" style="color:#000;">Plagiarism checker</a> provided by <a href="https://www.prepostseo.com/" target="_blank"  style="color:#000;">prepostseo.com</a></p></div>
-
-                    </div>
-
+<script type="text/javascript" src="//www.prepostseo.com/widget.js?"></script><div style="text-align: center; font-size:12px; color:#333;"><p>
 
 <?php
 $var_1 = 'Git is free and open source software for distributed version control: tracking changes in any set of files';
@@ -71,8 +67,11 @@ similar_text($var_1, $var_2, $percent);
 
 echo $percent;
 // 27.272727272727
-
 ?>
+</div>
+
+
+
 
 
                     <div class="col-sm-2" -->
