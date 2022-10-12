@@ -2,7 +2,7 @@
 
     session_start();
     
-    define('TITLE',"Create Poll | OnAid");
+    define('TITLE',"Create Poll | Lazatech");
     
     if(!isset($_SESSION['userId']))
     {

@@ -1,7 +1,7 @@
 <?php
 
     session_start();
-    define('TITLE',"Create Blog | OnAid");
+    define('TITLE',"Create Blog | Lazatech");
     
     if(!isset($_SESSION['userId']))
     {

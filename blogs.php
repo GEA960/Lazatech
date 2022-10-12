@@ -4,7 +4,7 @@
     session_start();
     require 'includes/dbh.inc.php';
     
-    define('TITLE',"Blogs | OnAid");
+    define('TITLE',"Blogs | Lazatech");
     
     if(!isset($_SESSION['userId']))
     {

@@ -3,7 +3,7 @@
     session_start();
     require 'includes/dbh.inc.php';
     
-    define('TITLE',"Reset Password | OnAid");
+    define('TITLE',"Reset Password | Lazatech");
     
     if(isset($_SESSION['userId']))
     {

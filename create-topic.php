@@ -3,7 +3,7 @@
     session_start();
     include_once 'includes/dbh.inc.php';
     
-    define('TITLE',"Create Forum | OnAid");
+    define('TITLE',"Create Forum | Lazatech");
     
     if(!isset($_SESSION['userId']))
     {

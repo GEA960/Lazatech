@@ -3,7 +3,7 @@
     session_start();
     require 'includes/dbh.inc.php';
     
-    define('TITLE',"The Team | OnAid");
+    define('TITLE',"The Team | Lazatech");
     
     if(!isset($_SESSION['userId']))
     {

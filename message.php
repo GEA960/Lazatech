@@ -3,7 +3,7 @@
     session_start();
     require 'includes/dbh.inc.php';
     
-    define('TITLE',"Inbox | OnAid");
+    define('TITLE',"Inbox | Lazatech");
     
     if(!isset($_SESSION['userId']))
     {

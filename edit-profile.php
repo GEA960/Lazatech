@@ -3,7 +3,7 @@
     session_start();
     require 'includes/dbh.inc.php';
     
-    define('TITLE',"Edit Profile | OnAid");
+    define('TITLE',"Edit Profile | Lazatech");
     
     if(!isset($_SESSION['userId']))
     {

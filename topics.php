@@ -2,7 +2,7 @@
 
     session_start();
     require 'includes/dbh.inc.php';
-    define('TITLE',"Forums | OnAid");
+    define('TITLE',"Forums | Lazatech");
     
     if(!isset($_SESSION['userId']))
     {

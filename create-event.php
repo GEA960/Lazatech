@@ -1,7 +1,7 @@
 <?php
 
     session_start();
-    define('TITLE',"Create Event | OnAid");
+    define('TITLE',"Create Event | Lazatech");
     
     if(!isset($_SESSION['userId']))
     {

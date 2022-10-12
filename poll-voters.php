@@ -2,7 +2,7 @@
 
     session_start();
     require 'includes/dbh.inc.php';
-    define('TITLE',"Votes | OnAid");
+    define('TITLE',"Votes | Lazatech");
     
     if(!isset($_SESSION['userId']))
     {

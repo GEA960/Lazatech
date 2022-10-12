@@ -1,7 +1,7 @@
 <?php
 
     session_start();
-    define('TITLE',"Signup | OnAid");
+    define('TITLE',"Signup | Lazatech");
     
     if(isset($_SESSION['userId']))
     {

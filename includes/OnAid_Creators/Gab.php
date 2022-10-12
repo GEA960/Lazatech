@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-	<title>OnAid Creator</title>
+	<title>Lazatech Creator</title>
         
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
         

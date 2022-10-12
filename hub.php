@@ -2,7 +2,7 @@
     session_start();
     require 'includes/dbh.inc.php';
     
-    define('TITLE',"Hub | OnAid");
+    define('TITLE',"Hub | Lazatech");
     
     if(!isset($_SESSION['userId']))
     {

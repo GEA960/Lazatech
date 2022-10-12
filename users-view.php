@@ -3,7 +3,7 @@
     session_start();
     require 'includes/dbh.inc.php';
     
-    define('TITLE',"Find People | OnAid");
+    define('TITLE',"Find People | Lazatech");
     
     if(!isset($_SESSION['userId']))
     {

@@ -3,7 +3,7 @@
     session_start();
     require 'includes/dbh.inc.php';
 
-    define('TITLE',"Poll | OnAid");
+    define('TITLE',"Poll | Lazatech");
     
     if(!isset($_SESSION['userId']))
     {

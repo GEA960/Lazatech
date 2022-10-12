@@ -2,7 +2,7 @@
 
     session_start();
     
-    define('TITLE',"Create Category | OnAid");
+    define('TITLE',"Create Category | Lazatech");
     
     if(!isset($_SESSION['userId']))
     {
