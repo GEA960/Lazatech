@@ -1,3 +1,24 @@
+<?php
+
+    session_start();
+    include_once 'includes/dbh.inc.php';
+    define('TITLE',"Dashboard| Lazatech");
+
+    $companyName = "Franklin's Fine Dining";
+    
+    function strip_bad_chars( $input ){
+        $output = preg_replace( "/[^a-zA-Z0-9_-]/", "", $input);
+        return $output;
+    }
+    
+    if(!isset($_SESSION['userId']))
+    {
+        header("Location: login.php");
+        exit();
+    }
+    ?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,7 +30,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <title>OnAId.org</title>
+    <title>Search | Lazatech</title>
   </head>
   <body>
     <?php
