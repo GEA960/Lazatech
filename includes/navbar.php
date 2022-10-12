@@ -18,6 +18,9 @@ require 'includes/dbh.inc.php';
             </li> 
            </ul>
 
+
+
+
               <div class="collapse navbar-collapse justify-content-right" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto mr-1">
    
@@ -59,6 +62,11 @@ require 'includes/dbh.inc.php';
                     </a>
                 </li>
 
+            <li class="nav-item px-3">
+                    <a class="nav-link" href="https://lazatech-educate.web.app">
+                        <i class="fa fa-list fa-2x" aria-hidden="true"></i>
+                    </a>
+            </li>
               <li class="nav-item px-3">
                     <a class="nav-link" href="survey.php">
                         <i class="fa fa-book fa-2x" aria-hidden="true"></i>
