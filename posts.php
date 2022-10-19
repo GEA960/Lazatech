@@ -214,6 +214,10 @@
                                             </table>
                                             <a href="profile.php?id='.$row['idUsers'].'">
                                                 <i class="fa fa-user fa-2x" aria-hidden="true"></i></a>
+
+                                            <a href="https://twitter.com/intent/tweet?text=%20%2B1%20 XRTemplate %20'.$row['headline'].'%20%23tipwithxumm">
+                                                <i class="fa fa-send fa-2x" aria-hidden="true"></i></a>
+                                               
                                             <a href="message.php?id='.$row['idUsers'].'">
                                                 <i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>';
                                         
