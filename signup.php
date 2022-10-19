@@ -176,9 +176,9 @@
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-12">
-                                <label for="headline">Headline</label>
+                                <label for="headline">Twitter Handle/Username</label>
                             <input type="text" class="form-control" id="headline" name="headline" 
-                                   placeholder="Your profile headline" 
+                                   placeholder="@Yourtwitterhandle/Username" 
                                    maxlength="120">
                             </div>
                         </div>

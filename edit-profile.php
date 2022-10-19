@@ -87,7 +87,7 @@
                   <hr>
                   
                     <div class="form-group">
-                        <label for="headline">Twitter Handle/Username</label>
+                        <label for="headline">Twitter Handle/Username Ex. @SeulGabi</label>
                         <input class="form-control" type="text" id="headline" name="TwitterHandle" 
                                placeholder="Twitter Handle" value='<?php echo $_SESSION['headline']; ?>'><br>
                         
