@@ -87,9 +87,9 @@
                   <hr>
                   
                     <div class="form-group">
-                        <label for="headline">Profile Headline</label>
-                        <input class="form-control" type="text" id="headline" name="headline" 
-                               placeholder="Your Profile Headline" value='<?php echo $_SESSION['headline']; ?>'><br>
+                        <label for="headline">Twitter Handle/Username</label>
+                        <input class="form-control" type="text" id="headline" name="TwitterHandle" 
+                               placeholder="Twitter Handle" value='<?php echo $_SESSION['headline']; ?>'><br>
                         
                         <label for="edit-bio">Profile Bio</label>
                         <textarea class="form-control" id="edit-bio" rows="10" name="bio" maxlength="5000"
