@@ -14,7 +14,7 @@ if (isset($_POST['update-profile']))
     $password = $_POST['pwd'];
     $passwordRepeat  = $_POST['pwd-repeat'];
     $gender = $_POST['gender'];
-    $headline = $_POST['headline'];
+    $headline = $_POST['TwitterHandle'];
     $bio = $_POST['bio'];
     
     
