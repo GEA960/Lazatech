@@ -115,6 +115,7 @@
             
             
             <?php
+                
             
                 $sql = "select * from posts p, users u "
                         . "where p.post_topic=? "
@@ -190,9 +191,9 @@
                         
                         echo '<div class="card post">  
                                 <span class="date">'.date("F jS, Y", strtotime($row['post_date']))
-                                .'<span class="span-post-no">#'.$i.'</span> </span>
+                                .'<span class="span-post-no">#'.$i.'  '. '<a href="report-post.php"><i class="fa fa-exclamation-circle" style="font-size:23px;"></i></a></span>
+                                </span>
                                 <div class="row">
-
                                     <div class="col-sm-3 user">
                                         <div class="text-center">
                                             <img src="uploads/'.$row['userImg'].'" class="img-fluid center-block user-img">
@@ -214,26 +215,20 @@
                                             </table>
                                             <a href="profile.php?id='.$row['idUsers'].'">
                                                 <i class="fa fa-user fa-2x" aria-hidden="true"></i></a>
-                                  
                                             <a href="message.php?id='.$row['idUsers'].'">
                                                 <i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>';
-                                            
                                         
                                        if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['post_by'])
                                                 {     
                                                     echo '<a href="Edit-forum.php?id= '.$row['post_id'].' ">
                                                     <i class="fa fa-pencil fa-2x edit-blog" aria-hidden="true"></i>
-                                                    </a>';
+                                                  </a>';
                                                 }    
                                                 
                                                 
-                                     echo   ' 
-                                     
-                                     <a href="https://twitter.com/intent/tweet?text=%20%2B1%20 XRTemplate %20'.$row['headline'].'%20%23tipwithxumm">
-                                     <i class="fa fa-send fa-2x" aria-hidden="true"></i></a> </div>
-                                     
+                                     echo   '</div>
                                     </div>
-                                       
+                                      
               
                                     <div class="col-sm-9 post-content">
                                         <p>'.$row['post_content'].'</p>
@@ -243,6 +238,7 @@
                         {
                             echo '<a href="includes/delete-post.php?topic='.$topic.'&post='.$row['post_id'].'&by='.$row['post_by'].'" >'
                                 . '<i class="fa fa-trash fa-2x" aria-hidden="true"></i></a><br>';
+
                         }
                         
                         if ($voted_u)
@@ -266,7 +262,7 @@
                                     </div>
                                 </div>
                                 <span class="likes"><span class="span-post-no"></span> <span class="span-post-no"><a
-                                        href="">OnAid Forum</a></span></span>
+                                        href="">Lazatech Forum</a></span></span>
                             </div>';
                                             
                         $i++;
