@@ -190,7 +190,7 @@
                         
                         echo '<div class="card post">  
                                 <span class="date">'.date("F jS, Y", strtotime($row['post_date']))
-                                .'<span class="span-post-no">#'.$i.'</span> </span>
+                                .'<span class="span-post-no">#'.$i.'  '. '<a href="report-post.php"><i class="fa fa-exclamation-circle" style="font-size:23px;"></i></a></span> </span>
                                 <div class="row">
 
                                     <div class="col-sm-3 user">
