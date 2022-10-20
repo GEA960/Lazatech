@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.5
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Jun 18, 2022 at 05:16 AM
--- Server version: 10.5.12-MariaDB
--- PHP Version: 7.3.32
+-- Host: 127.0.0.1:3306
+-- Generation Time: Oct 20, 2022 at 10:42 PM
+-- Server version: 5.7.36
+-- PHP Version: 7.4.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,8 +18,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `id17986245_onaid_database`
+-- Database: `lazatech_database`
 --
+CREATE DATABASE IF NOT EXISTS `lazatech_database` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `lazatech_database`;
 
 -- --------------------------------------------------------
 
@@ -28,15 +29,18 @@ SET time_zone = "+00:00";
 -- Table structure for table `blogs`
 --
 
-CREATE TABLE `blogs` (
-  `blog_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `blogs`;
+CREATE TABLE IF NOT EXISTS `blogs` (
+  `blog_id` int(11) NOT NULL AUTO_INCREMENT,
   `blog_title` varchar(100) NOT NULL,
   `blog_img` varchar(1000) NOT NULL DEFAULT 'default.png',
   `blog_by` int(11) NOT NULL,
   `blog_date` date DEFAULT NULL,
-  `blog_votes` int(11) NOT NULL DEFAULT 0,
-  `blog_content` longtext DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `blog_votes` int(11) NOT NULL DEFAULT '0',
+  `blog_content` longtext,
+  PRIMARY KEY (`blog_id`),
+  KEY `blog_by` (`blog_by`)
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `blogs`
@@ -74,13 +78,17 @@ INSERT INTO `blogs` (`blog_id`, `blog_title`, `blog_img`, `blog_by`, `blog_date`
 -- Table structure for table `blogvotes`
 --
 
-CREATE TABLE `blogvotes` (
-  `voteId` int(11) NOT NULL,
+DROP TABLE IF EXISTS `blogvotes`;
+CREATE TABLE IF NOT EXISTS `blogvotes` (
+  `voteId` int(11) NOT NULL AUTO_INCREMENT,
   `voteBlog` int(11) NOT NULL,
   `voteBy` int(11) NOT NULL,
   `voteDate` date NOT NULL,
-  `vote` int(11) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `vote` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`voteId`),
+  KEY `voteBlog` (`voteBlog`),
+  KEY `voteBy` (`voteBy`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `blogvotes`
@@ -92,6 +100,7 @@ INSERT INTO `blogvotes` (`voteId`, `voteBlog`, `voteBy`, `voteDate`, `vote`) VAL
 --
 -- Triggers `blogvotes`
 --
+DROP TRIGGER IF EXISTS `calc_blog_votes_after_delete`;
 DELIMITER $$
 CREATE TRIGGER `calc_blog_votes_after_delete` AFTER DELETE ON `blogvotes` FOR EACH ROW BEGIN
 
@@ -102,6 +111,7 @@ CREATE TRIGGER `calc_blog_votes_after_delete` AFTER DELETE ON `blogvotes` FOR EA
 END
 $$
 DELIMITER ;
+DROP TRIGGER IF EXISTS `calc_blog_votes_after_insert`;
 DELIMITER $$
 CREATE TRIGGER `calc_blog_votes_after_insert` AFTER INSERT ON `blogvotes` FOR EACH ROW BEGIN
 	
@@ -112,6 +122,7 @@ CREATE TRIGGER `calc_blog_votes_after_insert` AFTER INSERT ON `blogvotes` FOR EA
     END
 $$
 DELIMITER ;
+DROP TRIGGER IF EXISTS `calc_blog_votes_after_update`;
 DELIMITER $$
 CREATE TRIGGER `calc_blog_votes_after_update` AFTER UPDATE ON `blogvotes` FOR EACH ROW BEGIN
 	
@@ -129,11 +140,14 @@ DELIMITER ;
 -- Table structure for table `categories`
 --
 
-CREATE TABLE `categories` (
-  `cat_id` int(8) NOT NULL,
+DROP TABLE IF EXISTS `categories`;
+CREATE TABLE IF NOT EXISTS `categories` (
+  `cat_id` int(8) NOT NULL AUTO_INCREMENT,
   `cat_name` varchar(255) NOT NULL,
-  `cat_description` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `cat_description` varchar(255) NOT NULL,
+  PRIMARY KEY (`cat_id`),
+  UNIQUE KEY `cat_name_unique` (`cat_name`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `categories`
@@ -156,11 +170,15 @@ INSERT INTO `categories` (`cat_id`, `cat_name`, `cat_description`) VALUES
 -- Table structure for table `conversation`
 --
 
-CREATE TABLE `conversation` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `conversation`;
+CREATE TABLE IF NOT EXISTS `conversation` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_one` int(11) NOT NULL,
-  `user_two` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `user_two` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `user_one` (`user_one`),
+  KEY `user_two` (`user_two`)
+) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `conversation`
@@ -193,14 +211,17 @@ INSERT INTO `conversation` (`id`, `user_one`, `user_two`) VALUES
 -- Table structure for table `events`
 --
 
-CREATE TABLE `events` (
-  `event_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `events`;
+CREATE TABLE IF NOT EXISTS `events` (
+  `event_id` int(11) NOT NULL AUTO_INCREMENT,
   `event_by` int(11) NOT NULL,
   `title` varchar(100) NOT NULL,
   `date_created` date NOT NULL,
   `event_date` varchar(10) NOT NULL,
-  `event_image` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `event_image` varchar(200) NOT NULL,
+  PRIMARY KEY (`event_id`),
+  KEY `events_ibfk_1` (`event_by`)
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `events`
@@ -233,13 +254,17 @@ INSERT INTO `events` (`event_id`, `event_by`, `title`, `date_created`, `event_da
 -- Table structure for table `event_info`
 --
 
-CREATE TABLE `event_info` (
-  `event_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `event_info`;
+CREATE TABLE IF NOT EXISTS `event_info` (
+  `event_id` int(11) NOT NULL AUTO_INCREMENT,
   `event` int(11) NOT NULL,
   `title` varchar(100) NOT NULL,
   `headline` varchar(5000) NOT NULL,
-  `description` varchar(6000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `description` varchar(6000) NOT NULL,
+  PRIMARY KEY (`event_id`),
+  KEY `event` (`event`),
+  KEY `title` (`title`)
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `event_info`
@@ -269,13 +294,18 @@ INSERT INTO `event_info` (`event_id`, `event`, `title`, `headline`, `description
 -- Table structure for table `messages`
 --
 
-CREATE TABLE `messages` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `messages`;
+CREATE TABLE IF NOT EXISTS `messages` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `conversation_id` int(11) NOT NULL,
   `user_from` int(11) NOT NULL,
   `user_to` int(11) NOT NULL,
-  `message` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `message` text NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `user_from` (`user_from`),
+  KEY `user_to` (`user_to`),
+  KEY `conversation_id` (`conversation_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `messages`
@@ -305,16 +335,19 @@ INSERT INTO `messages` (`id`, `conversation_id`, `user_from`, `user_to`, `messag
 -- Table structure for table `polls`
 --
 
-CREATE TABLE `polls` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `polls`;
+CREATE TABLE IF NOT EXISTS `polls` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `subject` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
   `status` enum('1','0') CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT '1',
   `created_by` int(11) NOT NULL,
   `poll_desc` varchar(5000) NOT NULL,
-  `locked` int(1) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `locked` int(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `created_by` (`created_by`)
+) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `polls`
@@ -375,14 +408,17 @@ INSERT INTO `polls` (`id`, `subject`, `created`, `modified`, `status`, `created_
 -- Table structure for table `poll_options`
 --
 
-CREATE TABLE `poll_options` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `poll_options`;
+CREATE TABLE IF NOT EXISTS `poll_options` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `poll_id` int(11) NOT NULL,
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
-  `status` enum('1','0') CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT '1'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `status` enum('1','0') CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`),
+  KEY `poll_id` (`poll_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=207 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `poll_options`
@@ -584,12 +620,17 @@ INSERT INTO `poll_options` (`id`, `poll_id`, `name`, `created`, `modified`, `sta
 -- Table structure for table `poll_votes`
 --
 
-CREATE TABLE `poll_votes` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `poll_votes`;
+CREATE TABLE IF NOT EXISTS `poll_votes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `poll_id` int(11) NOT NULL,
   `poll_option_id` int(11) NOT NULL,
-  `vote_by` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `vote_by` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `poll_id` (`poll_id`),
+  KEY `poll_option_id` (`poll_option_id`),
+  KEY `vote_by` (`vote_by`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `poll_votes`
@@ -616,14 +657,18 @@ INSERT INTO `poll_votes` (`id`, `poll_id`, `poll_option_id`, `vote_by`) VALUES
 -- Table structure for table `posts`
 --
 
-CREATE TABLE `posts` (
-  `post_id` int(8) NOT NULL,
+DROP TABLE IF EXISTS `posts`;
+CREATE TABLE IF NOT EXISTS `posts` (
+  `post_id` int(8) NOT NULL AUTO_INCREMENT,
   `post_content` text NOT NULL,
   `post_date` datetime NOT NULL,
   `post_topic` int(8) NOT NULL,
   `post_by` int(8) NOT NULL,
-  `post_votes` int(11) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `post_votes` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`post_id`),
+  KEY `post_topic` (`post_topic`),
+  KEY `post_by` (`post_by`)
+) ENGINE=InnoDB AUTO_INCREMENT=210 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `posts`
@@ -694,13 +739,16 @@ INSERT INTO `posts` (`post_id`, `post_content`, `post_date`, `post_topic`, `post
 -- Table structure for table `postvotes`
 --
 
-CREATE TABLE `postvotes` (
-  `voteId` int(11) NOT NULL,
+DROP TABLE IF EXISTS `postvotes`;
+CREATE TABLE IF NOT EXISTS `postvotes` (
+  `voteId` int(11) NOT NULL AUTO_INCREMENT,
   `votePost` int(11) NOT NULL,
   `voteBy` int(11) NOT NULL,
   `voteDate` date NOT NULL,
-  `vote` int(11) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `vote` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`voteId`),
+  KEY `voteBy` (`voteBy`)
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `postvotes`
@@ -728,6 +776,7 @@ INSERT INTO `postvotes` (`voteId`, `votePost`, `voteBy`, `voteDate`, `vote`) VAL
 --
 -- Triggers `postvotes`
 --
+DROP TRIGGER IF EXISTS `calc_forum_votes_after_delete`;
 DELIMITER $$
 CREATE TRIGGER `calc_forum_votes_after_delete` AFTER DELETE ON `postvotes` FOR EACH ROW BEGIN
 
@@ -738,6 +787,7 @@ CREATE TRIGGER `calc_forum_votes_after_delete` AFTER DELETE ON `postvotes` FOR E
 END
 $$
 DELIMITER ;
+DROP TRIGGER IF EXISTS `calc_forum_votes_after_insert`;
 DELIMITER $$
 CREATE TRIGGER `calc_forum_votes_after_insert` AFTER INSERT ON `postvotes` FOR EACH ROW BEGIN
 	
@@ -748,6 +798,7 @@ CREATE TRIGGER `calc_forum_votes_after_insert` AFTER INSERT ON `postvotes` FOR E
     END
 $$
 DELIMITER ;
+DROP TRIGGER IF EXISTS `calc_forum_votes_after_update`;
 DELIMITER $$
 CREATE TRIGGER `calc_forum_votes_after_update` AFTER UPDATE ON `postvotes` FOR EACH ROW BEGIN
 	
@@ -765,13 +816,33 @@ DELIMITER ;
 -- Table structure for table `pwdreset`
 --
 
-CREATE TABLE `pwdreset` (
-  `pwdResetId` int(11) NOT NULL,
+DROP TABLE IF EXISTS `pwdreset`;
+CREATE TABLE IF NOT EXISTS `pwdreset` (
+  `pwdResetId` int(11) NOT NULL AUTO_INCREMENT,
   `pwdResetEmail` text NOT NULL,
   `pwdResetSelector` text NOT NULL,
   `pwdResetToken` longtext NOT NULL,
-  `pwdResetExpires` text NOT NULL
+  `pwdResetExpires` text NOT NULL,
+  PRIMARY KEY (`pwdResetId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `reports`
+--
+
+DROP TABLE IF EXISTS `reports`;
+CREATE TABLE IF NOT EXISTS `reports` (
+  `report_id` int(11) NOT NULL AUTO_INCREMENT,
+  `report_by` int(11) NOT NULL,
+  `report_date` date NOT NULL,
+  `link` varchar(6000) NOT NULL,
+  `description` varchar(6000) NOT NULL,
+  `message` varchar(6000) NOT NULL,
+  PRIMARY KEY (`report_id`),
+  KEY `report_by` (`report_by`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -779,13 +850,17 @@ CREATE TABLE `pwdreset` (
 -- Table structure for table `topics`
 --
 
-CREATE TABLE `topics` (
-  `topic_id` int(8) NOT NULL,
+DROP TABLE IF EXISTS `topics`;
+CREATE TABLE IF NOT EXISTS `topics` (
+  `topic_id` int(8) NOT NULL AUTO_INCREMENT,
   `topic_subject` varchar(255) NOT NULL,
   `topic_date` datetime NOT NULL,
   `topic_cat` int(8) NOT NULL,
-  `topic_by` int(8) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `topic_by` int(8) NOT NULL,
+  PRIMARY KEY (`topic_id`),
+  KEY `topic_cat` (`topic_cat`),
+  KEY `topic_by` (`topic_by`)
+) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `topics`
@@ -851,9 +926,10 @@ INSERT INTO `topics` (`topic_id`, `topic_subject`, `topic_date`, `topic_cat`, `t
 -- Table structure for table `users`
 --
 
-CREATE TABLE `users` (
-  `idUsers` int(11) NOT NULL,
-  `userLevel` int(11) NOT NULL DEFAULT 0,
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `idUsers` int(11) NOT NULL AUTO_INCREMENT,
+  `userLevel` int(11) NOT NULL DEFAULT '0',
   `f_name` varchar(50) NOT NULL,
   `l_name` varchar(50) NOT NULL,
   `uidUsers` tinytext NOT NULL,
@@ -862,8 +938,9 @@ CREATE TABLE `users` (
   `gender` char(1) NOT NULL,
   `headline` varchar(500) DEFAULT NULL,
   `bio` varchar(4000) DEFAULT NULL,
-  `userImg` varchar(500) DEFAULT 'default.png'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `userImg` varchar(500) DEFAULT 'default.png',
+  PRIMARY KEY (`idUsers`)
+) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `users`
@@ -881,216 +958,6 @@ INSERT INTO `users` (`idUsers`, `userLevel`, `f_name`, `l_name`, `uidUsers`, `em
 (51, 0, 'Marian', 'Guerra', 'marianzg1015', 'marian.guerra@g.batstate-u.edu.ph', '$2y$10$yJn581/GMJeww6ajrtKfIuZ0YtSGhlUjYdazet9.DV268f/eqCJhK', 'f', 'Future Graduate❤️', '', '624451d33535b5.69181310.jpg'),
 (52, 0, 'Mariel', 'Guerra', 'MARIEL', 'mariel.guerra@g.batstate-u.edu.ph', '$2y$10$DjTEP57v5l5UizTGvtVbDe872VB/JhxwWOS1DhImSULMyGxORc5Be', 'f', '\"Ad meliora.\"', '... ', '624454436e1c52.21706905.png'),
 (53, 0, '', '', 'MarielZG', 'marielzguerra09@gmail.com', '$2y$10$WtKQjhBviFTesVY3sl8Puujhhbolf2SUyMYy3E8mr.8iIE/9dzWaa', 'm', '', '', 'default.png');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `blogs`
---
-ALTER TABLE `blogs`
-  ADD PRIMARY KEY (`blog_id`),
-  ADD KEY `blog_by` (`blog_by`);
-
---
--- Indexes for table `blogvotes`
---
-ALTER TABLE `blogvotes`
-  ADD PRIMARY KEY (`voteId`),
-  ADD KEY `voteBlog` (`voteBlog`),
-  ADD KEY `voteBy` (`voteBy`);
-
---
--- Indexes for table `categories`
---
-ALTER TABLE `categories`
-  ADD PRIMARY KEY (`cat_id`),
-  ADD UNIQUE KEY `cat_name_unique` (`cat_name`);
-
---
--- Indexes for table `conversation`
---
-ALTER TABLE `conversation`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `user_one` (`user_one`),
-  ADD KEY `user_two` (`user_two`);
-
---
--- Indexes for table `events`
---
-ALTER TABLE `events`
-  ADD PRIMARY KEY (`event_id`),
-  ADD KEY `events_ibfk_1` (`event_by`);
-
---
--- Indexes for table `event_info`
---
-ALTER TABLE `event_info`
-  ADD PRIMARY KEY (`event_id`),
-  ADD KEY `event` (`event`),
-  ADD KEY `title` (`title`);
-
---
--- Indexes for table `messages`
---
-ALTER TABLE `messages`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `user_from` (`user_from`),
-  ADD KEY `user_to` (`user_to`),
-  ADD KEY `conversation_id` (`conversation_id`);
-
---
--- Indexes for table `polls`
---
-ALTER TABLE `polls`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `created_by` (`created_by`);
-
---
--- Indexes for table `poll_options`
---
-ALTER TABLE `poll_options`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `poll_id` (`poll_id`);
-
---
--- Indexes for table `poll_votes`
---
-ALTER TABLE `poll_votes`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `poll_id` (`poll_id`),
-  ADD KEY `poll_option_id` (`poll_option_id`),
-  ADD KEY `vote_by` (`vote_by`);
-
---
--- Indexes for table `posts`
---
-ALTER TABLE `posts`
-  ADD PRIMARY KEY (`post_id`),
-  ADD KEY `post_topic` (`post_topic`),
-  ADD KEY `post_by` (`post_by`);
-
---
--- Indexes for table `postvotes`
---
-ALTER TABLE `postvotes`
-  ADD PRIMARY KEY (`voteId`),
-  ADD KEY `voteBy` (`voteBy`);
-
---
--- Indexes for table `pwdreset`
---
-ALTER TABLE `pwdreset`
-  ADD PRIMARY KEY (`pwdResetId`);
-
---
--- Indexes for table `topics`
---
-ALTER TABLE `topics`
-  ADD PRIMARY KEY (`topic_id`),
-  ADD KEY `topic_cat` (`topic_cat`),
-  ADD KEY `topic_by` (`topic_by`);
-
---
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`idUsers`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `blogs`
---
-ALTER TABLE `blogs`
-  MODIFY `blog_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
-
---
--- AUTO_INCREMENT for table `blogvotes`
---
-ALTER TABLE `blogvotes`
-  MODIFY `voteId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `categories`
---
-ALTER TABLE `categories`
-  MODIFY `cat_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- AUTO_INCREMENT for table `conversation`
---
-ALTER TABLE `conversation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
-
---
--- AUTO_INCREMENT for table `events`
---
-ALTER TABLE `events`
-  MODIFY `event_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
-
---
--- AUTO_INCREMENT for table `event_info`
---
-ALTER TABLE `event_info`
-  MODIFY `event_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
-
---
--- AUTO_INCREMENT for table `messages`
---
-ALTER TABLE `messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
-
---
--- AUTO_INCREMENT for table `polls`
---
-ALTER TABLE `polls`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
-
---
--- AUTO_INCREMENT for table `poll_options`
---
-ALTER TABLE `poll_options`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=207;
-
---
--- AUTO_INCREMENT for table `poll_votes`
---
-ALTER TABLE `poll_votes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
-
---
--- AUTO_INCREMENT for table `posts`
---
-ALTER TABLE `posts`
-  MODIFY `post_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=210;
-
---
--- AUTO_INCREMENT for table `postvotes`
---
-ALTER TABLE `postvotes`
-  MODIFY `voteId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
-
---
--- AUTO_INCREMENT for table `pwdreset`
---
-ALTER TABLE `pwdreset`
-  MODIFY `pwdResetId` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `topics`
---
-ALTER TABLE `topics`
-  MODIFY `topic_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
-
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `idUsers` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 
 --
 -- Constraints for dumped tables
@@ -1160,6 +1027,12 @@ ALTER TABLE `poll_votes`
 --
 ALTER TABLE `postvotes`
   ADD CONSTRAINT `postvotes_ibfk_1` FOREIGN KEY (`voteBy`) REFERENCES `users` (`idUsers`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `reports`
+--
+ALTER TABLE `reports`
+  ADD CONSTRAINT `reports_ibfk_1` FOREIGN KEY (`report_by`) REFERENCES `users` (`idUsers`);
 
 --
 -- Constraints for table `topics`
