@@ -77,7 +77,7 @@ a.addbtn:hover, a.addbtn:active {
 					<h5>Violation Reports</h5>
 				</div>
 				<div class="card-body bg-basic">
-					<?php 
+					<!--?php 
 						$sql = "select r.*, u.*
                     from reports r, users u where r.report_by=u.idUsers
                     order by report_date desc";
@@ -111,7 +111,7 @@ a.addbtn:hover, a.addbtn:active {
                                   </div>';
                                   
 
-					 ?>
+					 ?-->
 
 					
 					<div class="modal fade" id="report-modal" tabindex="-1" role="dialog" aria-labelledby="reportmodallabel" aria-hidden="true">
@@ -130,7 +130,7 @@ a.addbtn:hover, a.addbtn:active {
 								<div class="modal-body">
 									
 
-									<?php
+									<!--?php
 
                       
 
@@ -154,7 +154,7 @@ a.addbtn:hover, a.addbtn:active {
 
                                   
                                  
-                  ?>
+                  ?-->
 								</div>
 								<div class="modal-footer">
 									<button type="button" class="btn btn-default" data-dismiss="modal">
@@ -170,7 +170,7 @@ a.addbtn:hover, a.addbtn:active {
 						
 					</div>
 
-					<?php 
+					<!--?php 
 
 						if (empty ($result)) {
                                   	echo '<i>No violation report for the mean time.</>';
@@ -182,7 +182,7 @@ a.addbtn:hover, a.addbtn:active {
 
                       }
 
-					?>
+					?-->
 					<script>
 						/**$(function() {
     for (var i = 0; i < 100; i++) {
@@ -230,7 +230,7 @@ a.addbtn:hover, a.addbtn:active {
 <!--------------------Content ng user admin modal----------------------------------------------------------------------------------------->
 
 								<div class="modal-body">
-									<?php
+									<!--?php
 
                       $sql = "select idUsers, uidUsers, userLevel, f_name, l_name, emailUsers, userImg
                               from users where userLevel=0
@@ -248,8 +248,8 @@ a.addbtn:hover, a.addbtn:active {
                           $result = mysqli_stmt_get_result($stmt);
 
                           while ($row = mysqli_fetch_assoc($result))
-                          {?> 
-                          		<?php 
+                          {?--> 
+                          		<!--?php 
                           		
                               echo '<form method="post" action="includes/add-user-admin.php">
                               <input type="hidden" name="usersID" value="'.$row["idUsers"].'">
@@ -263,7 +263,7 @@ a.addbtn:hover, a.addbtn:active {
                                       </p>
                                       <span class="text-right text-primary">
                                       <button type="submit" name="add-admin" value="Add" class="btn btn-outline-primary">Add</button>
-                                      </form>';?>
+                                      </form>';?-->
 
 
 
@@ -274,10 +274,10 @@ a.addbtn:hover, a.addbtn:active {
                                           </a>
                                       </span>
                                   </div>
-                            <?php      
+                            <!--?php      
                           }  
                      }
-                  ?>
+                  ?-->
 								</div>
 								<div class="modal-footer">
 									<button type="button" class="btn btn-default" data-dismiss="modal">
@@ -294,7 +294,7 @@ a.addbtn:hover, a.addbtn:active {
 				
 				<div class="card-body bg-basic">
 					<p>
-						<?php
+						<!--?php
 
                      $sql = "select idUsers, uidUsers, userLevel, f_name, l_name, emailUsers, userImg
                               from users WHERE userLevel != 0";
@@ -346,7 +346,7 @@ a.addbtn:hover, a.addbtn:active {
                                   
                           }  
                      }
-                  ?>
+                  ?-->
             
                   
 					</p>
