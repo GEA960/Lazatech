@@ -217,21 +217,23 @@
                                   
                                             <a href="message.php?id='.$row['idUsers'].'">
                                                 <i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>';
+                                            
                                         
                                        if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['post_by'])
                                                 {     
                                                     echo '<a href="Edit-forum.php?id= '.$row['post_id'].' ">
                                                     <i class="fa fa-pencil fa-2x edit-blog" aria-hidden="true"></i>
-                                                    </a>  
-                                                  
-                                                    <a href="https://twitter.com/intent/tweet?text=%20%2B1%20 XRTemplate %20'.$row['headline'].'%20%23tipwithxumm">
-                                                    <i class="fa fa-send fa-2x" aria-hidden="true"></i></a>';
+                                                    </a>';
                                                 }    
                                                 
                                                 
-                                     echo   '</div>
+                                     echo   ' 
+                                     
+                                     <a href="https://twitter.com/intent/tweet?text=%20%2B1%20 XRTemplate %20'.$row['headline'].'%20%23tipwithxumm">
+                                     <i class="fa fa-send fa-2x" aria-hidden="true"></i></a> </div>
+                                     
                                     </div>
-                                      
+                                       
               
                                     <div class="col-sm-9 post-content">
                                         <p>'.$row['post_content'].'</p>
