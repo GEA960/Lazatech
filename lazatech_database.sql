@@ -883,16 +883,6 @@ INSERT INTO `users` (`idUsers`, `userLevel`, `f_name`, `l_name`, `uidUsers`, `em
 (53, 0, '', '', 'MarielZG', 'marielzguerra09@gmail.com', '$2y$10$WtKQjhBviFTesVY3sl8Puujhhbolf2SUyMYy3E8mr.8iIE/9dzWaa', 'm', '', '', 'default.png');
 
 --
-CREATE TABLE `reports` (
-  `report_id` int(11) NOT NULL,
-  `report_by` int(11) NOT NULL DEFAULT 0,
-  `report_date` varchar(50) NOT NULL,
-  `link` varchar(6000) NOT NULL,
-  `description` varchar(6000) NOT NULL,
-  `message` varchar(6000) NOT NULL,
-  PRIMARY KEY (report_id),
-  FOREIGN KEY (report_by)  REFERENCES `users` (`idUsers`) ON DELETE CASCADE ON UPDATE CASCADE;
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 -- Indexes for dumped tables
 --
 
