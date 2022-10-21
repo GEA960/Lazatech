@@ -42,7 +42,7 @@ require 'includes/dbh.inc.php';
         $result = mysqli_stmt_get_result($stmt);
 
 
-             if ($_SESSION['userLevel'] == 1)
+             if ($_SESSION['userLevel'] == 1 || $_SESSION['userLevel'] == 2)
              {    
               echo '              <li class="nav-item px-3">
               <a class="nav-link" href="admin.php">
