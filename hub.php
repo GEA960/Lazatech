@@ -66,7 +66,7 @@
                             <span class="text-right text-primary"><i class="fa fa-thumbs-up" aria-hidden="true"></i>
                                 '.$row['blog_votes'].'<br>';
                     
-                        if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['blog_by'])
+                        if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['blog_by'] || ($_SESSION['userLevel'] == 2))
                     {
                         echo '<a href="includes/delete-blog.php?id='.$row['blog_id'].'&page=blogs" >
                                 <i class="fa fa-trash" aria-hidden="true" style="color: red;"></i>
@@ -134,7 +134,7 @@
                             </p>
                             <span class="text-primary text-right">';
                     
-                    if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['blog_by'])
+                    if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['blog_by'] || ($_SESSION['userLevel'] == 2))
                     {
                         echo '<a href="includes/delete-event.php?id='.$row['event_id'].'&page=events" >
                                 <i class="fa fa-trash" aria-hidden="true" style="color: red;"></i>
@@ -200,7 +200,7 @@
                             </p>
                             <span class="text-primary text-right">';
                             
-                            if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['event_by'])
+                            if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['event_by'] || ($_SESSION['userLevel'] == 2))
                             {
                                 echo '<a href="includes/delete-poll.php?id='.$row['id'].'&page=poll" >
                                         <i class="fa fa-trash" aria-hidden="true" style="color: red;"></i>

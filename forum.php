@@ -69,7 +69,7 @@
                             <span class="text-right text-primary"> 
                                 Forums: '.$row['forums'].' <i class="fa fa-book" aria-hidden="true"></i><br>';
                     
-                    if ($_SESSION['userLevel'] == 1)
+                    if ($_SESSION['userLevel'] == 1 || ($_SESSION['userLevel'] == 2))
                     {
                         echo '<a href="includes/delete-category.php?id='.$row['cat_id'].'&page=forum" >
                                 <i class="fa fa-trash" aria-hidden="true" style="color: red;"></i>
@@ -147,7 +147,7 @@
                                 <i class="fa fa-chevron-up" aria-hidden="true"></i><br>
                                     '.$row['upvotes'].'<br>';
                     
-                    if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['idUsers'])
+                    if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['idUsers'] || ($_SESSION['userLevel'] == 2))
                     {
                         echo '<a href="includes/delete-forum.php?id='.$row['topic_id'].'&page=forum" >
                                 <i class="fa fa-trash" aria-hidden="true" style="color: red;"></i>

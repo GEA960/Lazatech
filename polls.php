@@ -72,7 +72,7 @@
                             </p>
                             <span class="text-right">';
                     
-                    if ($_SESSION['userLevel'] == 1)
+                    if ($_SESSION['userLevel'] == 1 || ($_SESSION['userLevel'] == 2))
                     {
                         echo '<a href="includes/delete-poll.php?id='.$row['id'].'" >
                                 <i class="fa fa-trash fa-2x" aria-hidden="true" style="color: red;"></i>
