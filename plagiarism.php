@@ -58,15 +58,6 @@
 
 <!-- PrepostSEO Plagiarism Checker Widget --><div id="ppsWidgetCode"></div><div style="text-align: center; font-size:12px; color:#333;"><p>Plagiarism checker provided by <a href="https://www.prepostseo.com/plagiarism-checker" target="_blank"  style="color:#000;" id="ppsLink">prepostseo.com</a></p></div><script type="text/javascript" src="//www.prepostseo.com/widget.js?"></script>
 
-<?php
-$var_1 = 'Git is free and open source software for distributed version control: tracking changes in any set of files';
-$var_2 = 'Git is free a';
-
-similar_text($var_1, $var_2, $percent);
-
-echo $percent;
-// 27.272727272727
-?>
 </div>
 
 

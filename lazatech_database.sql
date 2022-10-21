@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 21, 2022 at 12:51 AM
--- Server version: 5.7.36
--- PHP Version: 7.4.26
+-- Generation Time: Oct 21, 2022 at 08:59 AM
+-- Server version: 5.7.31
+-- PHP Version: 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `lazatech_database`
 --
-CREATE DATABASE IF NOT EXISTS `lazatech_database` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `lazatech_database`;
 
 -- --------------------------------------------------------
 
@@ -850,7 +848,7 @@ CREATE TABLE IF NOT EXISTS `reports` (
 --
 
 INSERT INTO `reports` (`report_id`, `report_by`, `report_date`, `link`, `description`, `message`) VALUES
-(1, 52, '2022-10-21', 'http://localhost:8080/Lazatech4/posts.php?topic=56', 'klh', 'lkl');
+(1, 52, '2022-10-21', '/posts.php?topic=56', 'klh', 'lkl');
 
 -- --------------------------------------------------------
 
@@ -937,7 +935,7 @@ INSERT INTO `topics` (`topic_id`, `topic_subject`, `topic_date`, `topic_cat`, `t
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `idUsers` int(11) NOT NULL AUTO_INCREMENT,
-  `userLevel` int(11) NOT NULL DEFAULT '0',
+  `userLevel` int(11) NOT NULL DEFAULT '3',
   `f_name` varchar(50) NOT NULL,
   `l_name` varchar(50) NOT NULL,
   `uidUsers` tinytext NOT NULL,
@@ -957,7 +955,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 INSERT INTO `users` (`idUsers`, `userLevel`, `f_name`, `l_name`, `uidUsers`, `emailUsers`, `pwdUsers`, `gender`, `headline`, `bio`, `userImg`) VALUES
 (38, 0, '', '', 'testuser', 'testuser@test.com', '$2y$10$80YI6fiwFyOLHhn4CIOG/.xSAmkvG1L12LHGXjlNMdjwxeQCx/GNy', 'm', '', '', '5c20b68db30f81.29224418.jpg'),
 (40, 1, 'Gabriel Edrian', 'Alvaro', 'Gabby', 'gabrielalvaro693@gmail.com', '$2y$10$9x.hO88k83A73U.Emxf.AeYyombRMUG8j7xap0knPMOaNTjQ/cWp.', 'm', '', '', '6197b0bfb0f292.02584410.jpg'),
-(41, 0, 'Error', 'Checkers', 'TriUse', 'errorcheckers@gmail.com', '$2y$10$8KSoDBEoJ.EukeCd1BXJnOdC5/21REc4WXTpJswVp48OCKU4P6UJW', 'm', 'Information Technology Student', 'Trial User', '6183f5ab9adb30.69528606.jpg'),
+(41, 2, 'Error', 'Checkers', 'TriUse', 'errorcheckers@gmail.com', '$2y$10$8KSoDBEoJ.EukeCd1BXJnOdC5/21REc4WXTpJswVp48OCKU4P6UJW', 'm', 'Information Technology Student', 'Trial User', '6183f5ab9adb30.69528606.jpg'),
 (46, 0, 'Batangas', 'University', 'TrialUser', 'gabrielEdrianAlvaro740@gmail.com', '$2y$10$8KSoDBEoJ.EukeCd1BXJnOdC5/21REc4WXTpJswVp48OCKU4P6UJW', 'm', 'Information Technology Student', 'sdgsg', 'default.png'),
 (47, 0, 'Lee-Ann Joy', 'Natanauan', 'iamlianne', 'leeannjoy24natanauan@gmail.com', '$2y$10$yTXZ04aHy1ywn44NUJ843e41tm/dCRL9EKh29Wdqa68yoH5me6P1C', 'm', '', '20, PH.', '618a74b6a887e7.83004478.jpg'),
 (48, 0, 'Maezie', 'Casabal', 'maezieeeee', 'casabalmaezie@gmail.com', '$2y$10$5Yst3SEwVP6XhRrMD91vVu1BHrTcpWGkCY1SE9krAFRIWSZRJkXo.', 'm', 'Future Data Analyst', '20 | Information Technology Student | Former OJT at Batelec I', 'default.png'),
