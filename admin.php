@@ -357,4 +357,5 @@ a.addbtn:hover, a.addbtn:active {
 		</div>
 
 	</div>
+    <?php include 'includes/footer.php'; ?>
 </body>
