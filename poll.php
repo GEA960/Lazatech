@@ -58,7 +58,7 @@
         
                         <h1><?php echo $pollData['poll']['subject']; ?></h1>
                         <?php
-                        if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['event_by'])
+                        if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['event_by'] || ($_SESSION['userLevel'] == 2))
                                 {
                                     echo '<a href="includes/delete-poll.php?id='.$row['id'].'&page=poll" >
                                             <i class="fa fa-trash" aria-hidden="true" style="color: red;"></i>
