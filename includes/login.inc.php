@@ -39,7 +39,7 @@ if (isset($_POST['login-submit']))
                     header("Location: ../login.php?error=wrongpwd");
                     exit();
                 }
-                else if($pwdCheck == true)
+                else if($pwdCheck == true && $row['userLevel'] !=3)
                 {
                     session_start();
                     $_SESSION['userId'] = $row['idUsers'];
@@ -53,11 +53,17 @@ if (isset($_POST['login-submit']))
                     $_SESSION['bio'] = $row['bio'];
                     $_SESSION['userImg'] = $row['userImg'];
                     $_SESSION['coverImg'] = $row['coverImg'];
+
                     
-                    
-                    header("Location: ../index.php?login=success");
-                    exit();
+                        header("Location: ../index.php?login=success");
+                        exit();
                 }
+                elseif ($pwdCheck == true && $row['userLevel'] == 3) {
+                        
+
+                        header("Location: ../login.php?status=loginfailed");
+                        exit();
+                    }
                 else
                 {
                     header("Location: ../login.php?error=wrongpwd");

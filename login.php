@@ -23,6 +23,19 @@
 
     <section id="cover">
         <div id="cover-caption">
+        <?php
+
+            if(isset($_GET['status']))
+            {
+                if ($_GET['status'] =='loginfailed') {
+                    echo '<div class="alert alert-success alert-dismissible fade show" role="alert" style="width: 90%; margin-left: 3%; size: 5px;"><strong>Your registration is still waiting to be approved.</strong><i> You will receive an email notification  once your account had been approved.</i>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button></div>';
+                        
+                }
+            }
+        ?>
             <div class="container">
                 <div class="col-sm-10 offset-sm-1">
                     <div class="leftbox">
