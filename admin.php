@@ -55,19 +55,79 @@ a.addbtn:hover, a.addbtn:active {
 <body >
 	 <?php include 'includes/navbar.php'; ?>
 	<div class="row" style="margin-left: 2%; margin-right: 2%; margin-top: 2%;">
-		<div class="col-sm-4">
+    <div class="col-sm-4">
+			<div class="container">
 			<div class="card bg-basic">
 				<div class="card-header bg-primary">
 					<h5>Accounts For Approval</h5>
 				</div>
 				<div class="card-body bg-basic">
-					<i class="text-muted">No request for approval.</i>
-					<?php 
 
-					 ?>
-				</div>
-			</div>
+					
+					<?php 
+						$sql = "select * from users where userLevel = 3";
+            $stmt = mysqli_stmt_init($conn);  
+							if (!mysqli_stmt_prepare($stmt, $sql))
+                      {
+                          die('SQL error');
+                      }
+                      else
+                      {
+                      	 mysqli_stmt_execute($stmt);
+                          $result = mysqli_stmt_get_result($stmt);
+
+                          while ($row = mysqli_fetch_assoc($result))
+                          {
+                          	echo '<form method="post" action="includes/accept-user.php"
+                          	<a href="profile.php?id='.$row['idUsers'].'">
+                                  <div class="media text-muted pt-3">
+                                      <img src="uploads/'.$row['userImg'].'" alt="" class="mr-2 rounded-circle div-img list-user-img">
+                                      <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray ">
+                                        <strong class="d-block text-gray-dark">'.ucwords($row['uidUsers']).'</strong></a>
+                                            <span class="text-primary">'.ucwords($row['f_name'].' '.$row['l_name']).'</span><br>
+                                            '.$row['emailUsers'].'
+                                      </p>
+                                      <span class="text-right text-primary" style="padding-right:15px;">
+                                      		
+
+                                          <button type="button" class="btn btn-basic" data-toggle="modal" data-target="#accept-user-modal" name="accept"><i class="fa fa-check text-primary" style="font-size:20px;"></i></button>	
+                                      </span>
+                                      <span class="text-right">
+
+                                      		<input type="hidden" name="usersID" value="'.$row['idUsers'].'">
+                    											<input type="hidden" name="usersEmail" value="'.$row['emailUsers'].'">
+                                          <button type="submit" class="btn btn-basic" name="decline"><i class="fa fa-close text-danger" style="font-size:20px;"></i></button>
+                                      </span>
+                                  </div>
+                                  </form>
+					 
+				
+				
+										<div class="modal" id="accept-user-modal" tabindex="-1" role="dialog" aria-labelledby="acceptusermodallabel" aria-hidden="true">
+										<div class="modal-dialog" style="height:50%;">
+											<div class="modal-content">
+											
+
+												<div class="modal-body" style="overflow: auto;" >
+												
+													<h2 class="text-center" style="padding-top: 10%;">Account has been approved!</h2>
+												</div>
+											
+												<form action="includes/accept-user.php" method="post" style="display: flex; justify-content: center;">
+													<input type="hidden" name="usersID" value="'.$row['idUsers'].'">
+			                    <input type="hidden" name="usersEmail" value="'.$row['emailUsers'].'">
+													<button type="submit" class="btn btn-primary" name="done" style="width: 20%;">OK</button>
+												</form>
+											</div>
+										</div>
+									</div>';
+
+					}}
+			?>
 		</div>
+		</div>
+		</div>
+	</div>
 
 <!------------------VIEW REPORTS---------------->
 
