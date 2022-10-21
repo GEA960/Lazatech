@@ -280,12 +280,12 @@ a.addbtn:hover, a.addbtn:active {
 <!--------------------------------------------------------------------------------------------------------------------------->
 <!--------Search bar ng add user admin modal--------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------------->
-								<div class="input-group rounded">
+							<!--	<div class="input-group rounded">
   								<input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
   								<span class="input-group-text border-0" id="search-addon">
     								<i class="fa fa-search"></i>
   								</span>
-								</div>
+								</div>-->
 
 <!--------------------Content ng user admin modal----------------------------------------------------------------------------------------->
 
