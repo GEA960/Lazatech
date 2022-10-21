@@ -239,7 +239,7 @@
                                         <p>'.$row['post_content'].'</p>
                                             <div class="vote text-center">';
                         
-                        if ( ($row['post_by']==$_SESSION['userId']) || ($_SESSION['userLevel'] == 1))
+                        if ( ($row['post_by']==$_SESSION['userId']) || ($_SESSION['userLevel'] == 1)|| ($_SESSION['userLevel'] == 2))
                         {
                             echo '<a href="includes/delete-post.php?topic='.$topic.'&post='.$row['post_id'].'&by='.$row['post_by'].'" >'
                                 . '<i class="fa fa-trash fa-2x" aria-hidden="true"></i></a><br>';
