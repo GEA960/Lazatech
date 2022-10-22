@@ -84,7 +84,20 @@
                 ?>
               
               <img class="blog-cover" src="uploads/<?php echo $row['blog_img']; ?>">
-    <?php          
+    
+              <img class="blog-author" src="uploads/<?php echo $row['userImg']; ?>">
+              
+              <div class="px-5">
+                  
+                  <br><br>
+                  
+             <br><br>
+                  
+                <div style="justify-content: center; position: relative;">
+                      <h1><?php echo ucwords($row['blog_title']) ?></h1>
+                </div>
+                  <br>
+                  <?php          
    
    if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['blog_by'])
              { echo '<a href="edit-blog.php?id= '.$row['blog_id'].' ">
@@ -93,14 +106,9 @@
               
              }
              ?>
-              <img class="blog-author" src="uploads/<?php echo $row['userImg']; ?>">
-              
-              <div class="px-5">
-                  
-                  <br><br><br>
-                  
-                  <h1><?php echo ucwords($row['blog_title']) ?></h1>
-                  <br><br><br>
+             
+             <hr class="solid">
+             <br>
                   
                   <p> <?php echo $row['blog_content'] ?><p> 
                   
