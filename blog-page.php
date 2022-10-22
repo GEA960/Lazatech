@@ -128,7 +128,7 @@
 
                              if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['blog_by'] || ($_SESSION['userLevel'] == 2))
                                  {
-                                echo 'span style="margin-top:5px;"><a href="includes/delete-blog.php?id='.$row['blog_id'].'&page=blogs" >
+                                echo '<span style="margin-top:5px;"><a href="includes/delete-blog.php?id='.$row['blog_id'].'&page=blogs" >
                                 <i class="fa fa-trash" aria-hidden="true" style="color: red;"></i>
                                 </a>
                                 </span>';
