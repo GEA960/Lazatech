@@ -55,9 +55,9 @@
 <!-- Social Share Kit JS -->
 <script type="text/javascript" src="../social-share-kit/dist/js/social-share-kit.js"></script>
 
-<div class="col-sm-11" >
-<?php include 'includes/profile-card.php'; ?>
-</div>
+<!--div class="col-sm-11" >
+<//?php include 'includes/profile-card.php'; ?>
+</div-->
           <div class="col-sm-11" id="user-section">
               
                 <?php
