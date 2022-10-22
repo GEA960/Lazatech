@@ -114,7 +114,7 @@
                       </h3>
                       <br>
                       <p class="text-muted">Author: <?php echo ucwords($row['uidUsers']); ?></p>
-                      <?php
+                      
                         <hr class="solid">
                         <div style="display:flex;">
   
