@@ -58,7 +58,7 @@
 <!--div class="col-sm-11" >
 <//?php include 'includes/profile-card.php'; ?>
 </div-->
-          <div class="col-sm-11" id="user-section" style="margin-top:10%;">
+          <div class="col-sm-11" id="user-section" style="margin-top:10%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border-radius: 20px; background-color: whitesmoke;">
               
                 <?php
 
