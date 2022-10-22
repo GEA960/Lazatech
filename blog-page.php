@@ -58,7 +58,7 @@
 <!--div class="col-sm-11" >
 <//?php include 'includes/profile-card.php'; ?>
 </div-->
-          <div class="col-sm-11" id="user-section" style="margin-top: 10%;>
+          <div class="col-sm-11" id="user-section">
               
                 <?php
 
@@ -101,8 +101,7 @@
    
    if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['blog_by'])
              { echo '<a href="edit-blog.php?id= '.$row['blog_id'].' ">
-                <i class="fa fa-pencil edit-blog" aria-hidden="true" style="font-size:18px;"><label class="text-muted" style="margin-left:10px; font-size:12px; font-family: helvetica;"><i> Edit this content</i></label></i>
-              </a>';
+                <i class="fa fa-pencil edit-blog" aria-hidden="true" style="font-size:18px;"><label class="text-muted" style="margin-left:10px; font-size:12px; font-family: helvetica;"><i> Edit this content</i></label></i></a>';
               
              }
              ?>
