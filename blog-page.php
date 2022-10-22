@@ -115,15 +115,33 @@
                       <br>
                       <p class="text-muted">Author: <?php echo ucwords($row['uidUsers']); ?></p>
                       <?php
-              if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['blog_by'] || ($_SESSION['userLevel'] == 2))
-                      {
-                      echo '<a href="includes/delete-blog.php?id='.$row['blog_id'].'&page=blogs" >
-                      <i class="fa fa-trash" aria-hidden="true" style="color: red;"></i>
-                      </a>
-                      </span>';
-                      }
+                        <hr class="solid">
+                        <div style="display:flex;">
+  
+                        <p hidden>|</p>
+  
+                        
+  
+                            <div style="padding-left: 90%; display:flex;">
+                                   <?php
+                
 
-                      ?>
+                             if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['blog_by'] || ($_SESSION['userLevel'] == 2))
+                                 {
+                                echo '<a href="includes/delete-blog.php?id='.$row['blog_id'].'&page=blogs" >
+                                    <i class="fa fa-trash" aria-hidden="true" style="color: red;"></i>
+                                    </a>
+                                    </span>';
+                                    }
+                                    ?>
+                                  <form method="post" action="report-post.php">
+                                   <button href="report-post.php" class="btn btn-outlined-danger" style="height:35px; padding: 3px; margin-left: 10px;"><i class="fa fa-exclamation-circle text-muted" style="font-size:12px;"> Report this post.</i></button>
+                                  </form>
+  
+                            </div>
+                        </div>
+                      
+
                     <!--Disquss script-->
                     <div id="disqus_thread"></div>
                     
