@@ -46,7 +46,7 @@
    
 
         <main role="main" class="container">
-      <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded shadow-sm">
+      <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-info rounded shadow-sm">
           <img class="mr-3" src="img/logo.png" alt="" width="48" height="48">
         <div class="lh-100">
           <h1 class="mb-0 text-white lh-100">Lazatech Forums</h1>
