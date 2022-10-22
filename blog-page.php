@@ -58,7 +58,7 @@
 <!--div class="col-sm-11" >
 <//?php include 'includes/profile-card.php'; ?>
 </div-->
-          <div class="col-sm-11" id="user-section">
+          <div class="col-sm-11" id="user-section" style="margin-top:10%;">
               
                 <?php
 
@@ -84,7 +84,7 @@
                 ?>
               
               <img class="blog-cover" src="uploads/<?php echo $row['blog_img']; ?>">
-    
+                
               <img class="blog-author" src="uploads/<?php echo $row['userImg']; ?>">
               
               <div class="px-5">
