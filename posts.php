@@ -229,7 +229,7 @@
                                                 
                                      echo   ' 
                                      
-                                     <a href="https://twitter.com/intent/tweet?text=%20%2B1%20 XRTemplate %20'.$row['headline'].' %20%23tipwithxumm%20">
+                                     <a href="https://twitter.com/intent/tweet?text=%20%2B1%20 XRTemplate %20'.$row['headline'].' %20%23tipwithxumm%20 Content Title:%20['.$row['post_content'].']">
                                      <i class="fa fa-send fa-2x" aria-hidden="true"></i></a> </div>
                                      
                                     </div>
