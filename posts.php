@@ -229,7 +229,7 @@
                                                 
                                      echo   ' 
                                      
-                                     <a href="https://twitter.com/intent/tweet?text=%20%2B1%20 XRTemplate %20'.$row['headline'].' %20%23tipwithxumm%20%20%20%20%20%20%20%20%20%20%20%20%20 Content Title:%20['.$row['post_content'].'] %20By%20 '.$row['f_name'].'%20'.$row['l_name'].' Content Type: Forum">
+                                     <a href="https://twitter.com/intent/tweet?text=From Lazatech Family,%20thank you for using our platform! %20%2B1%20 XRTemplate %20'.$row['headline'].' %20%23tipwithxumm%20%20%20%20%20%20%20%20%20%20%20%20%20 Content Title:%20['.$row['post_content'].'] %20By%20 '.$row['f_name'].'%20'.$row['l_name'].' Content Type: Forum">
                                      <i class="fa fa-send fa-2x" aria-hidden="true"></i></a> </div>
                                      
                                     </div>
