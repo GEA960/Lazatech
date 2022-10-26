@@ -381,7 +381,7 @@ a.addbtn:hover, a.addbtn:active {
                                   <div class="media text-muted pt-3">
                                       <img src="uploads/'.$row['userImg'].'" alt="" class="mr-2 rounded-circle div-img list-user-img">
                                       <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray ">
-                                        <strong class="d-block text-gray-dark">'.ucwords($row['uidUsers']).'</strong></a>
+                                        <strong class="d-block text-gray-dark">'.ucwords($row['uidUsers']).' '.ucwords($row['userLevel']).'</strong></a>
                                             <span class="text-primary">'.ucwords($row['f_name'].' '.$row['l_name']).'</span><br>
                                             '.$row['emailUsers'].'
                                       </p>';
