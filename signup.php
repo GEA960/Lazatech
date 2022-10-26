@@ -58,6 +58,14 @@
                                                 <strong>Error: </strong> Passwords donot match
                                               </div>';
                                     }
+                                    else if ($_GET['error'] == 'passwordvalidation')
+                                    {
+                                        echo '<div class="alert alert-danger" role="alert">
+                                                <strong>Error: </strong> Password should be at least 8 characters in length 
+                                                <p> and should include at least one upper case letter,</p>
+                                                <p> one number, and one special character.</p>
+                                              </div>';
+                                    }
                                     else if ($_GET['error'] == 'usertaken')
                                     {
                                         echo '<div class="alert alert-danger" role="alert">

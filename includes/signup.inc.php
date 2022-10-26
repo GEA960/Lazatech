@@ -15,6 +15,13 @@ if (isset($_POST['signup-submit']))
     $bio = $_POST['bio'];
     $f_name = $_POST['f-name'];
     $l_name = $_POST['l-name'];
+
+    //password validation
+    $uppercase = preg_match('@[A-Z]@', $password);
+    $lowercase = preg_match('@[a-z]@', $password);
+    $number    = preg_match('@[0-9]@', $password);
+    $specialChars = preg_match('@[^\w]@', $password);
+
     
     if (empty($userName) || empty($email) || empty($password) || empty($passwordRepeat))
     {
@@ -34,6 +41,11 @@ if (isset($_POST['signup-submit']))
     else if (!preg_match("/^[a-zA-Z0-9]*$/", $userName))
     {
         header("Location: ../signup.php?error=invaliduid&mail=".$email);
+        exit();
+    }
+    else if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8) 
+    {
+        header("Location: ../signup.php?error=passwordvalidation&uid=".$userName."&mail=".$email);
         exit();
     }
     else if ($password !== $passwordRepeat)
