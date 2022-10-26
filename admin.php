@@ -387,7 +387,7 @@ a.addbtn:hover, a.addbtn:active {
                                       </p>';
 
 
-                                      if ($_SESSION['userLevel'] == '1' AND $row['userLevel'] != '0' )
+                                      if ($_SESSION['userLevel'] == '1')
                                   {
                                       echo '<button type="submit" name="delete-admin" value="Delete" class="btn btn-default"><i class="fa fa-trash" aria-hidden="true" style="color: red;"></i></button>
                                       </form> 
