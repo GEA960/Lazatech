@@ -357,7 +357,7 @@ a.addbtn:hover, a.addbtn:active {
 						<?php
 
                      $sql = "select idUsers, uidUsers, userLevel, f_name, l_name, emailUsers, userImg
-                              from users WHERE userLevel != 0 AND userLevel !=3";
+                              from users WHERE userLevel = 2";
 
                       $stmt = mysqli_stmt_init($conn);    
 
@@ -387,7 +387,7 @@ a.addbtn:hover, a.addbtn:active {
                                       </p>';
 
 
-                                      if ($_SESSION['userLevel'] == '1')
+                                      if ($_SESSION['userLevel'] == '1' AND $row['userLevel'] != '0' )
                                   {
                                       echo '<button type="submit" name="delete-admin" value="Delete" class="btn btn-default"><i class="fa fa-trash" aria-hidden="true" style="color: red;"></i></button>
                                       </form> 
