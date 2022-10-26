@@ -60,11 +60,13 @@
                                     }
                                     else if ($_GET['error'] == 'passwordvalidation')
                                     {
-                                        echo '<div class="alert alert-danger" role="alert">
-                                                <strong>Error: </strong> Password should be at least 8 characters in length 
-                                                <p> and should include at least one upper case letter,</p>
-                                                <p> one number, and one special character.</p>
-                                              </div>';
+                                      echo '<div class="alert alert-danger" role="alert">
+                                      <strong>Error: </strong> Password should include:
+                                      <p> - at least one uppercase letter</p>
+                                      <p> - at least one number</p>
+                                      <p> - at least one special character</p>
+                                      <p> - at least 8 characters in length</p>
+                                      </div>';
                                     }
                                     else if ($_GET['error'] == 'usertaken')
                                     {
