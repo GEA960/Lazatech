@@ -34,7 +34,7 @@
                 </div>
 
                 <div class="my-3 mx-5 p-3 bg-white rounded shadow-sm">
-                  <h5 class="border-bottom border-gray pb-2 mb-0">Find People on OnAid</h5>
+                  <h5 class="border-bottom border-gray pb-2 mb-0">Find People on Lazatech</h5>
 
 
                   <?php
