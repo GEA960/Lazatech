@@ -40,7 +40,7 @@
 
 
                     <?php  
-                          if ($_SESSION['userLevel'] === 1)
+                          if ($_SESSION['userLevel'] === 1 AND $_SESSION['userLevel'] === 2 )
                           {
                               echo '<img id="admin-badge" src="img/admin-badge.png">';
                           }
