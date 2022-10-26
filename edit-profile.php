@@ -40,13 +40,14 @@
 
 
                     <?php  
-                          if ($_SESSION['userLevel'] === 1 AND $_SESSION['userLevel'] === 2 )
+                          if ($_SESSION['userLevel'] === 1 || $_SESSION['userLevel'] === 2 )
                           {
                               echo '<img id="admin-badge" src="img/admin-badge.png">';
                           }
                     ?>
 
                     <h2><?php echo strtoupper($_SESSION['userUid']); ?></h2>
+                    
                     <br>
                   
                     <div class="form-row">
