@@ -357,7 +357,7 @@ a.addbtn:hover, a.addbtn:active {
 						<?php
 
                      $sql = "select idUsers, uidUsers, userLevel, f_name, l_name, emailUsers, userImg
-                              from users WHERE userLevel != 0";
+                              from users WHERE userLevel != 0 OR userLevel !=3";
 
                       $stmt = mysqli_stmt_init($conn);    
 
