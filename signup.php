@@ -64,6 +64,12 @@
                                                 <strong>Error: </strong> This User name is already taken
                                               </div>';
                                     }
+                                    else if ($_GET['error'] == 'emailexist')
+                                    {
+                                        echo '<div class="alert alert-danger" role="alert">
+                                                <strong>Error: </strong> This email already exist.
+                                              </div>';
+                                    }
                                     else if ($_GET['error'] == 'invalidimagetype')
                                     {
                                         echo '<div class="alert alert-danger" role="alert">
