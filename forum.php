@@ -172,7 +172,13 @@
         </small>
         
       </div>
-    </main>
+
+      <div class="my-3 p-3 bg-white rounded shadow-sm">
+        <h5 class="border-bottom border-gray pb-2 mb-0">Tweets by @TwitterDev</h5>
+        
+        <a class="twitter-timeline" href="https://twitter.com/LazatechS?ref_src=twsrc%5Etfw" data-tweet-limit="10">Tweets by LazatechS</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+        </main>
         
         <?php include 'includes/footer.php'; ?>
         
