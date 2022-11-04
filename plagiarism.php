@@ -51,15 +51,17 @@
                 <?php include 'includes/profile-card.php'; ?>
                 </div>
                   
+                <form action="" method='post' enctype="multipart/form-data"
+                class="col-sm-11";>
 
-                    <div class="col-sm-11" >
-                    
-                    <h1> <center> Lazatech Plagiarism Checker - Powered by Prepostseo </center></h1>
+                    <div>
+                    <label for="edit-bio">Input the text you want to check for plagiarism:</label>
+                        <textarea class="form-control" id="check-plag" rows="10" name="value" maxlength="5000"placeholder="Input text" ></textarea>         
+                    </div>
 
-<!-- PrepostSEO Plagiarism Checker Widget --><div id="ppsWidgetCode"></div><div style="text-align: center; font-size:12px; color:#333;"><p>Plagiarism checker provided by <a href="https://www.prepostseo.com/plagiarism-checker" target="_blank"  style="color:#000;" id="ppsLink">prepostseo.com</a></p></div><script type="text/javascript" src="//www.prepostseo.com/widget.js?"></script>
-
-</div>
-
+                    <br><input type="submit" class="btn btn-primary" name="check-plag" value="Submit">
+                
+                  </form>
 
 
 
@@ -87,7 +89,7 @@
         
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js" ></script>
-
+<script src="js/main.js" type="module"></script>
         <script>
             var myVar;
 
