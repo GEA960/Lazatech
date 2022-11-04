@@ -89,7 +89,7 @@
         
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js" ></script>
-<script src="js/main.js" type="module"></script>
+<script src="js/plag.js" type="module"></script>
         <script>
             var myVar;
 
