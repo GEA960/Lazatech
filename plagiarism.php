@@ -97,7 +97,7 @@
                     CURLOPT_TIMEOUT => 30,
                     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                     CURLOPT_CUSTOMREQUEST => "POST",
-                    CURLOPT_POSTFIELDS => json_encode($query_string),
+                    CURLOPT_POSTFIELDS => json_encode($postData),
                     CURLOPT_HTTPHEADER => [
                         "X-RapidAPI-Host: plagiarism-checker-and-auto-citation-generator-multi-lingual.p.rapidapi.com",
                         "X-RapidAPI-Key: b36987b24fmshe1b95f7c4bfd0f7p173746jsn6903703f1f5c",
