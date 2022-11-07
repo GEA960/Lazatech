@@ -68,24 +68,27 @@
                 <input id="userinput"> <br> <br>
                 <button onclick="greetings()"> Submit </button> -->
                 
+                <!--
                 <form action="plagiarism.php" method="post">
-                    <input name="plag[]" id="text" value="input your text to check for plagiarism"/><br>
-                    <input name="plag[]" id="language" value="en"/><br>
-                    <input name="plag[]" id="includeCitations" value="true"/><br>
-                    <input name="plag[]" id="scrapeSources" value="false"/><br>
+                    <input name="plag" id="text" value="input your text to check for plagiarism"/><br>
                     <input type="submit"/>
                 </form>
-
+-->             
+            <form action="plagiarism.php" method="post">
+            Text: <input type="text" name="plag" /><br />
+            
+            <input type="submit" name="submit" value="Submit me!" />
+            </form>
                 <?php
-                
-                $query_string = http_build_query($_POST['plag']);
-              
 
-                $postData = [ "text" => "The converted PEM file only contains the digital signatures for CAs. Several of those CAs have constraints in Firefox (and other browsers) to only be allowed for certain domains and other similar additional conditions. Those constraints are thus not brought along in this cacert file!",
+                $txt = $_POST['plag'];
+
+                $postData = [ "text" => $txt,
                             "language" => "en",
                             "includeCitations" => "true",
                             "scrapeSources" => "false"
                             ];
+
                 $curl = curl_init();
                 
                 curl_setopt_array($curl, [
@@ -100,7 +103,7 @@
                     CURLOPT_POSTFIELDS => json_encode($postData),
                     CURLOPT_HTTPHEADER => [
                         "X-RapidAPI-Host: plagiarism-checker-and-auto-citation-generator-multi-lingual.p.rapidapi.com",
-                        "X-RapidAPI-Key: b36987b24fmshe1b95f7c4bfd0f7p173746jsn6903703f1f5c",
+                        "X-RapidAPI-Key: d979243512msha0fb5e5215fa339p1bcb91jsnc007f937a446",
                         "content-type: application/json"
                     ],
                 ]);
