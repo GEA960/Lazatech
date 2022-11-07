@@ -51,21 +51,71 @@
                 <?php include 'includes/profile-card.php'; ?>
                 </div>
                   
-                <form action="" method='post' enctype="multipart/form-data"
+ <!--         <form action="" method='post' enctype="multipart/form-data"
                 class="col-sm-11";>
 
                     <div>
                     <label for="edit-bio">Input the text you want to check for plagiarism:</label>
-                        <textarea class="form-control" id="check-plag" rows="10" name="value" maxlength="5000"placeholder="Input text" ></textarea>         
+                        <textarea class="form-control" id="plag" rows="10" name="value" maxlength="5000"placeholder="Input text" ></textarea>         
                     </div>
 
-                    <br><input type="submit" class="btn btn-primary" name="check-plag" value="Submit">
+                    <br><input type="submit" class="btn btn-primary" name="submit_plag" value="Submit">
                 
                   </form>
 
+               
 
+                <input id="userinput"> <br> <br>
+                <button onclick="greetings()"> Submit </button> -->
+                
+                <form action="plagiarism.php" method="post">
+                    <input name="plag[]" id="text" value="input your text to check for plagiarism"/><br>
+                    <input name="plag[]" id="language" value="en"/><br>
+                    <input name="plag[]" id="includeCitations" value="true"/><br>
+                    <input name="plag[]" id="scrapeSources" value="false"/><br>
+                    <input type="submit"/>
+                </form>
 
+                <?php
+                
+                $query_string = http_build_query($_POST['plag']);
+              
 
+                $postData = [ "text" => "The converted PEM file only contains the digital signatures for CAs. Several of those CAs have constraints in Firefox (and other browsers) to only be allowed for certain domains and other similar additional conditions. Those constraints are thus not brought along in this cacert file!",
+                            "language" => "en",
+                            "includeCitations" => "true",
+                            "scrapeSources" => "false"
+                            ];
+                $curl = curl_init();
+                
+                curl_setopt_array($curl, [
+                    CURLOPT_URL => "https://plagiarism-checker-and-auto-citation-generator-multi-lingual.p.rapidapi.com/plagiarism",
+                    CURLOPT_RETURNTRANSFER => true,
+                    CURLOPT_FOLLOWLOCATION => true,
+                    CURLOPT_ENCODING => "",
+                    CURLOPT_MAXREDIRS => 10,
+                    CURLOPT_TIMEOUT => 30,
+                    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                    CURLOPT_CUSTOMREQUEST => "POST",
+                    CURLOPT_POSTFIELDS => json_encode($query_string),
+                    CURLOPT_HTTPHEADER => [
+                        "X-RapidAPI-Host: plagiarism-checker-and-auto-citation-generator-multi-lingual.p.rapidapi.com",
+                        "X-RapidAPI-Key: b36987b24fmshe1b95f7c4bfd0f7p173746jsn6903703f1f5c",
+                        "content-type: application/json"
+                    ],
+                ]);
+                
+                $response = curl_exec($curl);
+                $err = curl_error($curl);
+                
+                curl_close($curl);
+                
+                if ($err) {
+                    echo "cURL Error #:" . $err;
+                } else {
+                    echo $response;
+                }
+                ?>
                     <div class="col-sm-2" -->
 
                         <div class="text-center p-3 mt-5">
@@ -89,10 +139,9 @@
         
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js" ></script>
-<script src="js/plag.js" type="module"></script>
+
         <script>
             var myVar;
-
             function pageLoad() {
               myVar = setTimeout(showPage, 4000);
             }
@@ -101,7 +150,22 @@
               document.getElementById("loader-wrapper").style.display = "none";
               document.getElementById("content").style.display = "block";
             }
+     
+        function greetings() {
+        var ad = document.getElementById("userinput").value;   
+                };
+
+        var options = {
+	        method: 'POST',
+	        headers: {
+		        'content-type': 'application/json',
+		        'X-RapidAPI-Key': 'b36987b24fmshe1b95f7c4bfd0f7p173746jsn6903703f1f5c',
+		        'X-RapidAPI-Host': 'plagiarism-checker-and-auto-citation-generator-multi-lingual.p.rapidapi.com'
+	            },
+	            body: '{"text":"Code editors are tools typically used by programmers and web developers to write and edit code. They are used for developing software and apps as well as other web development purposes.",                         "language":"en",                                                               "includeCitations":true,                                                      "scrapeSources":false}'
+                };
+
         </script>  
-        
+        <!--<script src="js/plag.js" type="module"></script> -->
     </body>
 </html>
