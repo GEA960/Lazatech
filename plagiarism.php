@@ -82,7 +82,7 @@
             <input type="submit" name="submit" value="Submit me!" />
             </form>
                 <?php
-
+                error_reporting(0);
                 if (empty($_POST['plag'])) {
                 echo "Text to check is empty. Please input your text!!!<br>";
                 }      
