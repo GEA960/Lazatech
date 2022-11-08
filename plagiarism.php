@@ -74,9 +74,11 @@
                     <input type="submit"/>
                 </form>
 -->             
-            <form action="plagiarism.php" method="post">
-            Text: <input type="text" name="plag" /><br />
-            
+            <form action="plagiarism.php" method="post" class="col-sm-11";>
+            <div>
+                    <label for="edit-bio">Input the text you want to check for plagiarism:</label>
+                        <textarea class="form-control" type="text" name="plag" rows="10" name="value" maxlength="5000"placeholder="Input text" ></textarea>         
+            </div>
             <input type="submit" name="submit" value="Submit me!" />
             </form>
                 <?php
