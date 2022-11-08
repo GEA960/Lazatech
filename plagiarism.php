@@ -87,7 +87,7 @@
 
                 $postData = [ "text" => $txt,
                             "language" => "en",
-                            "includeCitations" => "true",
+                            "includeCitations" => "false",
                             "scrapeSources" => "false"
                             ];
 
@@ -140,8 +140,8 @@
                     }
                     else {
                         echo "<tr> <td>";
-                        echo $value . "<br>";
-                        echo "</td>";
+                        echo $value;
+                        echo "</td> </table>";
                     }
                 }
             }
@@ -182,10 +182,6 @@
               document.getElementById("content").style.display = "block";
             }
      
-        function greetings() {
-        var ad = document.getElementById("userinput").value;   
-                };
-
         var options = {
 	        method: 'POST',
 	        headers: {
