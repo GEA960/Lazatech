@@ -83,8 +83,11 @@
             </form>
                 <?php
 
+                if (empty($_POST['plag'])) {
+                echo "Text to check is empty. Please input your text!!!<br>";
+                }      
                 $txt = $_POST['plag'];
-
+                
                 $postData = [ "text" => $txt,
                             "language" => "en",
                             "includeCitations" => "false",
@@ -145,7 +148,7 @@
                     }
                 }
             }
-                
+        
                 ?>
                     <div class="col-sm-2" -->
 
