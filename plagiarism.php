@@ -118,8 +118,34 @@
                 if ($err) {
                     echo "cURL Error #:" . $err;
                 } else {
-                    echo $response;
+                    $someArray = json_decode($response,true); 
+                    RecursiveWrite($someArray);
                 }
+               
+
+               function RecursiveWrite($array) {
+                foreach ($array as $key => $value) {
+            
+                    echo '<table style="width:100%"> <tr> <th>'. $key .'</th> </tr>';
+            
+                    if(is_array($value)) {
+                        echo "<tr> <td>";
+                        RecursiveWrite($value);
+                        echo "</td>";
+                    }
+                    elseif(is_bool($value)) {
+                        echo "<tr> <td>";
+                        echo ($value? 'true' : 'false'); 
+                        echo "</td>";
+                    }
+                    else {
+                        echo "<tr> <td>";
+                        echo $value . "<br>";
+                        echo "</td>";
+                    }
+                }
+            }
+                
                 ?>
                     <div class="col-sm-2" -->
 
