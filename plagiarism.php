@@ -49,7 +49,7 @@
                 <div class="row">
                 <div class="col-sm-11" >
                 <?php include 'includes/profile-card.php'; ?>
-                </div>
+            </div>
                   
  <!--         <form action="" method='post' enctype="multipart/form-data"
                 class="col-sm-11";>
@@ -81,6 +81,8 @@
             </div>
             <input type="submit" name="submit" value="Submit me!" />
             </form>
+
+            <div class="container-fluid">
                 <?php
                 error_reporting(0);
                 if (empty($_POST['plag'])) {
@@ -127,29 +129,32 @@
                
 
                function RecursiveWrite($array) {
+                echo "<table border='1'>";
                 foreach ($array as $key => $value) {
-            
-                    echo '<table style="width:100%"> <tr> <th>'. $key .'</th> </tr>';
-            
+                    echo '<br><br><br>';
+
+                    echo '<b>';
+                    echo $key;
+                    echo ': </b>';
+                    echo '<&nbsp>';
+
                     if(is_array($value)) {
-                        echo "<tr> <td>";
                         RecursiveWrite($value);
-                        echo "</td>";
+                        echo '<br>';
                     }
                     elseif(is_bool($value)) {
-                        echo "<tr> <td>";
                         echo ($value? 'true' : 'false'); 
-                        echo "</td>";
+                        echo '<br>';
                     }
                     else {
-                        echo "<tr> <td>";
                         echo $value;
-                        echo "</td> </table>";
+                        echo '<br>';
                     }
                 }
             }
         
                 ?>
+             </div>
                     <div class="col-sm-2" -->
 
                         <div class="text-center p-3 mt-5">
