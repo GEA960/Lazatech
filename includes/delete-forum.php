@@ -18,7 +18,10 @@ if (isset($_GET['id']) && isset($_SESSION['userId']))
         $page = 'forum';
     }
     
-    $sql = "delete from topics where topic_id = ?";
+    $sql = "delete topics, posts
+    from topics
+    inner join posts ON topics.topic_id= posts.post_topic
+    where topic_id = ?";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql))
     {
