@@ -88,6 +88,24 @@
                     <input type="submit"/>
                 </form>
 -->             
+
+<?php
+if ($_SESSION['userLevel'] == 1)
+                    {
+                    echo '
+                    <form action="APIKeyInsert.php" method="POST"
+                    style="padding: 0 30px 0 30px;">
+                   <div class="px-5">
+                  <label for="edit-bio">Plagiarism Key API</label>
+                  <textarea class="form-control" id="api" rows="2" name="api"
+                    placeholder="Change API Key">
+                    </textarea>
+                  <input type="submit" class="btn btn-primary" name="update" value="UPDATE KEY">
+                  
+                  </form>
+                  </div>';}    
+                  ?>
+                
             <form action="plagiarism.php" method="post" class="col-sm-11";>
             <div>
                     <label for="edit-bio">Input the text you want to check for plagiarism:</label>
