@@ -109,9 +109,9 @@
                     CURLOPT_CUSTOMREQUEST => "POST",
                     CURLOPT_POSTFIELDS => json_encode($postData),
                     CURLOPT_HTTPHEADER => [
-                        "X-RapidAPI-Host: plagiarism-checker-and-auto-citation-generator-multi-lingual.p.rapidapi.com",
-                        "X-RapidAPI-Key: d979243512msha0fb5e5215fa339p1bcb91jsnc007f937a446",
-                        "content-type: application/json"
+ 		"X-RapidAPI-Host: plagiarism-checker-and-auto-citation-generator-multi-lingual.p.rapidapi.com",
+		"X-RapidAPI-Key: 855404c4f5mshac9d4f580a2381cp18ea91jsna152b3ce65d9",
+		"content-type: application/json"
                     ],
                 ]);
                 
