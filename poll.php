@@ -132,12 +132,12 @@
                                                     <label for="option'.$opt['id'].'">'.$opt['name'].'</label>
                                             </div>';
                                             
-                                    if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['created_by'])
+                             //       if ($_SESSION['userLevel'] == 1)
                                                     
-                                        {
-                                            echo '<a href="edit-poll.php?id= '.$row['name'].' ">
-                                            <i class="fa fa-pencil fa-2x edit-event" aria-hidden="true"></i>';
-                                        }     
+                               //         {
+                                 //           echo '<a href="edit-poll.php?id= '.$opt['id'].'">
+                                   //         <i class="fa fa-pencil fa-2x edit-event" //aria-hidden="true"></i>';
+                                   //     }     
    
                                                      
                                          

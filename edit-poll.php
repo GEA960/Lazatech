@@ -45,10 +45,7 @@
 
                 <?php
 
-                    $sql = "SELECT polls.id, polls.subject, polls.poll_desc, poll_options.id, poll_options.poll_id, poll_options.name
-                    FROM polls
-                    INNER JOIN poll_options 
-                    ON polls.id=poll_options.poll_id";
+                    $sql = "SELECT id, name FROM poll_options;";
 
                     $stmt = mysqli_stmt_init($conn);    
 
@@ -67,7 +64,7 @@
                     
                 ?>
            
-           <form action="Poll-Insert.php" method='POST'
+           <form action="PollOptionInsert.php" method='POST'
                     style="padding: 0 30px 0 30px;">
                
   
@@ -78,16 +75,18 @@
 
                             <br><br><br>
                             
-                            <label for="headline">Poll ID</label>
+
+                           <!-- <label for="headline">Poll ID</label>
                             <input class="form-control" type="text" id="id" name="id" 
-                            placeholder="Your Poll ID" value='<?php echo $row['id']; ?>'> 
+                            placeholder="Your Poll ID" value=' -->
+                            <?php echo $row['id']; ?> <!--'>--> <br>
                            
                             
 
-                            <label for="headline">Poll Name</label>
+                           <!-- <label for="headline">Poll Name</label>
                             <input class="form-control" type="text" id="subject" name="subject" 
-                            placeholder="Your Poll Subject" value='<?php echo ucwords($row['subject']) ?>'>
-
+                            placeholder="Your Poll Subject" value='<?php //echo ucwords($row['subject']) ?>'>
+                -->
 
                             <label for="headline">Poll Options</label>
                             <input class="form-control" type="text" id="name" name="name" 
