@@ -19,6 +19,20 @@
         exit();
     }
     
+    $sql = "select * from users where idUsers = 61";
+    $stmt = mysqli_stmt_init($conn);    
+    
+    if (!mysqli_stmt_prepare($stmt, $sql))
+    {
+        die('SQL error');
+    }
+    else
+    {
+        mysqli_stmt_execute($stmt);
+        $result = mysqli_stmt_get_result($stmt);
+        $user = mysqli_fetch_assoc($result);
+    }
+    
     include 'includes/HTML-head.php';
 ?> 
     <head>
@@ -95,6 +109,7 @@
                             "includeCitations" => "false",
                             "scrapeSources" => "false"
                             ];
+                $api =  $user['PlagAPIKey'];
 
                 $curl = curl_init();
                 
@@ -110,7 +125,7 @@
                     CURLOPT_POSTFIELDS => json_encode($postData),
                     CURLOPT_HTTPHEADER => [
  		"X-RapidAPI-Host: plagiarism-checker-and-auto-citation-generator-multi-lingual.p.rapidapi.com",
-		"X-RapidAPI-Key: 855404c4f5mshac9d4f580a2381cp18ea91jsna152b3ce65d9",
+		"X-RapidAPI-Key: $api",
 		"content-type: application/json"
                     ],
                 ]);
