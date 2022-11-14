@@ -97,7 +97,6 @@
                             placeholder="What you want to tell people about yourself" 
                             ><?php echo $_SESSION['bio']; ?></textarea>
                     </div>
-                  
                   <hr>
                   
                   <div class="form-group">
@@ -119,12 +118,11 @@
                   
                   <br><input type="submit" class="btn btn-primary" name="update-profile" value="Update Profile">
                   
-              </form>
-              
-              
+
+
           </div>
-          <div class="col-sm-1">
-            
+          <div class="col-sm-2">
+          <a href="edit-XummAdd.php">Edit Xumm Address</a>
           </div>
         </div>
 
