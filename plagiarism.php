@@ -96,7 +96,8 @@ if ($_SESSION['userLevel'] == 1)
                     <form action="APIKeyInsert.php" method="POST"
                     style="padding: 0 30px 0 30px;">
                    <div class="px-5">
-                  <label for="edit-bio">Plagiarism Key API</label>
+                  <label for="edit-bio">Current Plagiarism Key API: &nbsp;'.$user['PlagAPIKey'].'</label>
+                  
                   <textarea class="form-control" id="api" rows="2" name="api"
                     placeholder="Change API Key">
                     </textarea>
