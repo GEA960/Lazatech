@@ -6,7 +6,11 @@ require 'includes/dbh.inc.php';
 if(isset($_POST['update']))
 {
     $id = $_POST['blog_id'];
-    $query = "UPDATE blogs SET blog_title='$_POST[blog_title]', blog_content='$_POST[blog_content]' WHERE blog_id='$_POST[blog_id]'";
+
+    $BlogTitle = str_replace("'", "''", $_POST['blog_title']);
+    $BlogContent = str_replace("'", "''", $_POST['blog_content']);
+
+    $query = "UPDATE blogs SET blog_title='$BlogTitle', blog_content='$BlogContent' WHERE blog_id='$_POST[blog_id]'";
     $query_run = mysqli_query($conn, $query);                                                                 
     
     if($query_run){
