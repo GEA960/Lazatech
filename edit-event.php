@@ -63,7 +63,7 @@
                     $sql = "SELECT events.event_id, events.title, events.event_date, event_info.headline, event_info.description
                     FROM events
                     INNER JOIN event_info 
-                    ON events.event_id=event_info.event";
+                    ON events.event_id= '$eventId' and event_info.event = '$eventId'";
 
                     $stmt = mysqli_stmt_init($conn);    
 
@@ -93,11 +93,10 @@
 
                             <br><br><br>
                             
-                            <label for="headline">Event ID</label>
-                            <input class="form-control" type="text" id="event_id" name="event_id" 
-                            placeholder="Your Blog Title" value='<?php echo $row['event_id']; ?>'> 
+                            <input class="form-control" type="hidden" id="event_id" name="event_id" 
+                            placeholder="Your Blog Title" value='<?php echo $row['event_id']; ?>' > 
                            
-                            
+                            <?php echo $row['event_id']; ?>
 
                             <label for="headline">Event Title</label>
                             <input class="form-control" type="text" id="title" name="title" 

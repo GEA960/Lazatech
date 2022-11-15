@@ -102,7 +102,7 @@
 
                     if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['event_by'])
                     {
-                    echo '<a href="edit-event2.php?id= '.$row['event_id'].' ">
+                    echo '<a href="edit-event.php?id= '.$eventId.' ">
                     <i class="fa fa-pencil fa-2x edit-event" aria-hidden="true"></i>';
                     }
                      ?>
