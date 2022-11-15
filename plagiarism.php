@@ -117,6 +117,7 @@ if ($_SESSION['userLevel'] == 1)
             <div class="container-fluid">
                 <?php
                 error_reporting(0);
+                
                 if (empty($_POST['plag'])) {
                 echo "Text to check is empty. Please input your text!!!<br>";
                 }      
@@ -187,6 +188,46 @@ if ($_SESSION['userLevel'] == 1)
             }
         
                 ?>
+
+                <?php
+
+$json = '{"sources":[
+    
+{"url":"https://www.chegg.com/homework-help/questions-and-answers/project-initial-cost-45-000-incremental-inflows-associated-project-20-000-year-1-15-000-ye-q93949261","scholarResult":false,"title":"Solved A project has an initial cost of $45,000. The | Chegg.com",
+    "matches":[
+        {"inputStart":225,"inputEnd":302,"matchText":"appropriate discount rate for this project is 8.0%. (HINT: Possibly use Excel","context":{"before":"e at the end of the year. The ","after":" Worksheet) What is the projec"},"score":12.1},
+        
+        {"inputStart":176,"inputEnd":210,"matchText":"All cash inflows are at the end of","context":{"after":" the year. The appropriate dis"},"score":5}]},
+
+{"url":"https://www.cliffsnotes.com/tutors-problems/Finance/37092914-A-project-has-an-initial-cost-of-45000-The-incremental-inflows/","scholarResult":false,"title":"",
+    "matches":[
+        
+        {"inputStart":0,"inputEnd":65,"matchText":"A project has an initial cost of $45,000. The incremental inflows...","context":{"before":"estions & Answers Finance ","after":" Question Asked by k"},"score":10.125},
+    
+        {"inputStart":0,"inputEnd":65,"matchText":"A project has an initial cost of $45,000. The incremental inflows...","context":{"before":"refluker on coursehero.com ","after":" A project has an initial c"},"score":10.125},
+        
+        {"inputStart":0,"inputEnd":302,"matchText":"A project has an initial cost of $45,000. The incremental inflows associated with the project are $20,000 in year 1, $15,000 in year 2, $10,000 in year 3 and $8,000 in year 4. All cash inflows are at the end of the year. The appropriate discount rate for this project is 8.0%. (HINT: Possibly use Excel","context":{"before":"The incremental inflows... ","after":" Worksheet) What is the proje"},"score":47.022222222222226},
+        
+        {"inputStart":0,"inputEnd":276,"matchText":"A project has an initial cost of $45,000. The incremental inflows associated with the project are $20,000 in year 1, $15,000 in year 2, $10,000 in year 3 and $8,000 in year 4. All cash inflows are at the end of the year. The appropriate discount rate for this project is 8.0%.","context":{"before":"5.35% d. 8.12% ","after":" The component costs of capita"},"score":43.02439024390244}]}],
+        
+        "percentPlagiarism":86,
+
+"citations":[{"title":"","url":"https://www.cliffsnotes.com/tutors-problems/Finance/37092914-A-project-has-an-initial-cost-of-45000-The-incremental-inflows/","sentenceEndIndex":352,"score":47,"matchedContentStartIndex":0,"matchedContentEndIndex":302}]}';
+
+$arr = json_decode($json, TRUE);
+
+echo '<h1> Plagiarism Results </h1> <br>';
+echo '<b> Title: </b> ';                   print_r($arr['sources'][0]['title']); 
+echo '<br>';
+echo '<b> URL: </b> ';                     print_r($arr['sources'][0]['url']); 
+echo '<br> <br>';
+echo '<b> Title: </b> ';                   print_r($arr['sources'][1]['title']); 
+echo '<br>';
+echo '<b> URL: </b> ';                     print_r($arr['sources'][1]['url']); 
+echo '<br>';
+echo '<b> Overall Plagiarism Percentage: </b> '; print_r($arr['percentPlagiarism']);  
+echo '<b> % </b> ';
+?>
              </div>
                     <div class="col-sm-2" -->
 
