@@ -4,8 +4,9 @@ require 'includes/dbh.inc.php';
 
 if(isset($_POST['update']))
 {
+    $PostContent = str_replace("'", "''", $_POST['post_content']);
     $id = $_POST['post_id'];
-    $query = "UPDATE posts SET post_content='$_POST[post_content]' WHERE post_id='$_POST[post_id]'";
+    $query = "UPDATE posts SET post_content='$PostContent' WHERE post_id='$_POST[post_id]'";
     $query_run = mysqli_query($conn, $query);                                                                 
     
     if($query_run){
