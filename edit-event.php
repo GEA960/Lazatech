@@ -60,7 +60,7 @@
 
                 <?php
 
-                    $sql = "SELECT events.event_id, events.title, event_info.headline, event_info.description
+                    $sql = "SELECT events.event_id, events.title, events.event_date, event_info.headline, event_info.description
                     FROM events
                     INNER JOIN event_info 
                     ON events.event_id=event_info.event";
@@ -107,6 +107,19 @@
                             <label for="headline">Event Headline</label>
                             <input class="form-control" type="text" id="headline" name="headline" 
                             placeholder="Your Event Headline" value='<?php echo ucwords($row['headline']) ?>'>
+                    
+                            <br>
+                                        <div class="form-row">
+                                            <div class="col">
+                                                <h4 class="text-muted">Lets Get things Going!</h4>
+                                            </div>
+                                            <div class="col">
+                                              <input type="date" id="date" name="edate" placeholder="Date" class="form-control" value='<?php echo ucwords($row['event_date']) ?>'>
+                                              <small id="eventdate" class="form-text text-muted">Event Date</small>
+                                            </div>
+                                        </div>
+                                        
+                            <br>
                   
                             <label for="edit-bio">Event Description</label>
                             <textarea class="form-control" id="description" rows="10" name="description" maxlength="5000"
