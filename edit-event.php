@@ -96,7 +96,7 @@
                             <input class="form-control" type="hidden" id="event_id" name="event_id" 
                             placeholder="Your Blog Title" value='<?php echo $row['event_id']; ?>' > 
                            
-                            <?php echo $row['event_id']; ?>
+                            
 
                             <label for="headline">Event Title</label>
                             <input class="form-control" type="text" id="title" name="title" 
