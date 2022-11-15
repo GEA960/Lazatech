@@ -69,8 +69,8 @@
                <div class="px-5">
                   
                <br><br><br>  
-               <label for="headline">Blog ID</label>
-               <input class="form-control" type="text" id="blog_id" name="blog_id" 
+              
+               <input class="form-control" type="hidden" id="blog_id" name="blog_id" 
                     placeholder="Your Blog Title" value='<?php echo $row['blog_id']; ?>'>
              
 
