@@ -71,8 +71,10 @@
                <div class="px-5">
                   
                <br><br><br>  
-               <label for="headline">Forum ID</label>
-               <input class="form-control" type="text" id="post_id" name="post_id" 
+               <?php echo 'Event ID:'; ?>
+               <?php echo $row['post_id']; ?>
+
+               <input class="form-control" type="hidden" id="post_id" name="post_id" 
                     placeholder="Your Blog Title" value='<?php echo $row['post_id']; ?>'>
              
 
