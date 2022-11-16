@@ -93,7 +93,7 @@
                                placeholder="Twitter Handle" value='<?php echo $_SESSION['headline']; ?>'><br>
                         
                         <label for="edit-bio">Profile Bio</label>
-                        <textarea class="form-control" id="edit-bio" rows="10" name="bio" maxlength="5000"
+                        <textarea class="form-control" id="Article_editor" rows="10" name="bio" maxlength="5000"
                             placeholder="What you want to tell people about yourself" 
                             ><?php echo $_SESSION['bio']; ?></textarea>
                     </div>
@@ -162,6 +162,9 @@
                                   
                                   
                             </script>
-        
+                             <script src ="ckeditor/ckeditor.js"></script>
+        <script>
+            CKEDITOR.replace('Article_editor')
+        </script>
     </body>
 </html>
