@@ -200,7 +200,7 @@
                         </div>
                         <div class="form-group">
                             <label for="bio">Bio</label>
-                            <textarea class="form-control" id="bio" name="bio" rows="6" maxlength="1000"
+                            <textarea class="form-control" id="Article_editor" name="bio" rows="6" maxlength="1000"
                             placeholder="Tell people about yourself"></textarea>
                           </div>
                     </form>
@@ -239,6 +239,10 @@
                                   
                                   
                             </script>
+                            <script src ="ckeditor/ckeditor.js"></script>
+        <script>
+            CKEDITOR.replace('Article_editor')
+        </script>
         
     </body>
 </html>
