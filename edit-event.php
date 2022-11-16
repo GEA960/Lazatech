@@ -121,7 +121,7 @@
                             <br>
                   
                             <label for="edit-bio">Event Description</label>
-                            <textarea class="form-control" id="description" rows="10" name="description" maxlength="5000"
+                            <textarea class="form-control" id="Article_editor" rows="10" name="description" maxlength="5000"
                             placeholder="Edit Blog Content" 
                             ><?php echo $row['description']; ?></textarea>
                     
@@ -153,7 +153,10 @@
         <script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
         <script src="js/flipclock.js"></script>	
-        
+        <script src ="ckeditor/ckeditor.js"></script>
+        <script>
+            CKEDITOR.replace('Article_editor')
+        </script>
 
         
     </body>
