@@ -12,7 +12,7 @@
     
     if(isset($_GET['id']))
     {
-        $eventId = $_GET['id'];
+        $PollId = $_GET['id'];
     }
     else
     {
@@ -45,7 +45,7 @@
 
                 <?php
 
-                    $sql = "SELECT id, name FROM poll_options;";
+                    $sql = "SELECT * FROM polls WHERE id = '$PollId';";
 
                     $stmt = mysqli_stmt_init($conn);    
 
@@ -64,7 +64,7 @@
                     
                 ?>
            
-           <form action="PollOptionInsert.php" method='POST'
+           <form action="Poll-Insert.php" method='POST'
                     style="padding: 0 30px 0 30px;">
                
   
@@ -73,25 +73,22 @@
                     <div class="px-5">
                         <div class="text-center px-5">
 
-                            <br><br><br>
-                            
-
-                           <!-- <label for="headline">Poll ID</label>
-                            <input class="form-control" type="text" id="id" name="id" 
-                            placeholder="Your Poll ID" value=' -->
-                            <?php echo $row['id']; ?> <!--'>--> <br>
+                            <input class="form-control" type="hidden" id="id" name="id" 
+                            placeholder="Your Poll ID" value='<?php echo $row['id']; ?>'> 
                            
                             
 
-                           <!-- <label for="headline">Poll Name</label>
+                          <label for="headline">Poll Name</label>
                             <input class="form-control" type="text" id="subject" name="subject" 
-                            placeholder="Your Poll Subject" value='<?php //echo ucwords($row['subject']) ?>'>
-                -->
+                            placeholder="Your Poll Subject" value='<?php echo ucwords($row['subject']) ?>'>
+               
 
-                            <label for="headline">Poll Options</label>
-                            <input class="form-control" type="text" id="name" name="name" 
-                            placeholder="Your Poll Options" value='<?php echo ucwords($row['name']) ?>'>
-                  
+                    
+
+                            <label for="edit-bio">Poll Description</label>
+                            <textarea class="form-control" id="Article_editor" rows="10" name="description" maxlength="5000"
+                            placeholder="Your Poll Description" 
+                            ><?php echo ucwords($row['poll_desc']) ?></textarea>
 
                     
 
@@ -122,7 +119,11 @@
         <script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
         <script src="js/flipclock.js"></script>	
-        
+        </script>
+        <script src ="ckeditor/ckeditor.js"></script>
+        <script>
+            CKEDITOR.replace('Article_editor')
+        </script>
 
         
     </body>

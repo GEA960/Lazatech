@@ -60,11 +60,19 @@
                         <?php
                         if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['event_by'] || ($_SESSION['userLevel'] == 2))
                                 {
-                                    echo '<a href="includes/delete-poll.php?id='.$row['id'].'&page=poll" >
+                                    echo '<a href="includes/delete-poll.php?id='.$row['id'].'" >
                                             <i class="fa fa-trash" aria-hidden="true" style="color: red;"></i>
                                           </a>
                                         </span>';
                                 }    
+                        
+                                if ($_SESSION['userLevel'] == 1)
+                                                    
+                                {
+                                   echo '<a href="edit-poll.php?id= '.$pollData['poll']['id'].'">
+                                   <i class="fa fa-pencil fa-2x edit-event" //aria-hidden="true"></i>';
+                               }   
+        
                         ?>
                         <br>
                         <p class="text-muted"><?php echo $pollData['poll']['poll_desc']; ?></p>
@@ -105,6 +113,28 @@
                                 $row = mysqli_fetch_assoc($result);
                                 $voted = $row['poll_option_id']; 
 
+
+                                $sql = "select p.id, p.subject, p.created, p.poll_desc, p.locked, (
+                                    select count(*) 
+                                    from poll_votes v
+                                    where v.poll_id = p.id
+                                    ) as votes
+                                from polls p 
+                                order by votes desc
+                                LIMIT 5";
+
+                        $stmt = mysqli_stmt_init($conn);    
+
+                        if (!mysqli_stmt_prepare($stmt, $sql))
+                        {
+                            die('SQL error');
+                        }
+                        else
+                        {
+                            mysqli_stmt_execute($stmt);
+                            $result = mysqli_stmt_get_result($stmt);
+                        }
+
                        
                                         
 
@@ -130,16 +160,7 @@
                                     
                                     echo            '> 
                                                     <label for="option'.$opt['id'].'">'.$opt['name'].'</label>
-                                            </div>';
-                                            
-                             //       if ($_SESSION['userLevel'] == 1)
-                                                    
-                               //         {
-                                 //           echo '<a href="edit-poll.php?id= '.$opt['id'].'">
-                                   //         <i class="fa fa-pencil fa-2x edit-event" //aria-hidden="true"></i>';
-                                   //     }     
-   
-                                                     
+                                            </div>';             
                                          
                                 }
                                 
