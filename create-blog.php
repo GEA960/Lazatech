@@ -68,7 +68,7 @@
 					</div>
 
 					<div class="wrap-input2 validate-input" data-validate = "Description is required">
-                                            <textarea class="input2" id="content" name="bcontent"rows="20"></textarea>
+                                            <textarea class="input2" id="Article_editor" name="bcontent"rows="50"></textarea>
 						<span class="focus-input2" data-placeholder="Blog Content"></span>
 					</div>
 
@@ -124,6 +124,9 @@
                                   
                                   
                             </script>
-        
+        <script src ="ckeditor/ckeditor.js"></script>
+        <script>
+            CKEDITOR.replace('Article_editor')
+        </script>
     </body>
 </html>
