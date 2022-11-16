@@ -283,7 +283,7 @@
         <form method="post" action="">
             <fieldset>
                 <div class="form-group">
-                    <textarea name="reply-content" class="form-control" id="reply-form" rows="7"></textarea>
+                    <textarea name="reply-content" class="form-control" id="Article_editor" rows="7"></textarea>
                 </div>
                 <input type="submit" value="Submit reply" class="btn btn-lg btn-dark" name="submit-reply">
             </fieldset>
@@ -388,6 +388,9 @@ function newQuote(){
     // Displaying a new quote when the webpage loads
     displayQuote();
 }</script>
-    
+           <script src ="ckeditor/ckeditor.js"></script>
+        <script>
+            CKEDITOR.replace('Article_editor')
+        </script>
     </body>
 </html>
