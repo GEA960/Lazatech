@@ -58,6 +58,13 @@
         
                         <h1><?php echo $pollData['poll']['subject']; ?></h1>
                         <?php
+
+                        if ($_SESSION['userLevel'] == 1)
+                                                    
+                        {
+                        echo '<a href="edit-poll.php?id= '.$pollData['poll']['id'].'">
+                        <i class="fa fa-pencil fa-2x edit-event" aria-hidden="true"></i>';
+                        }
                         if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['event_by'] || ($_SESSION['userLevel'] == 2))
                                 {
                                     echo '<a href="includes/delete-poll.php?id='.$row['id'].'" >
@@ -66,14 +73,8 @@
                                         </span>';
                                 }    
                         
-                                if ($_SESSION['userLevel'] == 1)
-                                                    
-                                {
-                                   echo '<a href="edit-poll.php?id= '.$pollData['poll']['id'].'">
-                                   <i class="fa fa-pencil fa-2x edit-event" //aria-hidden="true"></i>';
-                               }   
-        
-                        ?>
+                                 ?>
+                        <br>
                         <br>
                         <p class="text-muted"><?php echo $pollData['poll']['poll_desc']; ?></p>
                         <br><br>
