@@ -82,7 +82,7 @@
                   
                   
                   <label for="edit-bio">Blog Content</label>
-                        <textarea class="form-control" id="blog_content" rows="10" name="blog_content" maxlength="5000"
+                        <textarea class="form-control" id="Article_editor" rows="10" name="blog_content" maxlength="5000"
                             placeholder="Edit Blog Content" 
                             ><?php echo $row['blog_content']; ?></textarea>
 
