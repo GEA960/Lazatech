@@ -80,7 +80,7 @@
 
                   <br><br><br>  
                   <label for="edit-bio">Response Content</label>
-                    <textarea class="form-control" id="post_content" rows="10" name="post_content" maxlength="5000"
+                    <textarea class="form-control" id="Article_editor"  rows="10" name="post_content" maxlength="5000"
                     placeholder="Edit Post Content" 
                     ><?php echo $row['post_content']; ?></textarea>
                   <br><br><br>
