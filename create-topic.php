@@ -127,7 +127,7 @@
 	<script src="js/bootstrap.min.js"></script>
         <script src="js/creation-main.js"></script>
         <script src ="ckeditor/ckeditor.js"></script>
-        <script>
+        <script>s
             CKEDITOR.replace('Article_editor')
         </script>
     </body>

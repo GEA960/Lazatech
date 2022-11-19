@@ -239,7 +239,7 @@
                                   
                                   
                             </script>
-                            <script src ="ckeditor/ckeditor.js"></script>
+                            <script src ="ckeditorSimple/ckeditor.js"></script>
         <script>
             CKEDITOR.replace('Article_editor')
         </script>
