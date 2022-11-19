@@ -124,7 +124,7 @@
                                   
                                   
                             </script>
-        <script src ="ckeditor/ckeditor.js"></script>
+        <script src ="ckeditor3rd/ckeditor.js"></script>
         <script>
             CKEDITOR.replace('Article_editor')
         </script>
