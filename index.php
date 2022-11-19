@@ -77,19 +77,19 @@
                         <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
                             <li class="nav-item">
                               <a class="nav-link active" id="forum-tab" data-toggle="tab" href="#forum" role="tab" 
-                                 aria-controls="forum" aria-selected="true">Recent Forums</a>
+                                 aria-controls="forum" aria-selected="true">Forums</a>
                             </li>
                             <li class="nav-item">
                               <a class="nav-link" id="blog-tab" data-toggle="tab" href="#blog" role="tab" 
-                                 aria-controls="blog" aria-selected="false">Recent Blogs</a>
+                                 aria-controls="blog" aria-selected="false">Blogs</a>
                             </li>
                             <li class="nav-item">
                               <a class="nav-link" id="poll-tab" data-toggle="tab" href="#poll" role="tab" 
-                                 aria-controls="poll" aria-selected="false">Recent Polls</a>
+                                 aria-controls="poll" aria-selected="false">Polls</a>
                             </li>
                             <li class="nav-item">
                               <a class="nav-link" id="event-tab" data-toggle="tab" href="#event" role="tab" 
-                                 aria-controls="event" aria-selected="false">Recent Events</a>
+                                 aria-controls="event" aria-selected="false">Events</a>
                             </li>
                         </ul>
 
@@ -102,13 +102,40 @@
                                 <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-info rounded shadow-sm">
                                     <img class="mr-3" src="img/logo.png" alt="" width="48" height="48">
                                   <div class="lh-100">
-                                    <h1 class="mb-0 text-white lh-100">Latest Forums</h1>
+                                    <h1 class="mb-0 text-white lh-100">Forums</h1>
                                   </div>
                                 </div>  
+ 				
+
+ <form method="post">
+   	<p>
+
+	<select name="formGender">
+  	<option value="">Select...</option>
+  <option value="M">Male</option>
+  <option value="F">Female</option>
+</select>
+</p>
+    <button type="formSubmit">Go</button>
+</form>
 
                                     <div class="mb-2">
 
                                     <?php
+
+if(isset($_POST['formSubmit']) )
+{
+  $varGender = $_POST['formGender'];
+  $errorMessage = "";
+
+  // - - - snip - - - 
+}
+
+echo $varGender;
+
+
+
+
                                         $sql = "select topic_id, topic_subject, topic_date, topic_cat, topic_by, userImg, idUsers, uidUsers, cat_name, (
                                                     select sum(post_votes)
                                                     from posts
@@ -157,7 +184,7 @@
                                             }
                                         }
                                     ?>        
-
+					
 
                                 </div>
 
@@ -168,7 +195,7 @@
                                 <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-info rounded shadow-sm">
                                     <img class="mr-3" src="img/logo.png" alt="" width="48" height="48">
                                   <div class="lh-100">
-                                    <h1 class="mb-0 text-white lh-100">Latest Blogs</h1>
+                                    <h1 class="mb-0 text-white lh-100">Blogs</h1>
                                   </div>
                                 </div>  
 
@@ -227,7 +254,7 @@
                                 <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-info rounded shadow-sm">
                                     <img class="mr-3" src="img/logo.png" alt="" width="48" height="48">
                                   <div class="lh-100">
-                                    <h1 class="mb-0 text-white lh-100">Latest Polls</h1>
+                                    <h1 class="mb-0 text-white lh-100">Polls</h1>
                                   </div>
                                 </div>  
 
