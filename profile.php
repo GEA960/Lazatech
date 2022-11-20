@@ -261,7 +261,69 @@
               
               <br><br>
               
+              <br><br>
+              <hr>
+              <h3>Participated Polls</h3>
+              <br><br>
               
+              
+              <?php
+                    $sql = "select * from poll_votes v "
+                            . "join polls p on v.poll_id = p.id "
+                            . "join users u on p.created_by = u.idUsers "
+                            . "where v.vote_by = ?";
+                            
+                    $stmt = mysqli_stmt_init($conn);    
+
+                    if (!mysqli_stmt_prepare($stmt, $sql))
+                    {
+                        die('SQL error');
+                    }
+                    else
+                    {
+                        mysqli_stmt_bind_param($stmt, "s", $userid);
+                        mysqli_stmt_execute($stmt);
+                        $result = mysqli_stmt_get_result($stmt);
+                        
+                        echo '<div class="container">'
+                                    .'<div class="row">';
+                        
+                        $row = mysqli_fetch_assoc($result);
+                        if(empty($row))
+                        {
+                            echo '<div class="col-sm-4" style="padding-bottom: 30px;"></div>
+                                <div class="col-sm-4">
+                                    <img class="profile-empty-img" src="img/empty.png">
+                                  </div>
+                                  <div class="col-sm-4" style="padding-bottom: 30px;"></div>
+                                    </div>
+                                  </div>';
+                        }
+                        else
+                        {
+                            do
+                            {   
+                                echo '<div class="col-sm-4" style="padding-bottom: 30px;">
+                                        <div class="card user-blogs">
+                                            <a href="poll.php?poll='.$row['poll_id'].'">
+                                            <img class="card-img-top" src="img/poll_cover.png" alt="Card image cap">
+                                            <div class="card-block p-2">
+                                              <p class="card-title">'.ucwords($row['subject']).'</p>
+                                             <p class="card-text"><small class="text-muted">'
+                                             .date("F jS, Y", strtotime($row['created'])).'</small></p>
+                                            </div>
+                                            </a>
+                                          </div>
+                                          </div>';
+                            }while ($row = mysqli_fetch_assoc($result));
+                            echo '</div>'
+                                    .'</div>';
+                        }
+                    }
+              ?>
+              
+              
+              <br><br>
               
           </div>
           <div class="col-sm-1">
