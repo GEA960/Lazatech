@@ -198,15 +198,17 @@
               
               <br><br>
               <hr>
-              <h3>Participated Polls</h3>
+              <h3>Created Polls</h3>
               <br><br>
               
               
               <?php
-                    $sql = "select * from poll_votes v "
+                    /*$sql = "select * from poll_votes v "
                             . "join polls p on v.poll_id = p.id "
                             . "join users u on p.created_by = u.idUsers "
                             . "where v.vote_by = ?";
+                            */
+                    $sql = "select * FROM polls WHERE created_by = ?";
                     $stmt = mysqli_stmt_init($conn);    
 
                     if (!mysqli_stmt_prepare($stmt, $sql))
@@ -239,7 +241,7 @@
                             {   
                                 echo '<div class="col-sm-4" style="padding-bottom: 30px;">
                                         <div class="card user-blogs">
-                                            <a href="poll.php?poll='.$row['poll_id'].'">
+                                            <a href="poll.php?poll='.$row['id'].'">
                                             <img class="card-img-top" src="img/poll_cover.png" alt="Card image cap">
                                             <div class="card-block p-2">
                                               <p class="card-title">'.ucwords($row['subject']).'</p>
