@@ -1,5 +1,5 @@
 <?php
- include_once 'includes/dbh.inc.php';
+ include_once 'dbh.inc.php';
 
  $sql = "select * from users where idUsers = 61";
     $stmt = mysqli_stmt_init($conn);    
