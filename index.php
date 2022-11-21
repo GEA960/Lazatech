@@ -103,7 +103,7 @@
                                     <img class="mr-3" src="img/logo.png" alt="" width="48" height="48">
                                   <div class="lh-100">
 
-                                  <form id="s" method="post">  
+                               <!--   <form id="s" method="post">  
                                 <select name='query'>
                                     <option value="HighVotes">High Votes Forums</option>
                                     <option value="Latest">Latest Forums</option>
@@ -111,7 +111,10 @@
                                 </select>      
                                 <input type="submit" name="Submit" value="Sort">
                             </form>                 
-
+-->                         
+                                <div class="lh-100">
+                                    <h1 class="mb-0 text-white lh-100">Forums</h1>
+                                  </div>
                                   </div>
                                 </div>  
 
