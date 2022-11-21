@@ -192,28 +192,36 @@ if ($_SESSION['userLevel'] == 1)
 
                 <?php
 
-$json = '{"sources":[
+$json = '{"sources":
     
-{"url":"https://www.chegg.com/homework-help/questions-and-answers/project-initial-cost-45-000-incremental-inflows-associated-project-20-000-year-1-15-000-ye-q93949261","scholarResult":false,"title":"Solved A project has an initial cost of $45,000. The | Chegg.com",
-    "matches":[
-        {"inputStart":225,"inputEnd":302,"matchText":"appropriate discount rate for this project is 8.0%. (HINT: Possibly use Excel","context":{"before":"e at the end of the year. The ","after":" Worksheet) What is the projec"},"score":12.1},
-        
-        {"inputStart":176,"inputEnd":210,"matchText":"All cash inflows are at the end of","context":{"after":" the year. The appropriate dis"},"score":5}]},
-
-{"url":"https://www.cliffsnotes.com/tutors-problems/Finance/37092914-A-project-has-an-initial-cost-of-45000-The-incremental-inflows/","scholarResult":false,"title":"",
-    "matches":[
-        
-        {"inputStart":0,"inputEnd":65,"matchText":"A project has an initial cost of $45,000. The incremental inflows...","context":{"before":"estions & Answers Finance ","after":" Question Asked by k"},"score":10.125},
+    [{"url":"https://www.toptal.com/php/10-most-common-mistakes-php-programmers-make","scholarResult":false,"title":"",
+        "matches":[
+            {"inputStart":0,"inputEnd":389,"matchText":"PHP makes it relatively easy to build a web-based system, which is much of the reason for its popularity. But its ease of use notwithstanding, PHP has evolved into quite a sophisticated language, with many nuances and subtleties that can bite developers, leading to hours of hair-pulling debugging. This article highlights ten of the more common mistakes that PHP developers need to beware","context":{"before":"istakes PHP Developers Make ","after":" of. By I"},"score":56.01851851851852}]},
     
-        {"inputStart":0,"inputEnd":65,"matchText":"A project has an initial cost of $45,000. The incremental inflows...","context":{"before":"refluker on coursehero.com ","after":" A project has an initial c"},"score":10.125},
-        
-        {"inputStart":0,"inputEnd":302,"matchText":"A project has an initial cost of $45,000. The incremental inflows associated with the project are $20,000 in year 1, $15,000 in year 2, $10,000 in year 3 and $8,000 in year 4. All cash inflows are at the end of the year. The appropriate discount rate for this project is 8.0%. (HINT: Possibly use Excel","context":{"before":"The incremental inflows... ","after":" Worksheet) What is the proje"},"score":47.022222222222226},
-        
-        {"inputStart":0,"inputEnd":276,"matchText":"A project has an initial cost of $45,000. The incremental inflows associated with the project are $20,000 in year 1, $15,000 in year 2, $10,000 in year 3 and $8,000 in year 4. All cash inflows are at the end of the year. The appropriate discount rate for this project is 8.0%.","context":{"before":"5.35% d. 8.12% ","after":" The component costs of capita"},"score":43.02439024390244}]}],
-        
-        "percentPlagiarism":86,
+    {"url":"https://shameerc.com/news/10-most-common-mistakes-that-php-developers-make","scholarResult":false,"title":"10 Most Common Mistakes That PHP Developers Make - Shameer C","matches":[
 
-"citations":[{"title":"","url":"https://www.cliffsnotes.com/tutors-problems/Finance/37092914-A-project-has-an-initial-cost-of-45000-The-incremental-inflows/","sentenceEndIndex":352,"score":47,"matchedContentStartIndex":0,"matchedContentEndIndex":302}]}';
+        {"inputStart":275,"inputEnd":354,"matchText":"hair-pulling debugging. This article highlights ten of the more common mistakes...","context":{"before":"velopers, leading to hours of "},"score":8},
+        
+        {"inputStart":206,"inputEnd":262,"matchText":"nuances, and subtleties that can bite developers, leading","context":{"after":" to hours of hair-pulling debu"},"score":8.166666666666666}]},
+        
+    {"url":"http://www.studentschillout.com/wp/10-most-common-mistakes-that-php-developers-make/","scholarResult":false,"title":"","matches":[
+        {"inputStart":106,"inputEnd":389,"matchText":"But its ease of use notwithstanding, PHP has evolved into quite a sophisticated language with many frameworks, nuances, and subtleties that can bite developers, leading to hours of hair-pulling debugging. This article highlights ten of the more common mistakes that PHP developers need to beware","context":{"before":"That PHP Developers Make. ","after":" of. Common Mistake #"},"score":37}]},
+        
+    {"url":"http://www.phpdeveloper.org/news/21448","scholarResult":false,"title":"","matches":[
+        {"inputStart":0,"inputEnd":389,"matchText":" PHP makes it relatively easy to build a web-based system, which is much of the reason for its popularity. But its ease of use notwithstanding, PHP has evolved into quite a sophisticated language, with many nuances and subtleties that can bite developers, leading to hours of hair-pulling debugging. This article highlights ten of the more common mistakes that PHP developers need to beware","context":{"before":"t are a bit more abstract. ","after":" of. Among the items on his"},"score":56.01851851851852}]},
+    
+    {"url":"https://belajardenganbaik.com/what-is-the-resulting-content-of-the-list-letters-after-this-code-snippet","scholarResult":false,"title":"","matches":[
+
+        {"inputStart":0,"inputEnd":389,"matchText":"PHP makes it relatively easy to build a web-based system, which is much of the reason for its popularity. But its ease of use notwithstanding, PHP has evolved into quite a sophisticated language, with many nuances and subtleties that can bite developers, leading to hours of hair-pulling debugging. This article highlights ten of the more common mistakes that PHP developers need to beware","context":{"before":"istakes PHP Developers Make ","after":" of. Author"},"score":56.01851851851852},
+        
+        {"inputStart":0,"inputEnd":389,"matchText":"PHP makes it relatively easy to build a web-based system, which is much of the reason for its popularity. But its ease of use notwithstanding, PHP has evolved into quite a sophisticated language with many frameworks, nuances, and subtleties that can bite developers, leading to hours of hair-pulling debugging. This article highlights ten of the more common mistakes that PHP developers need to beware","context":{"before":"SHARE ","after":" of. Snippets in Visual St"},"score":54}]},
+        
+        {"url":"https://www.phpweekly.com/archive/2014-07-24.html","scholarResult":false,"title":"","matches":[
+            {"inputStart":0,"inputEnd":389,"matchText":" PHP makes it relatively easy to build a web-based system, which is much of the reason for its popularity. But its ease of use notwithstanding, PHP has evolved into quite a sophisticated language, with many nuances and subtleties that can bite developers, leading to hours of hair-pulling debugging. This article highlights ten of the more common mistakes that PHP developers need to beware","context":{"before":"10 Most Common PHP Mistakes ","after":" of. 5 Steps to Build Perf"},"score":56.01851851851852}]}],
+            
+            "percentPlagiarism":99,
+            "citations":[{"title":"","url":"https://www.phpweekly.com/archive/2014-07-24.html","sentenceEndIndex":392,"score":56,"matchedContentStartIndex":0,"matchedContentEndIndex":389}]}
+';
 
 $arr = json_decode($json, TRUE);
 
@@ -228,6 +236,12 @@ echo '<b> URL: </b> ';                     print_r($arr['sources'][1]['url']);
 echo '<br>';
 echo '<b> Overall Plagiarism Percentage: </b> '; print_r($arr['percentPlagiarism']);  
 echo '<b> % </b> ';
+echo '<br> <br>';
+
+foreach($arr as $index=>&$subarray){  // modify $subarray by reference
+    $subarray=['matchText'=>$subarray['matches']['matchText'],'score'=>$subarray['matches']['score']];  // overwrite each subarray using the first two elements from deeper "control" subarray
+}
+var_export($arr); 
 ?>
              </div>
                     <div class="col-sm-2" -->
