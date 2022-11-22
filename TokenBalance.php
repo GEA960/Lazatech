@@ -45,6 +45,7 @@ include 'includes/HTML-head.php';
 a {
     text-decoration: none;
     outline: none;
+    color: white;
 }
 
 ul li {
@@ -214,16 +215,17 @@ i{
           <p>--</p>
         </li>
         <li class="item">
-          <a href="#">No other tokens yet</a>
+          <a href="#">Token balances are saved on your account and our database</a>
           <p>--</p>
         </li>
         <li class="item">
-          <a href="#">No other tokens yet</a>
-          <p>--</p>
+          <a href="#"> <b>If you inserted your personal xumm address below, you will received the mentioned token on your wallet after development and creation of the token were finished. </b></a>
         </li>
       </ul>
+      <br>
+          <a href="edit-XummAdd.php">Edit Xumm Address</a>
     </div>
-
+   
 
     
                 <div class="col-sm-2" -->

@@ -121,9 +121,7 @@
 
 
           </div>
-          <div class="col-sm-2">
-          <a href="edit-XummAdd.php">Edit Xumm Address</a>
-          </div>
+          
         </div>
 
 
