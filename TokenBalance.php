@@ -219,7 +219,7 @@ i{
           <p>--</p>
         </li>
         <li class="item">
-          <a href="#"> <b>If you inserted your personal xumm address below, you will received the mentioned token on your wallet after development and creation of the token were finished. </b></a>
+          <a href="#"> <b>If you inserted your personal xumm address on a page after you clicked the button below with label "Edit Xumm Address", you will received the mentioned token balance on your wallet after its development and creation were finished. </b></a>
         </li>
       </ul>
       <br>
