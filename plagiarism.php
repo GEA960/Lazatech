@@ -1,7 +1,7 @@
 
 
 <?php
-
+    error_reporting(0);
     session_start();
     include_once 'includes/dbh.inc.php';
     define('TITLE',"Plagiarism Checker| Lazatech");
@@ -90,6 +90,7 @@
 -->             
 
 <?php
+error_reporting(0);
 if ($_SESSION['userLevel'] == 1)
                     {
                     echo '
