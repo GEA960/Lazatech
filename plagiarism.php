@@ -110,7 +110,7 @@ if ($_SESSION['userLevel'] == 1)
             <form action="plagiarism.php" method="post" class="col-sm-11";>
             <div>
                     <label for="edit-bio">Input the text you want to check for plagiarism:</label>
-                        <textarea class="form-control" type="text" name="plag" rows="10" name="value" maxlength="5000"placeholder="Input text" ></textarea>         
+                        <textarea class="form-control" type="text" name="plag" rows="10" name="value" maxlength="5000"placeholder="Input text" > <?php echo $_POST['plag'];?></textarea>         
             </div>
             <input type="submit" name="submit" value="Submit me!" />
             </form>
@@ -154,7 +154,7 @@ if ($_SESSION['userLevel'] == 1)
                 $err = curl_error($curl);
                 
                 curl_close($curl);
-                
+             
                 if ($err) {
                     echo "cURL Error #:" . $err;
                 } else {
@@ -164,7 +164,7 @@ if ($_SESSION['userLevel'] == 1)
                
 
                function RecursiveWrite($array) {
-                echo "<table border='1'>";
+                echo "<table border='1'>"; }/*  
                 foreach ($array as $key => $value) {
                     echo '<br><br><br>';
 
@@ -187,11 +187,11 @@ if ($_SESSION['userLevel'] == 1)
                     }
                 }
             }
-        
+        */
                 ?>
 
                 <?php
-
+/*
 $json = '{"sources":
     
     [{"url":"https://www.toptal.com/php/10-most-common-mistakes-php-programmers-make","scholarResult":false,"title":"",
@@ -222,26 +222,17 @@ $json = '{"sources":
             "percentPlagiarism":99,
             "citations":[{"title":"","url":"https://www.phpweekly.com/archive/2014-07-24.html","sentenceEndIndex":392,"score":56,"matchedContentStartIndex":0,"matchedContentEndIndex":389}]}
 ';
-
-$arr = json_decode($json, TRUE);
-
-echo '<h1> Plagiarism Results </h1> <br>';
-echo '<b> Title: </b> ';                   print_r($arr['sources'][0]['title']); 
-echo '<br>';
-echo '<b> URL: </b> ';                     print_r($arr['sources'][0]['url']); 
-echo '<br> <br>';
-echo '<b> Title: </b> ';                   print_r($arr['sources'][1]['title']); 
-echo '<br>';
-echo '<b> URL: </b> ';                     print_r($arr['sources'][1]['url']); 
-echo '<br>';
-echo '<b> Overall Plagiarism Percentage: </b> '; print_r($arr['percentPlagiarism']);  
+*/
+$response = json_decode($response, TRUE);
+echo '<b> Overall Plagiarism Percentage: </b> '; print_r($response['percentPlagiarism']);  
 echo '<b> % </b> ';
-echo '<br> <br>';
 
-foreach($arr as $index=>&$subarray){  // modify $subarray by reference
+
+/*foreach($arr as $index=>&$subarray){  // modify $subarray by reference
     $subarray=['matchText'=>$subarray['matches']['matchText'],'score'=>$subarray['matches']['score']];  // overwrite each subarray using the first two elements from deeper "control" subarray
 }
 var_export($arr); 
+*/
 ?>
              </div>
                     <div class="col-sm-2" -->
