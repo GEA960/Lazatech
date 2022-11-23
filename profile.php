@@ -202,7 +202,7 @@
               <br><br>
               
               <?php
-                    $sql = "select * from posts where post_by = ?";
+                    $sql = "select * from posts where post_by = ? Order by post_votes desc";
                     $stmt = mysqli_stmt_init($conn);    
 
                     if (!mysqli_stmt_prepare($stmt, $sql))
