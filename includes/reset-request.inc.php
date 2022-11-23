@@ -25,7 +25,7 @@ if (isset($_POST['reset-request-submit']))
     if (!mysqli_stmt_prepare($stmt, $sql))
     {
         echo "sql error";
-      
+        exit();
     }
     else
     {
