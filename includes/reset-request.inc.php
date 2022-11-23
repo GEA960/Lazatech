@@ -19,7 +19,7 @@ if (isset($_POST['reset-request-submit']))
     
     $userEmail = $_POST['email'];
     echo 'error on first sql';
-    $sql = "delete from pwdReset where pwdResetEmail=?";
+    $sql = "delete from pwdReset where pwdResetEmail= '$userEmail'";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql))
     {
