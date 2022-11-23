@@ -219,7 +219,7 @@
                                                 <i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>';
                                             
                                         
-                                       if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['post_by'])
+                                       if ($_SESSION['userLevel'] == 1 || $_SESSION['userLevel'] == 3 || $_SESSION['userId'] == $row['post_by'])
                                                 {     
                                                     echo '<a href="Edit-forum.php?id= '.$row['post_id'].' ">
                                                     <i class="fa fa-pencil fa-2x edit-blog" aria-hidden="true"></i>
