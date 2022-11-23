@@ -19,5 +19,5 @@
 $SMTPuser = 'lazatech.org@gmail.com';   
 $SMTPpwd = $user['MailPass']; 
 $SMTPtitle = "Lazatech inc.";
-$Domain = 'ftp.lazatech.tech';
+$Domain = 'lazatech.tech';
 
