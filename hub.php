@@ -83,7 +83,7 @@
            }
         ?>
         <small class="d-block text-right mt-3">
-        <?php if ($_SESSION['userLevel'] == 1 ) {
+        <?php if ($_SESSION['userLevel'] == 1 || $_SESSION['userLevel'] == 2  ) {
            echo '<a href="create-blog.php" class="btn btn-primary">Create a Blog</a>
                 '; } ?>
                
@@ -153,7 +153,7 @@
         
         <small class="d-block text-right mt-3">
 
-        <?php if ($_SESSION['userLevel'] == 1 ) {
+        <?php if ($_SESSION['userLevel'] == 1 || $_SESSION['userLevel'] == 2 ) {
              echo '<a href="create-event.php" class="btn btn-primary">Create An Event</a>'; } ?>
               
         <a href="events.php" class="btn btn-primary">All Events</a>
@@ -218,7 +218,7 @@
            }
         ?>
         <small class="d-block text-right mt-3">
-        <?php if ($_SESSION['userLevel'] == 1 ) {
+        <?php if ($_SESSION['userLevel'] == 1 || $_SESSION['userLevel'] == 2 ) {
         echo '<a href="create-poll.php" class="btn btn-primary">Create A Poll</a>   
         '; } ?>
         

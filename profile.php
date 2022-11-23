@@ -380,11 +380,15 @@
                     }
               ?>
               
-              <br><br>
+              <?php 
+              if ($_SESSION['userLevel'] == 1 || $_SESSION['userLevel'] == 2)
+              {
+              echo '<br><br>
               <hr>
               <h3>Created Events</h3>
-              <br><br>
-              
+              <br><br>';
+              }
+               ?>
               <?php
                          $sql = "select * from events where event_by = ?";
                     $stmt = mysqli_stmt_init($conn);    
@@ -413,13 +417,13 @@
                                     </div>
                                   </div>';
                         }
-                        else
+                        elseif ($_SESSION['userLevel'] == 1 || $_SESSION['userLevel'] == 2)
                         {
                             do
                             {
                                 echo '<div class="col-sm-4" style="padding-bottom: 30px;">
                                         <div class="card user-blogs">
-                                            <a href="blog-page.php?id='.$row['event_id'].'">
+                                            <a href="event-page.php?id='.$row['event_id'].'">
                                             <img class="card-img-top" src="uploads/'.$row['event_image'].'" alt="Card image cap">
                                             <div class="card-block p-2">
                                               <p class="card-title">'.ucwords($row['title']).'</p>
