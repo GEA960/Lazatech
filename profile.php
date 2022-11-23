@@ -90,7 +90,7 @@
               
               <?php
                     $sql = "select * from blogs "
-                            . "where blog_by = ?";
+                            . "where blog_by = ? order by blog_votes desc";
                     $stmt = mysqli_stmt_init($conn);    
 
                     if (!mysqli_stmt_prepare($stmt, $sql))
@@ -127,6 +127,12 @@
                                             <img class="card-img-top" src="uploads/'.$row['blog_img'].'" alt="Card image cap">
                                             <div class="card-block p-2">
                                               <p class="card-title">'.ucwords($row['blog_title']).'</p>
+                                              <h3>
+                            <a href="includes/blog-vote.inc.php?blog='.$row['blog_id'].'" >
+                                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                            </a>  
+                             '.$row['blog_votes'].'
+                            </h3>
                                              <p class="card-text"><small class="text-muted">'
                                              .date("F jS, Y", strtotime($row['blog_date'])).'</small></p>
                                             </div>
