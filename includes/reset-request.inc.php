@@ -31,7 +31,7 @@ if (isset($_POST['reset-request-submit']))
         mysqli_stmt_bind_param($stmt, "s", $userEmail);
         mysqli_stmt_execute($stmt);
     }
-    
+    echo 'error on first sql';
     $sql = "insert into pwdReset (pwdResetEmail, pwdResetSelector, pwdResetToken, pwdResetExpires) "
             . "values (?,?,?,?);";
     $stmt = mysqli_stmt_init($conn);
