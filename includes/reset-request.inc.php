@@ -18,7 +18,7 @@ if (isset($_POST['reset-request-submit']))
     require 'dbh.inc.php';
     
     $userEmail = $_POST['email'];
-    
+    echo 'error on first sql';
     $sql = "delete from pwdReset where pwdResetEmail=?";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql))
@@ -31,7 +31,7 @@ if (isset($_POST['reset-request-submit']))
         mysqli_stmt_bind_param($stmt, "s", $userEmail);
         mysqli_stmt_execute($stmt);
     }
-    echo 'error on first sql';
+
     $sql = "insert into pwdReset (pwdResetEmail, pwdResetSelector, pwdResetToken, pwdResetExpires) "
             . "values (?,?,?,?);";
     $stmt = mysqli_stmt_init($conn);
