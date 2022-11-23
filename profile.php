@@ -198,6 +198,66 @@
               
               <br><br>
               <hr>
+              <h3>Replies from Forums that HELPS</h3>
+              <br><br>
+              
+              <?php
+                    $sql = "select * from posts where post_by = ?";
+                    $stmt = mysqli_stmt_init($conn);    
+
+                    if (!mysqli_stmt_prepare($stmt, $sql))
+                    {
+                        die('SQL error');
+                    }
+                    else
+                    {
+                        mysqli_stmt_bind_param($stmt, "s", $userid);
+                        mysqli_stmt_execute($stmt);
+                        $result = mysqli_stmt_get_result($stmt);
+                        
+                        echo '<div class="container">'
+                                    .'<div class="row">';
+                        
+                        $row = mysqli_fetch_assoc($result);
+                        if(empty($row))
+                        {
+                            echo '<div class="col-sm-4" style="padding-bottom: 30px;"></div>
+                                <div class="col-sm-4">
+                                    <img class="profile-empty-img" src="img/empty.png">
+                                  </div>
+                                  <div class="col-sm-4" style="padding-bottom: 30px;"></div>
+                                    </div>
+                                  </div>';
+                        }
+                        else
+                        {
+                            do
+                            {
+                                echo '<div class="col-sm-4" style="padding-bottom: 30px;">
+                                        <div class="card user-blogs">
+                                            <a href="posts.php?topic='.$row['post_topic'].'">
+                                            <img class="card-img-top" src="img/forum_cover.png" alt="Card image cap">
+                                            <div class="card-block p-2">
+                                              <p class="card-title">'.ucwords($row['post_content']).'</p>
+                                             <p class="card-text"><small class="text-muted">'
+                                             .date("F jS, Y", strtotime($row['post_date'])).'</small></p>
+                                            </div>
+                                            </a>
+                                            <strong class="d-inline-block mb-2 text-primary text-center  ml-auto">
+                                            <i class="fa fa-chevron-up" aria-hidden="true"></i><br>'.$row['post_votes'].'
+                        </strong>
+                                          </div>
+                                          
+                                          </div>
+                                          ';
+                            }while ($row = mysqli_fetch_assoc($result));
+                            echo '</div>'
+                                    .'</div>';
+                        }
+                    }
+              ?>
+              <br><br>
+              <hr>
               <h3>Created Polls</h3>
               <br><br>
               
