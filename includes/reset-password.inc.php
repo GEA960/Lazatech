@@ -22,7 +22,7 @@ if (isset($_POST['reset-password-submit']))
     
     require 'dbh.inc.php';
     
-    $sql = 'select * from pwdReset where pwdResetSelector=? and pwdResetExpires>='.$currentDate;
+    $sql = 'select * from pwdreset where pwdResetSelector=? and pwdResetExpires>='.$currentDate;
     $stmt = mysqli_stmt_init($conn);
     
     if (!mysqli_stmt_prepare($stmt, $sql))
@@ -88,7 +88,7 @@ if (isset($_POST['reset-password-submit']))
                             mysqli_stmt_bind_param($stmt, "ss", $newPwdHash, $tokenEmail);
                             mysqli_stmt_execute($stmt);
                             
-                            $sql = 'delete from pwdReset where pwdResetEmail=?';
+                            $sql = 'delete from pwdreset where pwdResetEmail=?';
                             $stmt = mysqli_stmt_init($conn);
                             if (!mysqli_stmt_prepare($stmt, $sql))
                             {
