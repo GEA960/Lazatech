@@ -4,7 +4,7 @@
 
 session_start();
 include_once 'includes/dbh.inc.php';
-define('TITLE',"Plagiarism Checker| Lazatech");
+define('TITLE',"Token Balance | Lazatech");
 
 $companyName = "Franklin's Fine Dining";
 
