@@ -66,7 +66,7 @@
                             {;
                                 echo '<div class="alert alert-danger" role="alert">
                                         <strong>Error: </strong>Wrong password  
-                                         <!--<a href="reset-pwd.php" class="alert-link">Forgot Password?</a> -->
+                                         <a href="reset-pwd.php" class="alert-link">Forgot Password?</a> -->
                                       </div>';
                             }
                             else if ($_GET['error'] == 'sqlerror')
