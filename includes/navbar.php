@@ -99,9 +99,10 @@ require 'includes/dbh.inc.php';
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="users-view.php">Find People</a>
                     <a class="dropdown-item" href="contact.php">Contact Us</a>
+                    <a class="dropdown-item" href="TokenBalance.php">Token Balance</a>
                     <a class="dropdown-item" href="https://twitter.com/LazatechS">Follow us on Twitter</a>
                     <!--<a class="dropdown-item" href="https://drive.google.com/open?id=1fBgZk-mZ8JEntt9KLyXfRQsCOOPYelBg&authuser=gabrieledrian.alvaro%40g.batstate-u.edu.ph&usp=drive_fs">Download the APP</a> -->
-                    <a class="dropdown-item" href="TokenBalance.php">Token Balance</a>
+                 
                   </div>
                 </li>
                <!-- <li class="nav-item px-3">
