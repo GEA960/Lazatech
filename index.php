@@ -186,7 +186,7 @@
                                                 echo '<div class="col-md-14">
                                                         <div class="card flex-md-row mb-4 shadow-sm h-md-250">
                                                         <a href="posts.php?topic='.$row['topic_id'].'">
-                                                        <img class="card-img-left flex-auto d-none d-lg-block blogindex-cover" 
+                                                        <img class="card-img-left flex-auto d-lg-block blogindex-cover" 
                                                                 src="img/forum_cover.png" alt="Card image cap">
                                                                 </a>
                                                           <div class="card-body d-flex flex-column align-items-start">
@@ -246,7 +246,7 @@
                                                 echo '<div class="col-md-14">
                                                         <div class="card flex-md-row mb-4 shadow-sm h-md-250">
                                                         <a href="blog-page.php?id='.$row['blog_id'].'">
-                                                          <img class="card-img-right flex-auto d-none d-lg-block blogindex-cover" 
+                                                          <img class="card-img-right flex-auto d-lg-block blogindex-cover" 
                                                                 src="uploads/'.$row['blog_img'].'" alt="Card image cap">
                                                                     </a>
                                                           <div class="card-body d-flex flex-column align-items-start">
