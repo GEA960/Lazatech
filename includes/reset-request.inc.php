@@ -1,6 +1,5 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', true);
+
 include 'email-server.php';
 
 
@@ -32,7 +31,7 @@ if (isset($_POST['reset-request-submit']))
         mysqli_stmt_bind_param($stmt, "s", $userEmail);
         mysqli_stmt_execute($stmt);
     }
-
+    
     $sql = "insert into pwdReset (pwdResetEmail, pwdResetSelector, pwdResetToken, pwdResetExpires) "
             . "values (?,?,?,?);";
     $stmt = mysqli_stmt_init($conn);
