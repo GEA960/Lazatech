@@ -21,31 +21,19 @@ if (isset($_POST['reset-request-submit']))
     
     $sql = "delete from pwdReset where pwdResetEmail=?";
     $stmt = mysqli_stmt_init($conn);
-    if (!mysqli_stmt_prepare($stmt, $sql))
-    {
-        echo "sql error";
-        exit();
-    }
-    else
-    {
+  
         mysqli_stmt_bind_param($stmt, "s", $userEmail);
         mysqli_stmt_execute($stmt);
-    }
+ 
     
     $sql = "insert into pwdReset (pwdResetEmail, pwdResetSelector, pwdResetToken, pwdResetExpires) "
             . "values (?,?,?,?);";
     $stmt = mysqli_stmt_init($conn);
-    if (!mysqli_stmt_prepare($stmt, $sql))
-    {
-        echo "sql error";
-        exit();
-    }
-    else
-    {
+  
         $hashedToken = password_hash($token, PASSWORD_DEFAULT);
         mysqli_stmt_bind_param($stmt, "ssss", $userEmail, $selector, $hashedToken, $expires);
         mysqli_stmt_execute($stmt);
-    }
+    
     
     mysqli_stmt_close($stmt);
     mysqli_close($conn);
