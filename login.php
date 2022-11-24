@@ -43,7 +43,14 @@
                     <h5 style="color:black; font-family: Helvetica; font-size: 20px;">Welcome to</h5>
                     <h3 class="lazatech" style="font-family: Verdana; font-size: 50px; text-shadow: 2px 2px 12px #0d0d0d;">LazaTech</h3>
                     <br>
+                    <a href="contact.php">
+                            <i class="fa fa-envelope fa-2x social-icon" aria-hidden="true"></i>
+                        </a>
+                           <a href="#">
+                            <i class="fa fa-github fa-2x social-icon" aria-hidden="true"></i>
+                        </a> 
                     </div>
+                    
                     <div class="rightbox">
                         <h3 id="title">Sign In</h3>
                         <?php
@@ -66,7 +73,7 @@
                             {;
                                 echo '<div class="alert alert-danger" role="alert">
                                         <strong>Error: </strong>Wrong password  
-                                         <a href="reset-pwd.php" class="alert-link">Forgot Password?</a> -->
+                                         <a href="reset-pwd.php" class="alert-link">Forgot Password?</a>
                                       </div>';
                             }
                             else if ($_GET['error'] == 'sqlerror')
@@ -106,19 +113,15 @@
                         <p>Dont have an account? 
                         <a href="signup.php">Signup</a>
                         </p>
+                       
                     </div>
                     
                     
-                    <!--<br><br>
-                    <div class="position-absolute login-icons">
-                        <a href="contact.php">
-                            <i class="fa fa-envelope fa-2x social-icon" aria-hidden="true"></i>
-                        </a>
-                      <!--  <a href="https://github.com/GEA960/OnAid.git">
-                            <i class="fa fa-github fa-2x social-icon" aria-hidden="true"></i>
-                        </a> -->
-                    </div>
-                    </div>
+                   <br><br>
+                    
+                        
+                    
+                    
                     
                     
                     
