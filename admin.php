@@ -11,6 +11,12 @@
         exit();
     }
     
+    if(!isset($_SESSION['userId']) == 0)
+    {
+        header("Location: index.php");
+        exit();
+    }
+    
     
     include 'includes/HTML-head.php';
 ?> 
