@@ -39,7 +39,7 @@ if (isset($_POST['login-submit']))
                     header("Location: ../login.php?error=wrongpwd");
                     exit();
                 }
-                else if($pwdCheck == true ) //&& $row['userLevel'] !=3   Deactivate the login security for users level 3
+                else if($pwdCheck == true)  // && $row['userLevel'] !=3
                 {
                     session_start();
                     $_SESSION['userId'] = $row['idUsers'];
