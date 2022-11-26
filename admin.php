@@ -11,7 +11,7 @@
         exit();
     }
     
-    if(!isset($_SESSION['userId']) == 0)
+    if(isset($_SESSION['userId']) == 0)
     {
         header("Location: index.php");
         exit();
