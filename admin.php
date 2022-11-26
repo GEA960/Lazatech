@@ -82,22 +82,20 @@ a.addbtn:hover, a.addbtn:active {
                           	<a href="profile.php?id='.$row['idUsers'].'">
                                   <div class="media text-muted pt-3">
                                       <img src="uploads/'.$row['userImg'].'" alt="" class="mr-2 rounded-circle div-img list-user-img">
-                                      <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray ">
-                                        <strong class="d-block text-gray-dark">'.ucwords($row['uidUsers']).'</strong></a>
-                                            <span class="text-primary">'.ucwords($row['f_name'].' '.$row['l_name']).'</span><br>
-                                            '.$row['emailUsers'].'
+                                      <p class="media-body pb-2 mb-0 small lh-125 border-bottom border-gray ">
+                                        <strong class="d-block text-gray-dark">'.ucwords($row['uidUsers']).'</strong>
+                                            <span class="text-primary">'.ucwords($row['f_name'].' '.$row['l_name']).'</span>
+                         
                                       </p>
-                                      <span class="text-right text-primary" style="padding-right:15px;">
-                                      		
-
+                                      
+<span class="text-right text-primary">
                                           <button type="button" class="btn btn-basic" data-toggle="modal" data-target="#accept-user-modal" name="accept"><i class="fa fa-check text-primary" style="font-size:20px;"></i></button>	
-                                      </span>
-                                      <span class="text-right">
-
-                                      		<input type="hidden" name="usersID" value="'.$row['idUsers'].'">
+                                      
+                                      		<input type="hidden" name="usersID" value="'.$row['idUsers'].'>
                     											<input type="hidden" name="usersEmail" value="'.$row['emailUsers'].'">
                                           <button type="submit" class="btn btn-basic" name="decline"><i class="fa fa-close text-danger" style="font-size:20px;"></i></button>
-                                      </span>
+</a>                                      
+</span>
                                   </div>
                                   </form>
 					 
