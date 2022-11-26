@@ -109,8 +109,8 @@ if ($_SESSION['userLevel'] == 1)
                   ?>
                 
             <form action="plagiarism.php" method="post" class="col-sm-11";>
-            <div>
-                    <label for="edit-bio">Input the text you want to check for plagiarism:</label>
+            <div>   <h1>Powered By Rapid API Plagiarism Checker</h1>
+                    <label for="edit-bio">Input the text you want to check for plagiarism percentage:</label>
                         <textarea class="form-control" type="text" name="plag" rows="10" name="value" maxlength="5000"placeholder="Input text" > <?php echo $_POST['plag'];?></textarea>         
             </div>
             <input type="submit" name="submit" value="Submit me!" />
