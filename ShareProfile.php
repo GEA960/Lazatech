@@ -116,7 +116,7 @@
                             {       
                                     echo '<div class="col-sm-4" style="padding-bottom: 30px;">
                                         <div class="card user-blogs">
-                                            <a href="blog-page.php?id='.$row['blog_id'].'">
+                                            <a href="ShareBlog-page.php?id='.$row['blog_id'].'">
                                             <img class="card-img-top" src="uploads/'.$row['blog_img'].'" alt="Card image cap">
                                             <div class="card-block p-2">
                                               <p class="card-title">'.ucwords($row['blog_title']).'</p>

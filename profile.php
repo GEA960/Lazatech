@@ -461,7 +461,7 @@
     <div class="col">
                         <input type="text" class="form-control" name="f-name" placeholder="First Name"
                                value=" Lazatech.tech/ShareProfile.php?id=<?php echo $_SESSION['userId'] ?>">
-                        <small id="emailHelp" class="form-text text-muted">First Name</small>
+                        <small id="emailHelp" class="form-text text-muted">Share your Profile</small>
                       </div>
       </div> <!-- /container -->
 
