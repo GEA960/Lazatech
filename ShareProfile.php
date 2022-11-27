@@ -3,13 +3,6 @@
     session_start();
     require 'includes/dbh.inc.php';
     
-    define('TITLE',"Profile | Lazatech");
-    
-    if(!isset($_SESSION['userId']))
-    {
-        header("Location: login.php");
-        exit();
-    }
     
     if(isset($_GET['id']))
     {
@@ -40,7 +33,7 @@
 
 <body class="justify-content-center">
 
-    <?php include 'includes/navbar.php'; ?>
+ 
       <div class="container">
         <div class="row">
 <!--
@@ -458,14 +451,9 @@
           </div>
         </div>
 
-    <div class="col">
-                        <input type="text" class="form-control" name="f-name" placeholder="First Name"
-                               value=" Lazatech.tech/ShareProfile.php?id=<?php echo $_SESSION['userId'] ?>">
-                        <small id="emailHelp" class="form-text text-muted">First Name</small>
-                      </div>
+
       </div> <!-- /container -->
 
-<?php include 'includes/footer.php'; ?>
 
 
 
