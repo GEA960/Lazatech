@@ -178,7 +178,7 @@
                             {
                                 echo '<div class="col-sm-4" style="padding-bottom: 30px;">
                                         <div class="card user-blogs">
-                                            <a href="posts.php?topic='.$row['topic_id'].'">
+                                            <a href="SharePosts.php?topic='.$row['topic_id'].'">
                                             <img class="card-img-top" src="img/forum_cover.png" alt="Card image cap">
                                             <div class="card-block p-2">
                                               <p class="card-title">'.ucwords($row['topic_subject']).'</p>
@@ -234,7 +234,7 @@
                             {
                                 echo '<div class="col-sm-4" style="padding-bottom: 30px;">
                                         <div class="card user-blogs">
-                                            <a href="SoloPosts.php?topic='.$row['post_topic'].'">
+                                            <a href="ShareSoloPosts.php?topic='.$row['post_topic'].'">
                                             <img class="card-img-top" src="img/forum_cover.png" alt="Card image cap">
                                             <div class="card-block p-2">
                                               <p class="card-title">'.ucwords($row['post_content']).'</p>
@@ -300,7 +300,7 @@
                             {   
                                 echo '<div class="col-sm-4" style="padding-bottom: 30px;">
                                         <div class="card user-blogs">
-                                            <a href="poll.php?poll='.$row['id'].'">
+                                            <a href="SharePoll.php?poll='.$row['id'].'">
                                             <img class="card-img-top" src="img/poll_cover.png" alt="Card image cap">
                                             <div class="card-block p-2">
                                               <p class="card-title">'.ucwords($row['subject']).'</p>
@@ -364,7 +364,7 @@
                             {   
                                 echo '<div class="col-sm-4" style="padding-bottom: 30px;">
                                         <div class="card user-blogs">
-                                            <a href="poll.php?poll='.$row['poll_id'].'">
+                                            <a href="SharePoll.php?poll='.$row['poll_id'].'">
                                             <img class="card-img-top" src="img/poll_cover.png" alt="Card image cap">
                                             <div class="card-block p-2">
                                               <p class="card-title">'.ucwords($row['subject']).'</p>
@@ -426,7 +426,7 @@
                             {
                                 echo '<div class="col-sm-4" style="padding-bottom: 30px;">
                                         <div class="card user-blogs">
-                                            <a href="event-page.php?id='.$row['event_id'].'">
+                                            <a href="ShareEvent-page.php?id='.$row['event_id'].'">
                                             <img class="card-img-top" src="uploads/'.$row['event_image'].'" alt="Card image cap">
                                             <div class="card-block p-2">
                                               <p class="card-title">'.ucwords($row['title']).'</p>
