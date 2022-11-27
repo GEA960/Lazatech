@@ -11,7 +11,7 @@
         exit();
     }
     
-    if(isset($_SESSION['userLevel']) == 3 || isset($_SESSION['userLevel']) == 0)
+    if ($_SESSION['userLevel'] == '3' || $_SESSION['userLevel'] == '0' )
     {
         header("Location: index.php");
         exit();
