@@ -241,7 +241,7 @@
                             {
                                 echo '<div class="col-sm-4" style="padding-bottom: 30px;">
                                         <div class="card user-blogs">
-                                            <a href="posts.php?topic='.$row['post_topic'].'">
+                                            <a href="SoloPosts.php?topic='.$row['post_topic'].'">
                                             <img class="card-img-top" src="img/forum_cover.png" alt="Card image cap">
                                             <div class="card-block p-2">
                                               <p class="card-title">'.ucwords($row['post_content']).'</p>
