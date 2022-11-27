@@ -459,12 +459,30 @@
         </div>
 
     <div class="col">
-                        <input type="text" class="form-control" name="f-name" placeholder="First Name"
-                               value=" Lazatech.tech/ShareProfile.php?id=<?php echo $_SESSION['userId'] ?>">
-                        <small id="emailHelp" class="form-text text-muted">Share your Profile</small>
-                      </div>
+    <input type="text" value="Lazatech.tech/ShareProfile.php?id=<?php echo $_SESSION['userId'] ?>" id="myInput">
+  
+    <button onclick="myFunction()">Copy Profile Link</button>
+    </div>
       </div> <!-- /container -->
 
+      <script>
+      function myFunction() {
+  // Get the text field
+  var copyText = document.getElementById("myInput");
+
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+   // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+
+  // Alert the copied text
+  alert("Copied the text: " + copyText.value);
+}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'> 
 <?php include 'includes/footer.php'; ?>
 
 

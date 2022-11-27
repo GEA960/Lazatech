@@ -2,7 +2,7 @@
 
     session_start();
     require 'includes/dbh.inc.php';
-    
+    define('TITLE',"Share Profile| Lazatech");
     
     if(isset($_GET['id']))
     {
@@ -383,15 +383,13 @@
               
               
               
-              <?php 
-              if ($_SESSION['userLevel'] == 1 || $_SESSION['userLevel'] == 2)
-              {
-              echo '<br><br>
+              
+             
+              <br><br>
               <hr>
               <h3>Created Events</h3>
-              <br><br>';
-              }
-               ?>
+              <br><br>
+             
               <?php
                          $sql = "select * from events where event_by = ?";
                     $stmt = mysqli_stmt_init($conn);    
@@ -420,7 +418,7 @@
                                     </div>
                                   </div>';
                         }
-                        elseif ($_SESSION['userLevel'] == 1 || $_SESSION['userLevel'] == 2)
+                        else
                         {
                             do
                             {
