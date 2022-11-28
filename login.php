@@ -25,7 +25,7 @@
         <div id="cover-caption">
         <?php
 
-      /*      if(isset($_GET['status']))
+    if(isset($_GET['status']))
             {
                 if ($_GET['status'] =='loginfailed') {
                     echo '<div class="alert alert-success alert-dismissible fade show" role="alert" style="width: 90%; margin-left: 3%; size: 5px;"><strong>Your registration is still waiting to be approved.</strong><i> You will receive an email notification  once your account had been approved.</i>
@@ -34,7 +34,7 @@
                         </button></div>';
                         
                 }
-            } */
+            } 
         ?>
             <div class="container">
                 <div class="col-sm-10 offset-sm-1">
