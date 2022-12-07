@@ -82,16 +82,7 @@
               <div class="profile-bio">
                   <small><?php echo $user['bio'];?></small>
               </div>
-              <?php
 
-        if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $userid )
-                              {
-                                  echo '<a href="includes/delete-user.php?id='.$userid.'" >
-                                          <i class="fa fa-trash" aria-hidden="true" style="color: red;"> Delete your account</i>
-                                        </a>
-                                      </span>';
-                              }
-        ?>
               
               <hr>
               <h3>Created Blogs</h3>
@@ -470,7 +461,18 @@
     <div class="col">
     <input type="text" value="Lazatech.tech/ShareProfile.php?id=<?php echo $_SESSION['userId'] ?>" id="myInput">
   
-    <button onclick="myFunction()">Copy Profile Link</button>
+    <button onclick="myFunction()">Copy Profile Link</button> <br>
+
+    <?php
+
+if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $userid )
+                      {
+                          echo '<a href="includes/delete-user.php?id='.$userid.'" >
+                                  <i class="fa fa-trash" aria-hidden="true" style="color: red;"> Delete your account</i>
+                                </a>
+                              </span>';
+                      }
+?>
     </div>
 
       </div> <!-- /container -->
