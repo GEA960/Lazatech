@@ -82,7 +82,16 @@
               <div class="profile-bio">
                   <small><?php echo $user['bio'];?></small>
               </div>
-              
+              <?php
+
+        if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $userid )
+                              {
+                                  echo '<a href="includes/delete-user.php?id='.$userid.'&page=users" >
+                                          <i class="fa fa-trash" aria-hidden="true" style="color: red;"> Delete your account</i>
+                                        </a>
+                                      </span>';
+                              }
+        ?>
               
               <hr>
               <h3>Created Blogs</h3>
@@ -463,6 +472,7 @@
   
     <button onclick="myFunction()">Copy Profile Link</button>
     </div>
+
       </div> <!-- /container -->
 
       <script>
