@@ -5,11 +5,7 @@
 
     define('TITLE',"Poll | Lazatech");
     
-    if(!isset($_SESSION['userId']))
-    {
-        header("Location: login.php");
-        exit();
-    }
+ 
     
     if (isset($_GET['poll']))
     {
@@ -29,7 +25,7 @@
     <body>
         
     <?php 
-        include 'includes/navbar.php'; 
+    
         include 'includes/poll.class.php';
         $poll = new Poll;
         $pollData = $poll->getPolls($pollid);
@@ -44,7 +40,6 @@
               
           </div>
           <div class="col-sm-11" >
-          <?php include 'includes/profile-card.php'; ?>
           </div>
 
             <div class="col-sm-11" id="user-section">
@@ -57,23 +52,7 @@
                       <form action="" method="post" name="pollFrm">
         
                         <h1><?php echo $pollData['poll']['subject']; ?></h1>
-                        <?php
 
-                        if ($_SESSION['userLevel'] == 1)
-                                                    
-                        {
-                        echo '<a href="edit-poll.php?id= '.$pollData['poll']['id'].'">
-                        <i class="fa fa-pencil fa-2x edit-event" aria-hidden="true"></i>';
-                        }
-                        if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['event_by'] || ($_SESSION['userLevel'] == 2))
-                                {
-                                    echo '<a href="includes/delete-poll.php?id='.$row['id'].'" >
-                                            <i class="fa fa-trash" aria-hidden="true" style="color: red;"></i>
-                                          </a>
-                                        </span>';
-                                }    
-                        
-                                 ?>
                         <br>
                         <br>
                         <p class="text-muted"><?php echo $pollData['poll']['poll_desc']; ?></p>
@@ -167,14 +146,8 @@
                                 
                                 echo '</div><br><br>';
                                 
-                                if ($voteCheck)
-                                {
-                                    echo '<input type="submit" name="voteSubmit" class="btn btn-lg btn-primary" 
-                                        value="Submit Vote">
-                                            <hr>';  
-                                }
-                                if (!empty($voted))
-                                {
+                               
+                              
                                     // Poll Results    
 
                                     $pollResult = $poll->getResult($_GET['poll']);
@@ -184,8 +157,6 @@
 
                                     echo '<div class="col-md-12 col-lg-8">';
 
-                                    if($voteCheck && !empty($pollResult['options']))
-                                    { 
                                         $i=0;
                                         //Option bar color class array
                                         $barColorArr = array('azure','emerald','violet','yellow','red');
@@ -215,19 +186,15 @@
                                         $i++;
                                         }
                                         echo '</div>';
-                                    }
+                                    
                             
                             ?>
                                                         
 
                             <br><br>
-                            <a href="./poll-voters.php?poll=<?php echo $_GET['poll']; ?>" 
-                               class="btn btn-secondary">View All Votes</a> 
-                            <a href="./polls.php" class="btn btn-secondary">View All Polls</a>
                             
-                            <?php
-                                }
-                            ?>
+                            
+                        
 
                         <input type="hidden" name="pollID" value="<?php echo $pollData['poll']['id']; ?>">
 
@@ -260,7 +227,6 @@
         }
     ?>
       
-    <?php include 'includes/footer.php'; ?>
         
 
         <script src="js/jquery.min.js"></script>
