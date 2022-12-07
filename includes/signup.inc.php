@@ -56,7 +56,7 @@ if (isset($_POST['signup-submit']))
     else
     {
         // checking if a user already exists with the given username
-        $sql = "select uidUsers from users where uidUsers=?;";
+        $sql = "select uidUsers from users where uidUsers=?";
         $stmt = mysqli_stmt_init($conn);
         if (!mysqli_stmt_prepare($stmt, $sql))
         {
