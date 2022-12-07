@@ -5,6 +5,16 @@
     
     define('TITLE',"Blog | Lazatech");
     
+
+    if(isset($_GET['id']))
+    {
+        $blogId = $_GET['id'];
+    }
+    else
+    {
+        header("Location: index.php");
+        exit();
+    }
     
     include 'includes/HTML-head.php'; 
 ?> 
@@ -82,14 +92,7 @@
                       <h1><?php echo ucwords($row['blog_title']) ?></h1>
                 </div>
                   <br>
-                  <?php          
-   
-   if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['blog_by'])
-             { echo '<a href="edit-blog.php?id= '.$row['blog_id'].' ">
-                <i class="fa fa-pencil edit-blog" aria-hidden="true" style="font-size:18px;"><label class="text-muted" style="margin-left:10px; font-size:12px; font-family: helvetica;"><i> Edit this content</i></label></i></a>';
-              
-             }
-             ?>
+
              
              <hr class="solid">
              <br>
@@ -115,21 +118,7 @@
                         
   
                             <div style="padding-left: 90%; display:flex;">
-                                   <?php
-                
-
-                             if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['blog_by'] || ($_SESSION['userLevel'] == 2))
-                                 {
-                                echo '<span style="margin-top:5px;"><a href="includes/delete-blog.php?id='.$row['blog_id'].'&page=blogs" >
-                                <i class="fa fa-trash" aria-hidden="true" style="color: red;"></i>
-                                </a>
-                                </span>';
-                                    }
-                                    ?>
-                                  <form method="post" action="report-post.php">
-                                   <button href="report-post.php" class="btn btn-outlined-danger" style="height:35px; padding: 3px; margin-left: 10px;"><i class="fa fa-exclamation-circle text-muted" style="font-size:12px;"> Report this post.</i></button>
-                                  </form>
-  
+                           
                             </div>
                         </div>
                       
