@@ -4,6 +4,18 @@
     require 'includes/dbh.inc.php';
     define('TITLE',"Event | Lazatech");
     
+
+    
+    if(isset($_GET['id']))
+    {
+        $eventId = $_GET['id'];
+    }
+    else
+    {
+        header("Location: index.php");
+        exit();
+    } 
+    
     include 'includes/HTML-head.php';
 ?> 
 
@@ -37,7 +49,7 @@
 
                 </div>
                 <div class="col-sm-11" >
-                <?php include 'includes/profile-card.php'; ?> 
+ 
                 </div>
 
                 <div class="col-sm-11" id="user-section">
@@ -82,14 +94,9 @@
                     ?>
 
                     <img class="blog-cover" src="uploads/<?php echo $row['event_image']; ?>">
-                    <?php
+             
 
-                    if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['event_by'])
-                    {
-                    echo '<a href="edit-event.php?id= '.$eventId.' ">
-                    <i class="fa fa-pencil fa-2x edit-event" aria-hidden="true"></i>';
-                    }
-                     ?>
+                  
    
                     </a>
                     <img class="blog-author" src="uploads/<?php echo $row['userImg']; ?>">
@@ -120,24 +127,15 @@
                             
 
                         </div>
-                        <?php
+            
 
-                            if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $row['event_by'] || ($_SESSION['userLevel'] == 2))
-                            {
-                                echo '<a href="includes/delete-event.php?id='.$row['event_id'].'&page=events" >
-                                        <i class="fa fa-trash" aria-hidden="true" style="color: red;"></i>
-                                      </a>
-                                    </span>';
-                            }
-                            ?>
+                      
                     </div>
                     
                 </div>
                 
             </div>
         </div> 
-
-
 
         
 
