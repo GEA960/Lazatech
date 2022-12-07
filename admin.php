@@ -91,17 +91,16 @@ a.addbtn:hover, a.addbtn:active {
                                       <p class="media-body pb-2 mb-0 small lh-125 border-bottom border-gray ">
                                         <strong class="d-block text-gray-dark">'.ucwords($row['uidUsers']).'</strong>
                                             <span class="text-primary">'.ucwords($row['f_name'].' '.$row['l_name']).'</span>
-                         
+                                            <input type="hidden" name="usersEmail" value="'.$row['emailUsers'].'">
                                       </p>
                                       
-<span class="text-right text-primary">
-                                          <button type="button" class="btn btn-basic" data-toggle="modal" data-target="#accept-user-modal" name="accept"><i class="fa fa-check text-primary" style="font-size:20px;"></i></button>	
-                                      
+                                    <span class="text-right text-primary">
+                                          <button type="button" class="btn btn-basic" data-toggle="modal" data-target="#accept-user-modal" name="accept"><i class="fa fa-check text-primary" style="font-size:20px;"></i></button>	                                    
                                       		<input type="hidden" name="usersID" value="'.$row['idUsers'].'>
-                    											<input type="hidden" name="usersEmail" value="'.$row['emailUsers'].'">
+                    						<input type="hidden" name="usersEmail" value="'.$row['emailUsers'].'">
                                           <button type="submit" class="btn btn-basic" name="decline"><i class="fa fa-close text-danger" style="font-size:20px;"></i></button>
-</a>                                      
-</span>
+                                    </a>                                                            
+                                    </span>
                                   </div>
                                   </form>
 					 
@@ -119,7 +118,7 @@ a.addbtn:hover, a.addbtn:active {
 											
 												<form action="includes/accept-user.php" method="post" style="display: flex; justify-content: center;">
 													<input type="hidden" name="usersID" value="'.$row['idUsers'].'">
-			                    <input type="hidden" name="usersEmail" value="'.$row['emailUsers'].'">
+			                                        <input type="hidden" name="usersEmail" value="'.$row['emailUsers'].'">
 													<button type="submit" class="btn btn-primary" name="done" style="width: 20%;">OK</button>
 												</form>
 											</div>
