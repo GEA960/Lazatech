@@ -86,7 +86,7 @@
 
         if ($_SESSION['userLevel'] == 1 || $_SESSION['userId'] == $userid )
                               {
-                                  echo '<a href="includes/delete-user.php?id='.$userid.'&page=users" >
+                                  echo '<a href="includes/delete-user.php?id='.$userid.'" >
                                           <i class="fa fa-trash" aria-hidden="true" style="color: red;"> Delete your account</i>
                                         </a>
                                       </span>';
