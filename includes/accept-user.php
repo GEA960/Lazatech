@@ -77,7 +77,7 @@
 				$to = $userEmail;
 				$subject = 'Lazatech Account Approval';
 				$message = '<p>Your account has been DECLINED.</p></br>'
-						. '<p>Click the link below to direct to the website </br>'
+						. '<p>To register again, click the link below: </br>'
 						. '<a href="https://lazatech.tech/login.php">lazatech.tech</a></p>';
 				
 						$mail = new PHPMailer(true);            
@@ -103,19 +103,19 @@
 							$mail->send();
 
 							$id = $_POST['usersID'];
-									$admin = "UPDATE users set userLevel = 0 where idUsers = '$id'";
-									$query_run = mysqli_query($conn, $admin);                                                                 
-									
-									if($query_run){
-										echo '<script type="text/javascript"> alert("Data Updated") </script>';
-										header("Location: ../admin.php");
-										exit();
-									}
-									else{
-										echo '<script type="text/javascript"> alert("Data NOT Updated") </script>';
-									}
+								        $admin = "DELETE FROM users where idUsers = '$id'";
+								        $query_run = mysqli_query($conn, $admin);                                                                 
+								        
+								        if($query_run){
+								            echo '<script type="text/javascript"> alert("Data deleted") </script>';
+								            header("Location: ../admin.php");
+								            exit();
+								        }
+								        else{
+								            echo '<script type="text/javascript"> alert("Data NOT deleted") </script>';
+								        }
 
-						} 
+				            } 
 						catch (Exception $e) {
 							echo '<h4 class="error">Message could not be sent. Mailer Error: '. $mail->ErrorInfo
 									.'</h4>';
