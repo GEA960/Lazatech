@@ -461,7 +461,7 @@
     <div class="col">
     <input type="text" value="Lazatech.tech/ShareProfile.php?id=<?php echo $_SESSION['userId'] ?>" id="myInput">
   
-    <button onclick="myFunction()">Copy Profile Link</button> <br>
+    <button onclick="myFunction()">Copy Profile Link</button> <br><br><br><br>
 
     <?php
 
