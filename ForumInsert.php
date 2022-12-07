@@ -60,7 +60,7 @@ if(isset($_POST['update']))
                 
                 if ($response['percentPlagiarism'] >= "50" ) {
                     
-                    echo '<script type="text/javascript"> alert("Blog Content is Plagiarized. The content has exceeded the 50% Threshold for plagiarism with a '.$response['percentPlagiarism'].' percent. Please rewrite it!") </script>';
+                    echo '<script type="text/javascript"> alert("Forum Reply is Plagiarized. The content has exceeded the 50% Threshold for plagiarism with a '.$response['percentPlagiarism'].' percent. Please rewrite it!") </script>';
                     exit();
                 }
 
