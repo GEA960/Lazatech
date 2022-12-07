@@ -5,11 +5,6 @@
     
     define('TITLE',"Forum | Lazatech");
     
-    if(!isset($_SESSION['userId']))
-    {
-        header("Location: login.php");
-        exit();
-    }
     
     if (isset($_GET['topic']))
     {
@@ -47,7 +42,7 @@
 
 <?php
 
-    include 'includes/navbar.php';
+
 
     if (isset($_POST['submit-reply']))
     {
@@ -190,7 +185,7 @@
                         
                         echo '<div class="card post">  
                                 <span class="date">'.date("F jS, Y", strtotime($row['post_date']))
-                                .'<span class="span-post-no">#'.$i.'  '. '<a href="report-post.php"><i class="fa fa-exclamation-circle" style="font-size:23px;"></i></a></span> </span>
+                                .'<span class="span-post-no">#'.$i.'  '. '<i class="fa fa-exclamation-circle" style="font-size:23px;"></i></a></span> </span>
                                 <div class="row">
 
                                     <div class="col-sm-3 user">
@@ -203,34 +198,22 @@
                                                     <th>Joined:</th>
                                                     <td>Sep 27, 2018</td>
                                                 </tr>
-                                                <tr>
-                                                    <th>Messages:</th>
-                                                    <td>3</td>
-                                                </tr>
+                                           
                                                 <tr>
                                                     <th>Likes:</th>
-                                                    <td>0</td>
+                                                    <td>'.$row['post_votes'].'</td>
                                                 </tr>
                                             </table>
-                                            <a href="profile.php?id='.$row['idUsers'].'">
-                                                <i class="fa fa-user fa-2x" aria-hidden="true"></i></a>
                                   
-                                            <a href="message.php?id='.$row['idUsers'].'">
-                                                <i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>';
+                                            ';
                                             
-                                        
-                                       if ($_SESSION['userLevel'] == 1 || $_SESSION['userLevel'] == 3 || $_SESSION['userId'] == $row['post_by'])
-                                                {     
-                                                    echo '<a href="Edit-forum.php?id= '.$row['post_id'].' ">
-                                                    <i class="fa fa-pencil fa-2x edit-blog" aria-hidden="true"></i>
-                                                    </a>';
-                                                }    
+                     
                                                 
                                                 
                                      echo   ' 
                                      
-                                     <a href="https://twitter.com/intent/tweet?text=From Lazatech Family,%20thank you for using our platform! %20%2B1%20 XRTemplate %20'.$row['headline'].' %20%23tipwithxumm%20 Content Title:%20['.$row['post_content'].'] %20By%20 ['.$row['f_name'].'%20'.$row['l_name'].'] Content Type: [Forum]">
-                                     <i class="fa fa-send fa-2x" aria-hidden="true"></i></a> </div>
+                                     
+                                    </a> </div>
                                      
                                     </div>
                                    
@@ -239,11 +222,7 @@
                                         <p>'.$row['post_content'].'</p>
                                             <div class="vote text-center">';
                         
-                        if ( ($row['post_by']==$_SESSION['userId']) || ($_SESSION['userLevel'] == 1)|| ($_SESSION['userLevel'] == 2))
-                        {
-                            echo '<a href="includes/delete-post.php?topic='.$topic.'&post='.$row['post_id'].'&by='.$row['post_by'].'" >'
-                                . '<i class="fa fa-trash fa-2x" aria-hidden="true"></i></a><br>';
-                        }
+                      
                         
                         if ($voted_u)
                         {
@@ -266,7 +245,7 @@
                                     </div>
                                 </div>
                                 <span class="likes"><span class="span-post-no"></span> <span class="span-post-no"><a
-                                        href="">OnAid Forum</a></span></span>
+                                        href="">Lazatech Forum</a></span></span>
                             </div>';
                                             
                         $i++;
@@ -280,19 +259,12 @@
     
     
     <div class="col-sm-12">
-        <form method="post" action="">
-            <fieldset>
-                <div class="form-group">
-                    <textarea name="reply-content" class="form-control" id="Article_editor" rows="7"></textarea>
-                </div>
-                <input type="submit" value="Submit reply" class="btn btn-lg btn-dark" name="submit-reply">
-            </fieldset>
-        </form>
+        
         
     </div> 
 </div>
     
-    <?php include 'includes/footer.php'; ?>
+
     
     
         <script src="js/jquery.min.js"></script>

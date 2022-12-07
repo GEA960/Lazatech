@@ -326,7 +326,7 @@
                                     </div>
                                 </div>
                                 <span class="likes"><span class="span-post-no"></span> <span class="span-post-no"><a
-                                        href="">OnAid Forum</a></span></span>
+                                        href="">Lazatech Forum</a></span></span>
                             </div>';
                                             
                         $i++;
