@@ -50,7 +50,7 @@
                 </div>";
         }
 
-        $sql = "UPDATE messages SET Status='0' WHERE conversation_id = '$conversation_id.'";
+        $sql = "UPDATE messages SET Status1='0' WHERE conversation_id = '$conversation_id.'";
 
         if ($conn->query($sql) === TRUE) {
         echo "Record updated successfully";

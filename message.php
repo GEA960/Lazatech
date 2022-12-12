@@ -18,7 +18,38 @@
         <link href="emoji-picker/lib/css/emoji.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
-    
+    <style type="text/css">
+	.div-img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    transition: transform .2s;
+}
+
+.div-img:hover {
+    transform: scale(1.17);
+}
+a.addbtn:hover, a.addbtn:active {
+	font-size: 25px;
+}
+.fa-plus{
+	padding-left: 210px;
+	padding-top: 3px;
+}
+.modal-dialog,
+.modal-content {
+    /* 80% of window height */
+    height: 80%;
+}
+
+.modal-body {
+    /* 100% = dialog height, 120px = header + footer */
+    max-height: calc(100% - 100px);
+    overflow-y: scroll;
+}
+
+</style>
+
     <body>
 
         <?php include 'includes/navbar.php'; ?>
@@ -28,10 +59,77 @@
               <div class="inbox_msg">
                 <div class="inbox_people">
                   <div class="headind_srch">
-                    <div class="recent_heading">
+                    <div class="recent_heading">                       
                       <h2>Inbox</h2>
+                      <div>
+							<a data-toggle="modal" data-target="#usermodal"><i class="fa fa-user d-flex" aria-hidden="true" style="color:black;"></i></a>
+							<div class="modal fade" id="usermodal" tabindex="-1" role="dialog" aria-labelledby="usermodallabel" aria-hidden="true">
+						   <div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<div class="modal-title"><h4>Select a user to chat with</h4></div>
+									<button type="button" class="close" data-dismiss="modal"><span aria-hidden ="true">&times;</span><span class="sr-only">Close</span></button>
+									
+								</div>
+								<div class="modal-body">
+									<?php
+
+                      $sql = "select idUsers, uidUsers, userLevel, f_name, l_name, emailUsers, userImg
+                              from users order by userLevel desc, idUsers asc";
+
+                      $stmt = mysqli_stmt_init($conn);    
+
+                      if (!mysqli_stmt_prepare($stmt, $sql))
+                      {
+                          die('SQL error');
+                      }
+                      else
+                      {
+                          mysqli_stmt_execute($stmt);
+                          $result = mysqli_stmt_get_result($stmt);
+
+                          while ($row = mysqli_fetch_assoc($result))
+                          {?> 
+                          		<?php 
+                          		
+                                  echo '
+                                  <input type="hidden" name="usersID" value="'.$row["idUsers"].'">
+                                  <a href="./message.php?id='.$row['idUsers'].'">
+                              
+                                  <div class="media text-muted pt-3">
+                                      <img src="uploads/'.$row['userImg'].'" alt="" class="mr-2 rounded-circle div-img list-user-img">
+                                      <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray ">
+                                        <strong class="d-block text-gray-dark">'.ucwords($row['uidUsers']).'</strong></a>
+                                            <span class="text-primary">'.ucwords($row['f_name'].' '.$row['l_name']).'</span><br>
+                                            '.$row['emailUsers'].'
+                                      </p>
+                                      <span class="text-right text-primary">';?>
+
+
+
+                                      
+                                      	
+                                          
+                                              
+                                          </a>
+                                      </span>
+                                  </div>
+                            <?php      
+                          }  
+                     }
+                  ?>
+								</div>
+							</div>
+						</div>
+						</div>
+						</div>
+                        
                     </div>
+
+
                   </div>
+
+
                   <div class="inbox_chat">
                       
                       <?php
@@ -41,7 +139,7 @@
                         INNER JOIN conversation
                         ON users.idUsers = conversation.user_one OR users.idUsers = conversation.user_two 
                         INNER JOIN messages
-                        ON conversation.id = messages.conversation_id Where users.idUsers != ? AND messages.Status = '1' ";
+                        ON conversation.id = messages.conversation_id Where users.idUsers != ? AND messages.Status1 = '1' ";
                         $stmt = mysqli_stmt_init($conn);    
                         if (!mysqli_stmt_prepare($stmt, $sql))
                         {
