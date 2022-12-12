@@ -130,7 +130,7 @@ a.addbtn:hover, a.addbtn:active {
                   </div>
 
 
-                  <div class="inbox_chat">
+                    <div class="inbox_chat">
                       
                       <?php
                 
@@ -162,11 +162,12 @@ a.addbtn:hover, a.addbtn:active {
                                 </div>
                               <div class="chat_ib">
                                 <h5>
-                                    <?php echo ucwords($row['uidUsers']) ?> 
+                                <p style="color:red;">  <?php echo ucwords($row['uidUsers']) ?> </p>
                                     <span class="chat_date">Lazatech User</span>
                                 </h5>
                                 <p>Click on the User to start chatting</p>
                               </div>
+                    
                             </div>
                           </div></a>
                       
@@ -176,6 +177,50 @@ a.addbtn:hover, a.addbtn:active {
                         }
 
                         ?>
+
+
+
+
+<?php
+                
+                $sql = "select * from users where idUsers != ?";
+                $stmt = mysqli_stmt_init($conn);    
+                if (!mysqli_stmt_prepare($stmt, $sql))
+                {
+                    die('sql error');
+                }
+                else
+                {
+                    mysqli_stmt_bind_param($stmt, "s", $_SESSION['userId']);
+                    mysqli_stmt_execute($stmt);
+                    $result = mysqli_stmt_get_result($stmt);
+                    
+                    while ($row = mysqli_fetch_assoc($result))
+                    {
+                ?>
+              
+              <a href='./message.php?id=<?php echo $row['idUsers']; ?>'><div class="chat_list ">
+                    <div class="chat_people">
+                        <div class="chat_img"> 
+                            <img class="chat_people_img" src="uploads/<?php echo $row['userImg'] ?>"> 
+                        </div>
+                      <div class="chat_ib">
+                        <h5>
+                            <?php echo ucwords($row['uidUsers']) ?> 
+                            <span class="chat_date">Lazatech User</span>
+                        </h5>
+                        <p>Click on the User to start chatting</p>
+                      </div>
+            
+                    </div>
+                  </div></a>
+              
+                <?php
+                       
+                    }
+                }
+
+                ?>
                   </div>
                 </div>
                   
