@@ -1,7 +1,9 @@
 <?php
     session_start();
     require("dbh.inc.php");
+
     if(isset($_GET['c_id'])){
+
         $conversation_id = base64_decode($_GET['c_id']);
         
         $q = mysqli_query($conn, "SELECT * FROM messages WHERE conversation_id = ".$conversation_id);
@@ -17,6 +19,7 @@
                 $user = mysqli_query($conn, "SELECT uidUsers, userImg FROM users WHERE idUsers = '$user_form'");
                 $user_fetch = mysqli_fetch_assoc($user);
                 $user_form_username = $user_fetch['uidUsers'];
+                
                 $user_form_img = $user_fetch['userImg'];
  
                 //display the message
@@ -27,6 +30,7 @@
                               <p>'.$message.'</p>
                             </div>
                           </div>';
+                    $user_to1= $user_to;
                 }
                 else 
                 {
@@ -39,39 +43,51 @@
                                 </div>
                              </div>
                            </div>';
+                           $user_to1= $user_to;
                 }
                 
  
             }
-        }else{
+        }
+        
+        else{
             echo "<div class='text-center'>
                     <br>
                     <img src='img/empty.png' style='width:500px;'>
                 </div>";
         }
+
+
         if ( $_SESSION['userUid'] === $user_form_username) {
-        $sql = "UPDATE messages SET Status1='0' WHERE conversation_id = '$conversation_id.'";
+        $sql = "UPDATE messages SET Status1='0' WHERE conversation_id = '$conversation_id.' OR user_from = '$user_form_username.'";
 
         if ($conn->query($sql) === TRUE) {
-        echo "Record updated successfully";
+        echo "Record updated successfully status1";
         } else {
         echo "Error updating record: " . $conn->error;
         }
-
         $conn->close();
         }
-        else  {
-            $sql = "UPDATE messages SET Status2='0' WHERE conversation_id = '$conversation_id.'";
 
+        
+        
+
+        else
+        {
+            $user_to2 = $_SESSION['userUid'];
+
+            $sql = "UPDATE messages SET Status2='0' WHERE conversation_id = '$conversation_id.' ";
+            
             if ($conn->query($sql) === TRUE) {
-            echo "Record updated successfully";
+            echo "Record updated successfully status2";
             } else {
             echo "Error updating record: " . $conn->error;
             }
     
             $conn->close();
         }
-        }
+
+    }
        
     
  
