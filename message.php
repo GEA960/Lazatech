@@ -150,7 +150,8 @@ a.addbtn:hover, a.addbtn:active {
                             mysqli_stmt_bind_param($stmt, "s", $_SESSION['userId']);
                             mysqli_stmt_execute($stmt);
                             $result = mysqli_stmt_get_result($stmt);
-                            
+                            $rowcount=mysqli_num_rows($result);
+                            printf ("Unread Messages: ". $rowcount);
                             while ($row = mysqli_fetch_assoc($result))
                             {
                         ?>

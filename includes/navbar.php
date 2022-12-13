@@ -55,13 +55,13 @@ require 'includes/dbh.inc.php';
                 } 
               }      
                 ?>
-                
+            
               <li class="nav-item px-3">
                     <a class="nav-link" href="index.php">
                         <i class="fa fa-home fa-2x" aria-hidden="true"></i>
                     </a>
                 </li>
-
+   
             <li class="nav-item px-3">
                     <a class="nav-link" href="https://lazatech-educate.web.app">
                         <i class="fa fa-list fa-2x" aria-hidden="true"></i>
@@ -78,11 +78,34 @@ require 'includes/dbh.inc.php';
                         <i class="fa fa-check fa-2x" aria-hidden="true"></i>
                     </a>
                 </li>
-
+              
                 <li class="nav-item px-3">
                     <a class="nav-link" href="message.php">
                         <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+                        <?php 
+              $sql = "SELECT *
+              FROM users 
+              INNER JOIN conversation
+              ON users.idUsers = conversation.user_one OR users.idUsers = conversation.user_two 
+              INNER JOIN messages
+              ON conversation.id = messages.conversation_id Where messages.Status1 = '1' OR messages.Status2 = '1' AND users.idUsers != ? ";
+              $stmt = mysqli_stmt_init($conn);    
+              if (!mysqli_stmt_prepare($stmt, $sql))
+              {
+                  die('sql error');
+              }
+              else
+              {
+                  mysqli_stmt_bind_param($stmt, "s", $_SESSION['userId']);
+                  mysqli_stmt_execute($stmt);
+                  $result = mysqli_stmt_get_result($stmt);
+                  $rowcount=mysqli_num_rows($result);
+                  printf ("<h style=color:white>". $rowcount ."</h>");
+              }
+              ?>
                     </a>
+               
+
                 </li>
                 <li class="nav-item px-3">
                     <a class="nav-link" href="users-view.php">
