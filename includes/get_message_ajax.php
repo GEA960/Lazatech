@@ -49,7 +49,7 @@
                     <img src='img/empty.png' style='width:500px;'>
                 </div>";
         }
-
+        if ( $_SESSION['userUid'] === $user_form_username) {
         $sql = "UPDATE messages SET Status1='0' WHERE conversation_id = '$conversation_id.'";
 
         if ($conn->query($sql) === TRUE) {
@@ -59,8 +59,20 @@
         }
 
         $conn->close();
-
         }
+        else  {
+            $sql = "UPDATE messages SET Status2='0' WHERE conversation_id = '$conversation_id.'";
+
+            if ($conn->query($sql) === TRUE) {
+            echo "Record updated successfully";
+            } else {
+            echo "Error updating record: " . $conn->error;
+            }
+    
+            $conn->close();
+        }
+        }
+       
     
  
 ?>

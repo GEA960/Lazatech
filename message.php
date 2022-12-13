@@ -139,7 +139,7 @@ a.addbtn:hover, a.addbtn:active {
                         INNER JOIN conversation
                         ON users.idUsers = conversation.user_one OR users.idUsers = conversation.user_two 
                         INNER JOIN messages
-                        ON conversation.id = messages.conversation_id Where users.idUsers != ? AND messages.Status1 = '1' ";
+                        ON conversation.id = messages.conversation_id Where messages.Status1 = '1' OR messages.Status2 = '1' AND users.idUsers != ? ";
                         $stmt = mysqli_stmt_init($conn);    
                         if (!mysqli_stmt_prepare($stmt, $sql))
                         {
