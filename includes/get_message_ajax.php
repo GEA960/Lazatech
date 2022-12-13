@@ -62,7 +62,7 @@
         $sql = "UPDATE messages SET Status1='0' WHERE conversation_id = '$conversation_id.' OR user_from = '$user_form_username.'";
 
         if ($conn->query($sql) === TRUE) {
-        echo "Record updated successfully status1";
+        echo "Seen";
         } else {
         echo "Error updating record: " . $conn->error;
         }
@@ -79,7 +79,7 @@
             $sql = "UPDATE messages SET Status2='0' WHERE conversation_id = '$conversation_id.' ";
             
             if ($conn->query($sql) === TRUE) {
-            echo "Record updated successfully status2";
+            echo "Seen";
             } else {
             echo "Error updating record: " . $conn->error;
             }
