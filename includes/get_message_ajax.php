@@ -62,7 +62,7 @@
         $sql = "UPDATE messages SET Status1='0' WHERE conversation_id = '$conversation_id.' OR user_from = '$user_form_username.'";
 
         if ($conn->query($sql) === TRUE) {
-        echo "Seen";
+        echo "Sent";
         } else {
         echo "Error updating record: " . $conn->error;
         }
