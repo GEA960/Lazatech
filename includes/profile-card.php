@@ -24,12 +24,12 @@
                         </small>
                         <small class="text-muted"><?php echo $_SESSION['headline']; ?></small>
                     </h4>
-                 <p> Note: All transactions obtained from Lazatech Educate and Social media are all for testing first. 
+                </div>
+                 <p><span class="small"> Note: All transactions obtained from Lazatech Educate and Social media are all for testing first. 
                The tokens obtained will not be transferred to XUMM wallet as the testing and development phase are ongoing. 
                Once the testing phase is finished, all balances will be reset to zero. 
                However, the respondents and beta testers will receive 10 LZT tokens from the year 2022 up to 2/24/2023 - 9:00 am, 
-               once the token is created in the XRP Ledger.</p>
-                </div>
+               once the token is created in the XRP Ledger.</span></p>
                </div>
                
            
