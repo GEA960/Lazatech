@@ -303,7 +303,7 @@
                                  if(isset($_POST['ChatGPT'])) {
                                         $FinalQuestion = $row['post_content'];
                                       } else {
-                                        $FinalQuestion = 'ChatGPT API integration with Lazatech'; // assign a default value if no icon is selected
+                                        $FinalQuestion = 'What is ChatGPT'; // assign a default value if no icon is selected
                                       }
 
                                  echo  '</div>
