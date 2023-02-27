@@ -74,6 +74,7 @@
                         "scrapeSources" => "false"
                         ];
             $api =  $user['PlagAPIKey'];
+            
 
             $curl = curl_init();
             
@@ -337,13 +338,66 @@
             
         
     </div>
-    
+    <?php
+        $sql = "select * from users where idUsers = 61";
+        $stmt = mysqli_stmt_init($conn);    
+        
+        if (!mysqli_stmt_prepare($stmt, $sql))
+        {
+            die('SQL error');
+        }
+        else
+        {
+            mysqli_stmt_execute($stmt);
+            $result = mysqli_stmt_get_result($stmt);
+            $user = mysqli_fetch_assoc($result);
+        }
+        
+        $api2 =  $user['ChatGPTkey'];
+        $dTemperature = 1;
+        $iMaxTokens = 1500;
+        $top_p = 1;
+        $frequency_penalty = 0.0;
+        $presence_penalty = 0.0;
+        $OPENAI_API_KEY = "$api2";
+        $sModel = "text-davinci-003";
+        $prompt = "how to use python to create a basic calculator?";
+        $ch = curl_init();
+        $headers  = [
+        'Accept: application/json',
+        'Content-Type: application/json',
+        'Authorization: Bearer ' . $OPENAI_API_KEY . ''
+        ];
+
+        $postData = [
+        'model' => $sModel,
+        'prompt' => str_replace('"', '', $prompt),
+        'temperature' => $dTemperature,
+        'max_tokens' => $iMaxTokens,
+        'top_p' => $top_p,
+        'frequency_penalty' => $frequency_penalty,
+        'presence_penalty' => $presence_penalty,
+        'stop' => '[" Human:", " AI:"]',
+        ];
+
+curl_setopt($ch, CURLOPT_URL, 'https://api.openai.com/v1/completions');
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($postData));
+
+$result = curl_exec($ch);
+$decoded_json = json_decode($result, true);
+
+
+
+?>   
     
     <div class="col-sm-12">
         <form method="post" action="">
             <fieldset>
                 <div class="form-group">
-                    <textarea name="reply-content" class="form-control" id="Article_editor" rows="7"></textarea>
+                    <textarea name="reply-content" class="form-control" id="Article_editor" rows="7"> <?php print_r ($decoded_json['choices'][0]['text']) ?></textarea>
                 </div>
                 <input type="submit" value="Submit reply" class="btn btn-lg btn-dark" name="submit-reply">
             </fieldset>
