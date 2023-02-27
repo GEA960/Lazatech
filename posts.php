@@ -291,21 +291,36 @@
                                      echo   ' 
                                      
                                      <a href="https://twitter.com/intent/tweet?text=From Lazatech Family,%20thank you for using our platform! %20%2B1%20 XRTemplate %20'.$row['headline'].' %20%23tipwithxumm%20 Content Title:%20['.$row['post_content'].'] %20By%20 ['.$row['f_name'].'%20'.$row['l_name'].'] Content Type: [Forum]">
-                                     <i class="fa fa-send fa-2x" aria-hidden="true"></i></a> </div>
+                                     <i class="fa fa-send fa-2x" aria-hidden="true"></i></a> ';
+
+                                 echo ' <form method="post" action="">
+                                 <fieldset>
+                                 <div class="form-group">
+                                 <input type="submit" value="Ask ChatGPT?" class="btn btn-lg btn-dark"  name="ChatGPT">
+                                 </fieldset>
+                                 </form>';
+
+                                 if(isset($_POST['ChatGPT'])) {
+                                        $FinalQuestion = $row['post_content'];
+                                      } else {
+                                        $FinalQuestion = 'ChatGPT API integration with Lazatech'; // assign a default value if no icon is selected
+                                      }
+
+                                 echo  '</div>
+                                     
                                      
                                     </div>
                                    
               
                                     <div class="col-sm-9 post-content">
                                         <p>'.$row['post_content'].'</p>
-                                            <div class="vote text-center">';
+                                            <div class="vote text-center"> ';
                         
-                        if ( ($row['post_by']==$_SESSION['userId']) || ($_SESSION['userLevel'] == 1)|| ($_SESSION['userLevel'] == 2))
-                        {
-                            echo '<a href="includes/delete-post.php?topic='.$topic.'&post='.$row['post_id'].'&by='.$row['post_by'].'" >'
-                                . '<i class="fa fa-trash fa-2x" aria-hidden="true"></i></a><br>';
-                        }
-                        
+
+                       
+
+                       
+
                         if ($voted_u)
                         {
                             echo "<a href='includes/post-vote.inc.php?topic=".$topic."&post=".$row['post_id']."&vote=1' >";
@@ -320,25 +335,38 @@
                         {
                             echo "<a href='includes/post-vote.inc.php?topic=".$topic."&post=".$row['post_id']."&vote=-1' >";
                         }
-                        echo '<i class="fa fa-chevron-down fa-3x" aria-hidden="true"></i></a>';
-                        
-                        
-                        echo            '</div>
+                        echo '<i class="fa fa-chevron-down fa-3x" aria-hidden="true"></i></a> 
+                             </div>
                                     </div>
-                                </div>
+                                </div>';
+
+  
+                        
+                        if ( ($row['post_by']==$_SESSION['userId']) || ($_SESSION['userLevel'] == 1)|| ($_SESSION['userLevel'] == 2))
+                        {
+                            echo '<a href="includes/delete-post.php?topic='.$topic.'&post='.$row['post_id'].'&by='.$row['post_by'].'" >'
+                                . '<i class="fa fa-trash fa-2x" aria-hidden="true"></i></a><br>';
+                        }
+                        
+                        echo            '
                                 <span class="likes"><span class="span-post-no"></span> <span class="span-post-no"><a
-                                        href="">Lazatech Forum</a></span></span>
-                            </div>';
+                                        href="">Lazatech Forum</a></span></span> </div>
+                            ';
+
+                         
                                             
                         $i++;
                     }
+                  
                 }
-            
+
+    
             ?>
             
         
     </div>
     <?php
+      
         $sql = "select * from users where idUsers = 61";
         $stmt = mysqli_stmt_init($conn);    
         
@@ -361,7 +389,7 @@
         $presence_penalty = 0.0;
         $OPENAI_API_KEY = "$api2";
         $sModel = "text-davinci-003";
-        $prompt = "how to use python to create a basic calculator?";
+        $prompt = "$FinalQuestion";
         $ch = curl_init();
         $headers  = [
         'Accept: application/json',
@@ -397,7 +425,7 @@ $decoded_json = json_decode($result, true);
         <form method="post" action="">
             <fieldset>
                 <div class="form-group">
-                    <textarea name="reply-content" class="form-control" id="Article_editor" rows="7"> <?php print_r ($decoded_json['choices'][0]['text']) ?></textarea>
+                    <textarea name="reply-content" class="form-control" id="Article_editor" rows="7"> <b>ChatGPT says:</b><?php print_r ($decoded_json['choices'][0]['text']) ?></textarea>
                 </div>
                 <input type="submit" value="Submit reply" class="btn btn-lg btn-dark" name="submit-reply">
             </fieldset>
