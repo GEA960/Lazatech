@@ -55,7 +55,7 @@
                                     else if ($_GET['error'] == 'passwordcheck')
                                     {
                                         echo '<div class="alert alert-danger" role="alert">
-                                                <strong>Error: </strong> Passwords donot match
+                                                <strong>Error: </strong> Passwords do not match
                                               </div>';
                                     }
                                     else if ($_GET['error'] == 'passwordvalidation')
