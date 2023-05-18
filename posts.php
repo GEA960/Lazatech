@@ -301,7 +301,8 @@
                                  </form>';
 
                                  if(isset($_POST['ChatGPT'])) {
-                                        $FinalQuestion = $row['post_content'];
+                                    echo "<script>alert('ChatGPT response not available yet. Please wait for some time please!');</script>";
+                                        //$FinalQuestion = $row['post_content'];
                                       } else {
                                         $FinalQuestion = 'What is ChatGPT'; // assign a default value if no icon is selected
                                       }
@@ -389,7 +390,7 @@
         $presence_penalty = 0.0;
         $OPENAI_API_KEY = "$api2";
         $sModel = "text-davinci-003";
-        $prompt = "$FinalQuestion";
+//$prompt = "$FinalQuestion";
         $ch = curl_init();
         $headers  = [
         'Accept: application/json',
@@ -399,7 +400,7 @@
 
         $postData = [
         'model' => $sModel,
-        'prompt' => str_replace('"', '', $prompt),
+        //'prompt' => str_replace('"', '', $prompt),
         'temperature' => $dTemperature,
         'max_tokens' => $iMaxTokens,
         'top_p' => $top_p,
@@ -425,7 +426,8 @@ $decoded_json = json_decode($result, true);
         <form method="post" action="">
             <fieldset>
                 <div class="form-group">
-                    <textarea name="reply-content" class="form-control" id="Article_editor" rows="7"> <b>ChatGPT says:</b><?php print_r ($decoded_json['choices'][0]['text']) ?></textarea>
+                    <textarea name="reply-content" class="form-control" id="Article_editor" rows="7"> <b>ChatGPT says:</b><?php //print_r ($decoded_json['choices'][0]['text']) 
+                    echo 'ChatGPT response not AVAILABLE YET'; ?></textarea>
                 </div>
                 <input type="submit" value="Submit reply" class="btn btn-lg btn-dark" name="submit-reply">
             </fieldset>
