@@ -41,7 +41,7 @@
                     <div class="leftbox">
                         <img src='img/logo.png' style="width: 30%; height30%">
                     <h5 style="color:black; font-family: Helvetica; font-size: 20px;">Welcome to</h5>
-                    <h3 class="lazatech" style="font-family: Verdana; font-size: 50px; text-shadow: 2px 2px 12px #0d0d0d;">LazaTech</h3>
+                    <h3 class="lazatech" style="font-family: Verdana; font-size: 50px; text-shadow: 2px 2px 12px #0d0d0d;">Lazatech</h3>
                     <br>
                     <a href="contact.php">
                             <i class="fa fa-envelope fa-2x social-icon" aria-hidden="true"></i>
